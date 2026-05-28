@@ -1,3 +1,21 @@
+# ==========================================
+# MILO.ONE - SENSITIVE DATA LOCK (Open Science)
+# ==========================================
+
+data/
+
+!data/synthetic_sample.csv
+!data/README_data.md
+
+# ==========================================
+# STANDARD R TEMPLATE 
+# ==========================================
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+*.Rproj
+
 # History files
 .Rhistory
 .Rapp.history
