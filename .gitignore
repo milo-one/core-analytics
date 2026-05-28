@@ -65,3 +65,16 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+---
+
+# ==========================================
+# PYTHON TEMPLATE
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.venv
+venv/
+ENV/
