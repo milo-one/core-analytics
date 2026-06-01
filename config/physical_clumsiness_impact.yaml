@@ -1,0 +1,6 @@
+'physical_clumsiness_impact':
+  'patterns':
+  - '\b(stieß|gestoßen|gestossen)\s+(?:sich|mir|dir|ihm|ihr)\s+(?:den|die|das|am)\b'
+  - '\b(stolperte|ausgeglitten|hingefallen|gestürzt)\b'
+  - '\b(geritzt|eingeklemmt|gepiekst|gestochen)\b'
+  - '\b(stieß|stießen)\s+(?:an|gegen|auf)\s+(?:einen|den|die|das)\s+(?:Baum|Stein|Tisch|Wand|Fels)\b'

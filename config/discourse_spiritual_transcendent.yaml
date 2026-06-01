@@ -1,0 +1,6 @@
+'discourse_spiritual_transcendent':
+  'patterns':
+  - '\b(spiritu(ismus|ell|alität))\b'
+  - '\b(transzendenz|metaphysik)\b'
+  - '\b(karma|reinkarnation|samsara|nirwana|chakren)\b'
+  - '\b(seele(n)?|seelenweg|inneres\s+licht)\b'

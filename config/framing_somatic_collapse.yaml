@@ -1,0 +1,14 @@
+'framing_somatic_collapse':
+  'patterns':
+  - '\bgriff\s+im\s+nacken\b'
+  - '\bzugriff\s+bis\s+auf\s+die\s+knochen\b'
+  - '\bselbstauflösung\b'
+  - '\b(riss\s+im\s+kabel|riss\s+in\s+der\s+leitung)\b'
+  - '\b(sprache\s+wird\s+zur\s+klinge|präzision\s+wird\s+sound)\b'
+  - '\bich\s+falle\s+auseinander\b'
+  - '\bich\s+bin\s+nur\s+noch\s+(fragmente|teile)\b'
+  - '\bmein\s+inneres\s+(zerbricht|reißt)\b'
+  - '\bich\s+habe\s+risse\b'
+  - '\bich\s+fühle\s+mich\s+zersplittert\b'
+  - '\bich\s+bin\s+kurz\s+vorm\s+(zerreißen|platzen)\b'
+  - '\bdas\s+zerfrisst\s+mich\b'

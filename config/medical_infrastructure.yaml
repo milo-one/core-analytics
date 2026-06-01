@@ -1,0 +1,15 @@
+'medical_infrastructure':
+  'patterns':
+  - '\b(arzt|ärztin|facharzt|notarzt|pflegekraft|therapeut(in)?)\b'
+  - '\b(klinik|krankenhaus|praxis|ambulanz|station)\b'
+  - '\b(patient(in)?|fallnummer)\b'
+  - '\b(notaufnahme|sprechstunde|terminvergabe)\b'
+  - '\b(befund|diagnose(n)?|abklärung|screening|untersuchung)\b'
+  - '\b(überweisung|einweisung|verordnung)\b'
+  - '\b(blutbild|laborwert|ct|mrt|ekg|sonografie)\b'
+  - '\b(therapie|intervention)\b'
+  - '\bbehandlung\b(?=[^.?!]{0,80}\b(?:patient|ärztlich|medizinisch|klinisch|diagnose|therapie|symptom|krankheit|ambulant|stationär)\b)'
+  - '\b(rezept|attest|krankmeldung|arbeitsunfähigkeit)\b'
+  - '\b(akte|aktenführung|dokumentation)\b'
+  - '\b(krankenkasse|krankenversicherung|kostenträger)\b'
+  - '\b(?:medizinische|ärztliche|therapeutische|klinische|ambulante|stationäre)\s+abrechnung\b'

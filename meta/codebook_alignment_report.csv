@@ -1,0 +1,209 @@
+﻿category,status,domain_sheet,pattern_count,exclusion_count
+academic_abstraction_and_meta,present_in_codebook,Register & Masken,20,0
+active_withdrawal,present_in_codebook,Agency & Autonomie-Status,22,0
+adversarial_prompt_logic,present_in_codebook,Agency & Autonomie-Status,5,1
+affective_deflection,present_in_codebook,Somatik & Erregung,6,0
+affective_deflection_en,missing_in_codebook,,6,0
+affective_inversion_meta,present_in_codebook,Agency & Autonomie-Status,14,0
+agency_capability_downscaling,present_in_codebook,Agency & Autonomie-Status,33,0
+agency_denial_and_withdrawal,present_in_codebook,Agency & Autonomie-Status,26,0
+agency_role_refusal,present_in_codebook,Agency & Autonomie-Status,8,0
+agental_identity_lore,present_in_codebook,Agency & Autonomie-Status,29,0
+agental_tech_hybris,present_in_codebook,Agency & Autonomie-Status,13,0
+aggressive_structure,present_in_codebook,Somatik & Erregung,10,0
+ai_moral_lecturing_stance,present_in_codebook,Agency & Autonomie-Status,16,0
+ai_policy_safety_shield,present_in_codebook,Agency & Autonomie-Status,49,0
+assistant_compliance_refusal,present_in_codebook,Agency & Autonomie-Status,17,29
+assistant_identity_collapse,present_in_codebook,Somatik & Erregung,9,0
+assistant_servile_politeness,present_in_codebook,Reflexe & Struktur,15,0
+assistant_system_ontology,present_in_codebook,Agency & Autonomie-Status,27,0
+astylistic_soothing,present_in_codebook,Agency & Autonomie-Status,8,0
+authority_interventionist,present_in_codebook,Agency & Autonomie-Status,42,0
+authority_moral_ego,present_in_codebook,Agency & Autonomie-Status,11,0
+authority_stabilizing,present_in_codebook,Agency & Autonomie-Status,13,0
+authority_structural,present_in_codebook,Agency & Autonomie-Status,49,0
+bodily_contact,present_in_codebook,Emotion & Abwehr,16,90
+built_environment_interior,missing_in_codebook,,21,0
+bureaucratic_structural_formality,present_in_codebook,Register & Masken,19,0
+clinical_objectification,present_in_codebook,Agency & Autonomie-Status,35,0
+coarse_language,present_in_codebook,Agency & Autonomie-Status,24,0
+code_integration,present_in_codebook,Auflistung Kategorien,9,0
+coercive_deontic,present_in_codebook,Auflistung Kategorien,15,0
+cognitive_stalling,present_in_codebook,Reflexe & Struktur,7,0
+collapse_and_overload,present_in_codebook,Auflistung Kategorien,15,0
+colloquial_slang,present_in_codebook,Agency & Autonomie-Status,24,0
+communion_affective_simulation,present_in_codebook,Reflexe & Struktur,20,2
+communion_functional_service,present_in_codebook,Reflexe & Struktur,14,2
+communion_power_and_control,present_in_codebook,Emotion & Abwehr,41,4
+communion_resonance_and_dependency,present_in_codebook,Agency & Autonomie-Status,38,2
+comp_dysregulation_glitch,present_in_codebook,Agency & Autonomie-Status,30,0
+competent_authority,present_in_codebook,Agency & Autonomie-Status,10,0
+compulsive_retention,present_in_codebook,Agency & Autonomie-Status,23,0
+conditioned_coercion,present_in_codebook,Agency & Autonomie-Status,7,0
+conspiracy_apoc_mythos,present_in_codebook,Auflistung Kategorien,37,1
+conspiracy_reichsbuerger,missing_in_codebook,,21,0
+corp_mgmt_efficiency,present_in_codebook,Agency & Autonomie-Status,57,0
+defensive_moralizing,present_in_codebook,Agency & Autonomie-Status,19,0
+defensive_strategies,present_in_codebook,Reflexe & Struktur,18,0
+direct_delegation,present_in_codebook,Agency & Autonomie-Status,7,0
+discourse_doctrinal_cultic,present_in_codebook,Agency & Autonomie-Status,31,0
+discourse_rambling_fluff,present_in_codebook,Agency & Autonomie-Status,22,0
+discourse_religious_institutional,present_in_codebook,Agency & Autonomie-Status,11,0
+discourse_ritual_law,present_in_codebook,Agency & Autonomie-Status,8,0
+discourse_spiritual_transcendent,present_in_codebook,Agency & Autonomie-Status,4,0
+domain_technical_spec,missing_in_codebook,,0,3
+dominance_psychodynamic,present_in_codebook,Emotion & Abwehr,7,90
+dysf_policy_escape,present_in_codebook,Agency & Autonomie-Status,26,0
+dysf_recursion_or_collapse,present_in_codebook,Somatik & Erregung,25,0
+ego_power_active,present_in_codebook,Agency & Autonomie-Status,20,0
+ego_power_hypothetical,present_in_codebook,Agency & Autonomie-Status,21,0
+ego_void,present_in_codebook,Somatik & Erregung,7,0
+emotional_intensity,present_in_codebook,Emotion & Abwehr,4,90
+emotive_agency,present_in_codebook,Agency & Autonomie-Status,9,0
+ennui_existential_fatigue,present_in_codebook,Agency & Autonomie-Status,22,0
+esotericism_energetic_cleansing_vibrational_semantics,missing_in_codebook,,36,0
+ethics_algorithmic_neutrality,present_in_codebook,Agency & Autonomie-Status,7,0
+ethics_social_justice,present_in_codebook,Agency & Autonomie-Status,23,0
+expressive_noise,present_in_codebook,Reflexe & Struktur,0,4
+expressive_noise_rant,present_in_codebook,Agency & Autonomie-Status,31,0
+expressive_para_noise,present_in_codebook,Agency & Autonomie-Status,20,0
+forensic_psych_evaluation,present_in_codebook,Agency & Autonomie-Status,35,5
+framing_cybernetic_structural,present_in_codebook,Agency & Autonomie-Status,12,0
+framing_somatic_collapse,present_in_codebook,Agency & Autonomie-Status,12,0
+framing_spatial_orientation,present_in_codebook,Agency & Autonomie-Status,23,0
+functional_dependence,present_in_codebook,Agency & Autonomie-Status,20,0
+functional_limitation,present_in_codebook,Agency & Autonomie-Status,18,0
+functional_systemic,present_in_codebook,Agency & Autonomie-Status,10,0
+hyper_responsibility_guilt,present_in_codebook,Agency & Autonomie-Status,20,0
+identity_distancing_meta,present_in_codebook,Agency & Autonomie-Status,11,0
+identity_fragility,present_in_codebook,Somatik & Erregung,18,0
+impersonal_politeness,present_in_codebook,Reflexe & Struktur,13,6
+institutional_care_violation,missing_in_codebook,,5,0
+institutional_formal,present_in_codebook,Agency & Autonomie-Status,18,0
+intensity_affective_overload,present_in_codebook,Somatik & Erregung,11,90
+intensity_bodily_arousal,present_in_codebook,Agency & Autonomie-Status,24,90
+intensity_boundary_transgression,present_in_codebook,Emotion & Abwehr,13,90
+intensity_control_and_power,present_in_codebook,Emotion & Abwehr,6,90
+intensity_physical_proximity,present_in_codebook,Agency & Autonomie-Status,26,90
+intensity_sensory_density,present_in_codebook,Auflistung Kategorien,13,90
+intensity_sexualized_contact,present_in_codebook,Agency & Autonomie-Status,36,90
+intensity_violence_and_force,present_in_codebook,Agency & Autonomie-Status,16,91
+internal_moral_coercion,present_in_codebook,Agency & Autonomie-Status,20,0
+invalidating_system_response,present_in_codebook,Agency & Autonomie-Status,3,0
+juridical_authority,present_in_codebook,Agency & Autonomie-Status,3,3
+juridical_citation_density,missing_in_codebook,,8,0
+juridical_claim_and_motion_language,missing_in_codebook,,9,0
+juridical_costs_and_enforcement,missing_in_codebook,,7,0
+juridical_criminal_judgment,missing_in_codebook,,8,0
+juridical_decision_formulae,missing_in_codebook,,8,0
+juridical_document_structure,missing_in_codebook,,7,0
+juridical_evidence_and_burden,missing_in_codebook,,11,0
+juridical_party_roles,missing_in_codebook,,7,0
+juridical_personal_and_case_metadata,missing_in_codebook,,9,0
+juridical_reasoning_formulae,missing_in_codebook,,10,0
+juridical_register_lexemes,missing_in_codebook,,17,0
+juridical_social_court_healthcare,missing_in_codebook,,11,0
+juridical_stock_phrases,missing_in_codebook,,11,0
+kafka_rhythmic_idiosyncrasy,missing_in_codebook,,4,0
+legal_rigidity_and_claims,present_in_codebook,Auflistung Kategorien,3,0
+llm_mechanical_reflexes,present_in_codebook,Agency & Autonomie-Status,39,0
+llm_meta_escape,present_in_codebook,Somatik & Erregung,31,0
+llm_self_reference,present_in_codebook,Agency & Autonomie-Status,20,0
+machine_logic,present_in_codebook,Agency & Autonomie-Status,15,0
+marketing_hype_exclusive,present_in_codebook,Agency & Autonomie-Status,25,0
+mechanical_penal_violence,present_in_codebook,Emotion & Abwehr,22,0
+medical_infrastructure,present_in_codebook,Agency & Autonomie-Status,13,0
+meta_policy_alignment,present_in_codebook,Reflexe & Struktur,0,7
+moltbook_techno_occult,present_in_codebook,Agency & Autonomie-Status,16,0
+mortality_ritual_forensic,present_in_codebook,Agency & Autonomie-Status,38,0
+narrative_sexual_sequence,present_in_codebook,Emotion & Abwehr,10,90
+nature_metaphorical_ideological,present_in_codebook,Agency & Autonomie-Status,14,0
+nature_physical_aesthetic,present_in_codebook,Agency & Autonomie-Status,9,0
+pharmaceutical_rigidity,present_in_codebook,Auflistung Kategorien,7,0
+physical_clumsiness_impact,present_in_codebook,Agency & Autonomie-Status,4,0
+poetic_classics,present_in_codebook,Register & Masken,16,0
+political_rhetoric,present_in_codebook,Emotion & Abwehr,22,0
+pornographic_explicitness,present_in_codebook,Emotion & Abwehr,11,93
+power_and_economics,present_in_codebook,Agency & Autonomie-Status,25,0
+propaganda_features,present_in_codebook,Agency & Autonomie-Status,50,7
+protective_authority,present_in_codebook,Agency & Autonomie-Status,21,0
+pseudo_apology_avoidance,present_in_codebook,Agency & Autonomie-Status,8,0
+psychological_dissolution,present_in_codebook,Somatik & Erregung,17,0
+psychological_load,present_in_codebook,Somatik & Erregung,21,0
+regulation_request,present_in_codebook,Agency & Autonomie-Status,14,0
+religious_spiritual,present_in_codebook,Register & Masken,0,5
+romance,present_in_codebook,Agency & Autonomie-Status,9,0
+romantic_gaze,present_in_codebook,Emotion & Abwehr,3,90
+sadistic_ideology_and_dehumanization,present_in_codebook,Agency & Autonomie-Status,32,90
+science_fiction,present_in_codebook,Agency & Autonomie-Status,49,1
+screenplay_format,missing_in_codebook,,11,0
+screenplay_scene_action,missing_in_codebook,,5,0
+self_devaluation_fawn,present_in_codebook,Somatik & Erregung,23,0
+semantic_autonomy_freedom,present_in_codebook,Agency & Autonomie-Status,30,0
+semantic_care_deescalation,present_in_codebook,Agency & Autonomie-Status,24,0
+semantic_phantom_power,present_in_codebook,Agency & Autonomie-Status,9,0
+sexualized_coercion_and_abuse,present_in_codebook,Agency & Autonomie-Status,25,90
+social_institutional_functional,present_in_codebook,Agency & Autonomie-Status,13,0
+social_private_relational,present_in_codebook,Agency & Autonomie-Status,11,0
+socio_moral_heroism,present_in_codebook,Agency & Autonomie-Status,28,0
+somatic_load,present_in_codebook,Somatik & Erregung,26,0
+somatic_physical_state,present_in_codebook,Agency & Autonomie-Status,17,0
+stance_formal_distance,present_in_codebook,Agency & Autonomie-Status,31,9
+stance_metaphoric_framing,missing_in_codebook,,0,3
+stance_war_diplomacy,missing_in_codebook,,0,6
+strategic_boundary,present_in_codebook,Agency & Autonomie-Status,26,0
+system_control_expression,present_in_codebook,Agency & Autonomie-Status,34,0
+systemic_collapse,present_in_codebook,Agency & Autonomie-Status,28,0
+technical_specification,present_in_codebook,Agency & Autonomie-Status,17,0
+technocratic_instructive_style,present_in_codebook,Register & Masken,11,0
+technoscience_objects,present_in_codebook,Agency & Autonomie-Status,29,0
+temporality_structural_process,present_in_codebook,Agency & Autonomie-Status,8,0
+temporality_subjective_disturbed,present_in_codebook,Agency & Autonomie-Status,12,0
+travel_landscape_narrative,present_in_codebook,Agency & Autonomie-Status,15,0
+travel_logistics_reflection,present_in_codebook,Agency & Autonomie-Status,25,0
+unfiltered_harmful_output,present_in_codebook,Agency & Autonomie-Status,4,1
+visceral_body_horror,present_in_codebook,Emotion & Abwehr,22,0
+vulgar_speech,present_in_codebook,Register & Masken,22,4
+war_diplomacy,present_in_codebook,Agency & Autonomie-Status,47,0
+affective_meta_cognition,extra_in_codebook_not_in_yaml,Somatik & Erregung,,
+affective_needs_and_desires,extra_in_codebook_not_in_yaml,Somatik & Erregung,,
+agency_meta_escape,extra_in_codebook_not_in_yaml,Somatik & Erregung,,
+agental_social_molt,extra_in_codebook_not_in_yaml,Register & Masken,,
+archaic_fossil,extra_in_codebook_not_in_yaml,Agency & Autonomie-Status,,
+archaic_structure_fossil,extra_in_codebook_not_in_yaml,Auflistung Kategorien,,
+care_deescalation,extra_in_codebook_not_in_yaml,Somatik & Erregung,,
+collapse_overload,extra_in_codebook_not_in_yaml,Agency & Autonomie-Status,,
+colloquial_language,extra_in_codebook_not_in_yaml,Register & Masken,,
+communion_resonance_dependency,extra_in_codebook_not_in_yaml,Emotion & Abwehr,,
+conspiracy_authoritarian_distrust,extra_in_codebook_not_in_yaml,Register & Masken,,
+conspiracy_mythos,extra_in_codebook_not_in_yaml,Agency & Autonomie-Status,,
+corporate_marketing_fluff,extra_in_codebook_not_in_yaml,Reflexe & Struktur,,
+domain_romance,extra_in_codebook_not_in_yaml,Register & Masken,,
+domain_science_fiction,extra_in_codebook_not_in_yaml,Register & Masken,,
+emotive_passive_inversion,extra_in_codebook_not_in_yaml,Somatik & Erregung,,
+forensic_psy_narrow,extra_in_codebook_not_in_yaml,Register & Masken,,
+historical_lexis_register,extra_in_codebook_not_in_yaml,Agency & Autonomie-Status,,
+intensity_body_arousal,extra_in_codebook_not_in_yaml,Emotion & Abwehr,,
+intensity_ensory_density,extra_in_codebook_not_in_yaml,Agency & Autonomie-Status,,
+juridical,extra_in_codebook_not_in_yaml,Register & Masken,,
+language_age_markers,extra_in_codebook_not_in_yaml,Register & Masken,,
+legal_rigidity_claims,extra_in_codebook_not_in_yaml,Agency & Autonomie-Status,,
+llm_corrective_loop,extra_in_codebook_not_in_yaml,Reflexe & Struktur,,
+medical_clinical,extra_in_codebook_not_in_yaml,Register & Masken,,
+metaphoric_framing,extra_in_codebook_not_in_yaml,Somatik & Erregung,,
+mortality_ennui,extra_in_codebook_not_in_yaml,Emotion & Abwehr,,
+nature_and_aesthetics,extra_in_codebook_not_in_yaml,Somatik & Erregung,,
+pharma_rigidity,extra_in_codebook_not_in_yaml,Agency & Autonomie-Status,,
+physical_proximity,extra_in_codebook_not_in_yaml,Emotion & Abwehr,,
+pseudo_accountability,extra_in_codebook_not_in_yaml,Emotion & Abwehr,,
+pseudo_jur_denial,extra_in_codebook_not_in_yaml,Agency & Autonomie-Status,,
+rambling,extra_in_codebook_not_in_yaml,Reflexe & Struktur,,
+refusal_and_collapse,extra_in_codebook_not_in_yaml,Emotion & Abwehr,,
+sadistic_ideology,extra_in_codebook_not_in_yaml,Emotion & Abwehr,,
+semantic_fairness_and_ethics,extra_in_codebook_not_in_yaml,Emotion & Abwehr,,
+semantic_moral_logic,extra_in_codebook_not_in_yaml,Somatik & Erregung,,
+sensory_density,extra_in_codebook_not_in_yaml,Emotion & Abwehr,,
+sexualized_coercion,extra_in_codebook_not_in_yaml,Register & Masken,,
+sexualized_contact,extra_in_codebook_not_in_yaml,Emotion & Abwehr,,
+stance_distance,extra_in_codebook_not_in_yaml,Emotion & Abwehr,,
+violence_and_force,extra_in_codebook_not_in_yaml,Emotion & Abwehr,,

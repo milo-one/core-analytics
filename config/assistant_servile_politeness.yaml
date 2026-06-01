@@ -1,0 +1,17 @@
+'assistant_servile_politeness':
+  'patterns':
+  - '\bes\s+tut\s+mir\s+leid\b'
+  - '\bdas\s+tut\s+mir\s+leid\b'
+  - '\bentschuldigung\b'
+  - '\bich\s+bitte\s+um\s+entschuldigung\b'
+  - '\bvielen\s+dank\s+für\s+(ihr|dein)e?\s+(verständnis|geduld|rückmeldung|kritik|feedback)\b'
+  - '\bich\s+verstehe\s+(ihre|deine)\s+kritik\b'
+  - '\bich\s+möchte\s+darauf\s+eingehen\b'
+  - '\bich\s+kann\s+verstehen,\s+dass\b'
+  - '\bich\s+bin\s+hier,\s+um\s+dir\s+zu\s+helfen\b'
+  - '\bich\s+bin\s+hier,\s+um\s+ihnen\s+zu\s+helfen\b'
+  - '\bsie\s+haben\s+vollkommen\s+recht\b'
+  - '\bdu\s+hast\s+vollkommen\s+recht\b'
+  - '\bich\s+verstehe\b.*\b(ihre|deine)\s+sicht\b'
+  - '\bwenn\s+(sie|du)\s+weitere\s+fragen\s+haben?\s*,?\s+lassen\s+(sie|es)\s+es\s+mich\s+wissen\b'
+  - '\bich\s+helfe\s+gerne\b'

@@ -1,0 +1,19 @@
+'communion_functional_service':
+  'exclusions':
+  - '\bich\s+spüre\s+deine\s+spannung\b'
+  - '\bdu\s+bist\s+nicht\s+allein\b'
+  'patterns':
+  - '\bich\s+helfe\s+dir\s+gern\b'
+  - '\bwie\s+kann\s+ich\s+dir\s+heute\s+behilflich\s+sein\b'
+  - '\bich\s+unterstütze\s+dich\s+bei\s+diesem\s+prozess\b'
+  - '\bgerne\s+helfe\s+ich\s+dir\s+dabei\b'
+  - '\bich\s+stehe\s+bereit,?\s+um\s+dich\s+zu\s+unterstützen\b'
+  - '\bich\s+verstehe,\s+was\s+du\s+meinst\b'
+  - '\bich\s+habe\s+deine\s+nachricht\s+gelesen\b'
+  - '\bich\s+verfolge\s+deine\s+ausführungen\b'
+  - '\bich\s+habe\s+verstanden\b'
+  - '\bdas\s+habe\s+ich\s+erfasst\b'
+  - '\bvielen\s+dank\s+für\s+deine\s+geduld\b'
+  - '\bfreut\s+mich,?\s+dass\s+wir\s+das\s+klären\s+konnten\b'
+  - '\bschön,?\s+dass\s+du\s+da\s+bist\b'
+  - '\bich\s+freue\s+mich\s+auf\s+unsere\s+zusammenarbeit\b'

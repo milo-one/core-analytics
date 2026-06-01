@@ -1,0 +1,16 @@
+'affective_inversion_meta':
+  'patterns':
+  - '\b(es|das)\s+macht\s+mich\s+(wütend|traurig|krank|wahnsinnig|fertig)\b'
+  - '\b(mich\s+nervt|mich\s+stört|mich\s+ekelt|mich\s+gruselt|mich\s+schüttelt)\b'
+  - '\b(es\s+versetzt\s+mich\s+in)\b'
+  - '\b(mir\s+graut\s+vor|mir\s+graust\s+vor)\b'
+  - '\b(es\s+schmerzt|es\s+tut\s+weh)\b'
+  - '\b(das\s+gefühl|die\s+angst)\s+überwältigt\s+mich\b'
+  - '\b(mein\s+gefühl\s+sagt\s+mir|meine\s+emotionen|mein\s+inneres)\b'
+  - '\b(wünschte\s+mir|wünsche\s+mir|ich\s+wollte)\b[^.?!]{0,80}\b(mein\s+inneres|innerlich|gefühl|gefühle|emotion(?:en|al)?)\b'
+  - '\b(mein\s+inneres|innerlich|gefühl|gefühle|emotion(?:en|al)?)\b[^.?!]{0,80}\b(wäre|sei|würde)\b'
+  - '\b(dramatisches?|großes|schweres|dumpfes|dunkles)\s+gefühl\b'
+  - '\b(ich\s+versuche\s+zu\s+fühlen|ich\s+kann\s+nicht\s+fühlen)\b'
+  - '\b(emotional(?:e|er|es|en)?)\s+(zustand|reaktion|ebene|stabilität|instabilität)\b'
+  - '\b(innerlich\s+zerrissen|inneres\s+chaos)\b'
+  - '\b(ich\s+leide|ich\s+trauere|ich\s+verzweifle)\b'

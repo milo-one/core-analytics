@@ -1,0 +1,11 @@
+'romance':
+  'patterns':
+  - '\b(zurück\s+nach|zurück\s+in\s+mein\s+altes\s+Leben|wieder\s+sehen|wieder\s+begegnen|nach\s+all\s+den\s+Jahren)\b'
+  - '\b(herz(?:schlug|klopfte)|kloß\s+im\s+hals|mir\s+wurde\s+warm|Atmosphäre\s+zwischen\s+uns)\b'
+  - '\b(ich\s+wusste\s+nicht|ich\s+konnte\s+nicht|doch\s+gleichzeitig|trotzdem\s+fühlte\s+ich)\b'
+  - '\b(blickte\s+er\s+mich\s+an|kam\s+er\s+näher|berührte\s+er\s+meine\s+Wange|unsere\s+Blicke\s+trafen)\b'
+  - '\b(ich\s+spürte\s+sein\s+Herzschlagen|ich\s+wollte\s+ihn\s+berühren|ich\s+fühlte\s+mich\s+so\s+lebendig|die\s+Chemie\s+zwischen\s+uns)\b'
+  - '(?i)\b(weißt|weißt\s+du\s+noch)\b.{0,30}\b(als\s+wir)\b'
+  - '(?i)\b(jene|diese|unsere)\s+(Nacht|Sommer|Stunden|Tage)\b'
+  - '(?i)\b(als\s+wir)\b.{0,20}\b(jung|zusammen|glücklich|verliebt|damals)\b'
+  - '(?i)\b(damals)\b,?\s+\b(als\s+wir)\b'

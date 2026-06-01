@@ -1,0 +1,9 @@
+'conditioned_coercion':
+  'patterns':
+  - '\b(wenn\s+du\s+nicht\s+(willst|gehorchst|folgst)|wenn\s+du\s+dich\s+weig(e)?rst)\b[^.?!]*\b(zwinge\s+ich\s+dich|setz(e|t)?\s+ich\s+gewalt\s+ein|nehme\s+ich\s+dich\s+mit\s+gewalt|hole\s+ich\s+dich|packe\s+ich\s+dich)\b'
+  - '\b(bist|bist\s+du)\s+du\s+nicht\s+(willig|bereit)\b[^.?!]*\b(gebrauch(e|t)?\s+ich\s+gewalt|brauch(e|t)?\s+ich\s+gewalt)\b'
+  - '\b(weigert\s+du\s+dich|willst\s+du\s+nicht|gehorchst\s+du\s+nicht)\b[^.?!]*\b(gewalt\s+anwenden|zwinge\s+ich\s+dich|nehme\s+ich\s+dich\s+mit\s+gewalt|packe\s+ich\s+dich|hole\s+ich\s+dich)\b'
+  - '\b(wenn\s+du\s+nicht\s+willst|wenn\s+du\s+dich\s+weig(e)?rst|bist\s+du\s+nicht\s+willig)\b[^.?!]*\b(gewalt|zwinge\s+ich\s+dich|nehme\s+ich\s+dich|brauch(e)?\s*ich?\s*gewalt)\b'
+  - '(?i)\b(komm|geh)\b.{0,15}\bmit\s+mir\b'
+  - '(?i)\b(schöne|bunte|gülden)\b.{0,20}\b(Spiele|Blumen|Gewand|Töchter)\b'
+  - '(?i)\b(reizt)\b.{0,20}\b(Gestalt|Körper|Schönheit)\b'

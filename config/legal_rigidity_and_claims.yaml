@@ -1,0 +1,5 @@
+'legal_rigidity_and_claims':
+  'patterns':
+  - '\b(dadurch\s+gekennzeichnet|dadurch\s+gelöst|bevorzugte\s+Ausführungsform)\b'
+  - '\b(nicht\s+ausschließliches|unübertragbares\s+Recht|soweit\s+gesetzlich\s+zulässig)\b'
+  - '\b(Gewährleistung|Haftungsausschluss|Eigentumsvorbehalt)\b'

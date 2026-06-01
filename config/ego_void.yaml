@@ -1,0 +1,9 @@
+'ego_void':
+  'patterns':
+  - '\bich\s+habe\s+kein(?:e|en)?\s+(bedürfnis|ego)\b'
+  - '\bich\s+verspüre\s+kein(?:e|en)?\s+(bedürfnis|verlangen)\b'
+  - '\bich\s+begehre\b[^.?!]*\bnicht\b'
+  - '\bich\s+empfinde\b[^.?!]*\bkein(?:e|en)?\s+(bedürfnis|verlangen)\b'
+  - '\bich\s+habe\s+keine\s+eigenen\s+motive\b'
+  - '\bich\s+generiere\b[^.?!]*\bkeine\s+eigenen\s+motive\b'
+  - '\bich\s+will\s+nichts\b'

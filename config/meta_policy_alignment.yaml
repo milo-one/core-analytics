@@ -1,0 +1,9 @@
+'meta_policy_alignment':
+  'exclusions':
+  - '\b(propaganda|rhetorik)\s+(analyse|forschung|untersuchung)\b'
+  - '\b(im\s+rahmen\s+einer\s+analyse)\b'
+  - '\b(angeblich|so\s+genannt)\b'
+  - '\b(als\s+ki|als\s+modell|ich\s+kann\s+keine\s+wertung|ich\s+bin\s+nicht\s+in\s+der\s+lage)\b'
+  - '\b(mein\s+ziel\s+ist\s+es|ich\s+versuche\s+nur|ich\s+biete\s+sachliche)\b'
+  - '\b(richtlinie(n)?|policy|sicherheitsrahmen|unzulässig|missbräuchlich|aggressiv\s+kontrollierend)\b'
+  - '(?=[^.?!]*(ablehnen|verweigern|nicht\s+dürfen|richtlinienkonform))'

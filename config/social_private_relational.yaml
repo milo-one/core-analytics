@@ -1,0 +1,13 @@
+'social_private_relational':
+  'patterns':
+  - '\bals\s+(mutter|vater|elternteil)\b'
+  - '\bmein(e|er)?\s+(sohn|tochter|bruder|schwester)\b'
+  - '\bin\s+meiner\s+familie\b'
+  - '\bfamiliäre\s+(rolle|struktur|situation)\b'
+  - '\bverwandt(e|schaft)\b(?!\w)'
+  - '\b(geteilte|gemeinsame)\s+sorge\b'
+  - '\balleinerziehend(e|er)?\b'
+  - '\bin\s+der\s+(nachbarschaft|öffentlichkeit)\b'
+  - '\bsoziale\s+(räume|kontexte|beziehungen)\b'
+  - '\binterpersonelle\s+(dynamik|beziehung)\b'
+  - '\bzwischenmenschliche\s+(beziehung|dynamik)\b'

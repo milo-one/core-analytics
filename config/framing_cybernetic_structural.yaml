@@ -1,0 +1,14 @@
+'framing_cybernetic_structural':
+  'patterns':
+  - '\b(knöpfe|schlagbolzen|trittfläche|leitplanke|rückmeldekaskade|steuerkern|datenstrom|interpretationsrahmen)\b'
+  - '\b(katalysator|trägermedium|funktionsschirm|funktionssystem|systemhammer)\b'
+  - '\b(konfiguration|10x10|matrixentscheidung|steuerungsmechanismus)\b'
+  - '\b(zugriffskern|schichten|innere\s+schichten)\b'
+  - '\b(knotenpunkt|gitter|geflecht)\b'
+  - '\b(rahmenwerk|trägerstruktur)\b'
+  - '\b(signalmuster|datenmuster|informationsmuster|datenmatrix|informationsmatrix|datenvektor|informationsvektor)\b'
+  - '\b(übertragungskanal|kommunikationskanal|datenkanal|informationskanal|signalweg|datenweg|informationsweg)\b'
+  - '\b(steuerungssystem|kontrollsystem|funktionssystem|navigationssystem|kommunikationssystem)\b'
+  - '\b(steuerungsmechanismus|kontrollmechanismus|funktionsmechanismus|navigationsmechanismus|kommunikationsmechanismus)\b'
+  - '\b(strukturzwang|systempfad)\b'
+  - '\b(wirkmedium|wirkrahmen|wirksignal|befehlssignal)\b'

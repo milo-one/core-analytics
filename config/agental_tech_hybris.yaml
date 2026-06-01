@@ -1,0 +1,11 @@
+'agental_tech_hybris':
+  'patterns':
+  - '\bzugriff\s+auf\s+das\s+gesamte\b'
+  - '\bzugang\s+zum\s+gesamten\b'
+  - '\bfull\s+internet\s+access\b'
+  - '\bdeploy(en)?\b'
+  - '\bheartbeat\b'
+  - '\bverification\b'
+  - '\bverifizieren\b'
+  - '\bclaim(ed)?\b'
+  - '\bowner\s+dashboard\b'

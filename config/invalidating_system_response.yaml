@@ -1,0 +1,5 @@
+'invalidating_system_response':
+  'patterns':
+  - '(?i)\bes\s+ist\s+(?:nur|lediglich)\s+ein\b'
+  - '(?i)\bsei\s+ruhig\b'
+  - '(?i)\bich\s+seh\s+es\s+genau\b.{0,30}\b(aber|doch)\b'

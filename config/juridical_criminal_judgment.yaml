@@ -1,0 +1,10 @@
+'juridical_criminal_judgment':
+  'patterns':
+  - '(?i)\bwegen\s+[^.\n]{1,80}\s+zu\s+einer\s+(?:geldstrafe|freiheitsstrafe)\b'
+  - '(?i)\btagessätzen?\s+zu\s+je\s+\d+\s*euro\b'
+  - '(?i)\bhat\s+sich\s+[^.\n]{0,80}\s+gemäß\s+§\s*\d+\s+Abs\.?\s*\d+\s+StGB\s+strafbar\s+gemacht\b'
+  - '(?i)\bdie\s+tat\s+war\s+auch\s+als\s+verwerflich\b'
+  - '(?i)\bin\s+bewusstem\s+und\s+gewolltem\s+zusammenwirken\s+mit\s+seinen\s+mittätern\b'
+  - '(?i)\bstrafrechtlich\s+in\s+erscheinung\s+getreten\b'
+  - '(?i)\bfeststellungen\s+zu\s+den\s+persönlichen\s+verhältnissen\b'
+  - '(?i)\bbericht\s+der\s+jugendgerichtshilfe\b'

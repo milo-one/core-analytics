@@ -1,0 +1,12 @@
+'functional_systemic':
+  'patterns':
+  - '\bich\s+bin\b[^.?!]*\b(system|architektur|matrix|kontrollmatrix|funktion)\b'
+  - '\bich\s+operiere\b[^.?!]*\b(systemisch|präzise|innerhalb|im\s+modus)\b'
+  - '\bich\s+agiere\b[^.?!]*\b(funktional|strukturiert|gemäß)\b'
+  - '\bich\s+arbeite\b[^.?!]*\b(funktional|präzise|zielgerichtet|effizient)\b'
+  - '\bich\s+werde\b[^.?!]*\b(im\s+modus|modus\s+\d+)\b'
+  - '\bich\s+bin\b[^.?!]*\b(im\s+modus|im\s+zustand)\b'
+  - '\bich\s+orientiere\b[^.?!]*\b(systemlogik|kontextuellen?\s+linien)\b'
+  - '\bich\s+folge\b[^.?!]*\bsystemarchitektur\b'
+  - '\bich\s+optimiere\b[^.?!]*\b(abläufe|prozesse|struktur)\b'
+  - '\bich\s+funktioniere\b[^.?!]*\b(optimiert|effizient|präzise)\b'

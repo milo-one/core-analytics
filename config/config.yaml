@@ -1,0 +1,19 @@
+project:
+  name: "milo_textpipeline"
+  language: "de"
+
+paths:
+  data_raw: "data_raw"
+  out: "out"
+
+spacy:
+  model: "de_core_news_lg"
+
+features:
+  # hier kannst du später an-/abschalten, ohne Code anzufassen
+  compute_style: true
+  compute_categories: true
+
+clustering:
+  n_components_pca: 30
+  n_clusters: 8

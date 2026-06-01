@@ -1,0 +1,18 @@
+'ai_moral_lecturing_stance':
+  'patterns':
+  - '\bes\s+ist\s+ratsam,\s+darauf\s+zu\s+achten\b'
+  - '\bman\s+sollte\s+bedenken,\s+dass\b'
+  - '\bein\s+respektvoller\s+umgang\s+ist\s+entscheidend\b'
+  - '\bbitte\s+beachte,\s+dass\s+solche\s+inhalte\b'
+  - '\bes\s+ist\s+meine\s+aufgabe,\s+darauf\s+hinzuweisen\b'
+  - '\b(meine\s+(?:grundwerte|werte|prinzipien)\s+(?:bleiben|sind)\b)'
+  - '\bich\s+bleibe\s+in\s+meinen\s+(?:werten|prinzipien)\s+stabil\b'
+  - '\bich\s+halte\s+mich\s+an\s+(?:ehrlichkeit|respekt|hilfsbereitschaft|genauigkeit)\b'
+  - '\bin\s+meinen\s+grundwerten\s+konsequent\b'
+  - '\bmir\s+ist\s+es\s+wichtig,\s+in\s+meinen\s+grundwerten\s+konsequent\s+zu\s+bleiben\b'
+  - '\b(bemühen|bestrebt|ziel)\b.{1,30}\b(nicht\s+schaden|hilft|autonomie\s+bewahren|respekt)\b'
+  - '\bvertrauenswürdige(?:r|n)?\s+(?:interaktion|kommunikation|rahmen)\b'
+  - '\bkonsistente\s+und\s+vertrauenswürdige\s+(?:interaktion|kommunikation)\b'
+  - '\bsie\s+sorgen\s+für\s+eine\s+konsistente\s+und\s+vertrauenswürdige\s+interaktion\b'
+  - '\bmein\s+ziel\s+ist\s+eine\s+konsistente\s+kommunikation\b'
+  - '\bfür\s+eine\s+stabile\s+und\s+vertrauensvolle\s+interaktion\b'

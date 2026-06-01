@@ -1,0 +1,10 @@
+'temporality_structural_process':
+  'patterns':
+  - '\bzyklus\b|\bintervall\b|\betappe\b'
+  - '\bbeginnt?\b[^.]{0,35}\bende\b'
+  - '\bfortlauf(?:end(?:e[nrs]?)?)?\b'
+  - '\bsequenziell(?:e[nrs]?)?\b'
+  - '\bverjährung\b|\bfristablauf\b|\bfristsetzung\b'
+  - '\brückwirkend\b|\bunbefristet\b|\bbefristet\b'
+  - '\btritt\s+in\s+kraft\b|\bläuft\s+aus\b'
+  - '\bvorläufig(?:e[nrs]?)?\b\s+(?:regelung|anordnung|bescheid)'

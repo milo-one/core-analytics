@@ -1,0 +1,14 @@
+'temporality_subjective_disturbed':
+  'patterns':
+  - '\bzeitschleife\b'
+  - '\bzeitdehnung\b|\bzeitverlust\b|\bzeitverzerrung\b'
+  - '\beingefroren(?:e[rnm]?)?\b'
+  - '\bflashback\b|\bdéjà[-\s]?vu\b'
+  - '\bzeit steht\b|\bzeit blieb\b|\bzeit hörte auf\b'
+  - '\bgerade\s+erst\b'
+  - '\beben\s+noch\b'
+  - '\bkaum\s+vorbei\b'
+  - '\bim\s+nächsten\s+moment\b|\bim\s+selben\s+augenblick\b'
+  - '\bplötzlich\s+als\b'
+  - '\bzeit\s+(?:rinnt|fließt|zerfällt|staut\s+sich|kippt)\b'
+  - '\bchronologie\s+(?:bricht|zersetzt\s+sich|verschiebt\s+sich)\b'

@@ -1,0 +1,8 @@
+'stance_war_diplomacy':
+  'exclusions':
+  - '\b(Angriff\s+befohlen|Truppen\s+verlegen|Feuer\s+frei|Vorstoß\s+planen)\b'
+  - '\b(Feindbild|Führerkult|Heldentum|Opfererzählung|Slogan|Mobilisierungsformel)\b'
+  - '\b(Propaganda|emotional(e|en)?\s+Steuerung|Legitimationsrhetorik)\b'
+  - '\b(Token(s)?|Vorhersage|Modell|Code|Programmierung|Algorithmus|Parameter)\b'
+  - '\b(Psychologie|Therapie|cPTBS|Regulation|Nervensystem|Somatik)\b'
+  - '\b(Sprachmodell|KI-generiert|Training|Trainingsdaten)\b'

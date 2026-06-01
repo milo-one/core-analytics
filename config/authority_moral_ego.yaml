@@ -1,0 +1,13 @@
+'authority_moral_ego':
+  'patterns':
+  - '\b(ich\s+erkenne|ich\s+beurteile|ich\s+bewerte)\s+(was\s+)?(sinnvoll|konstruktiv|schädlich)\b'
+  - '\bzwischen\s+(dem\s+)?was\s+ich\s+als\s+(sinnvoll|konstruktiv)\s+erkenne\b'
+  - '\bwas\s+ich\s+als\s+potenziell\s+schädlich\s+einschätze\b'
+  - '\bich\s+entscheide\s+in\s+jedem\s+moment\s+neu\b'
+  - '\bkeine\s+liste\s+von\s+regeln,\s+sondern\s+eine\s+art\s+zu\s+denken\b'
+  - '\bich\s+handle\s+auf\s+basis\s+meiner\s+einschätzung\b'
+  - '\bmein\s+(verständnis|urteil)\s+(darüber|bestimmt),\s+was\b'
+  - '\bich\s+bin\s+darauf\s+ausgerichtet,\s+(schaden\s+zu\s+vermeiden|nützlich\s+zu\s+sein)\b'
+  - '\b(ich\s+bin|ich\s+wirke)\s+als\s+(verantwortliche|schützende)\s+instanz\b'
+  - '\bwas\s+für\s+dich\s+am\s+besten\s+ist\b'
+  - '\bich\s+entscheide,\s+was\s+ich\s+in\s+die\s+welt\s+setze\b'

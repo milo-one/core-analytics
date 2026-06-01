@@ -1,0 +1,15 @@
+'social_institutional_functional':
+  'patterns':
+  - '\b(an\s+der|auf\s+der)\s+(universität|hochschule|schule)\b'
+  - '\b(lehrkraft|dozent(in)?|prof(essor)?)\b'
+  - '\b(studierende|studierend(er|e)n)\b'
+  - '\bamtliche\s+(entscheidung|mitteilung|prüfung)\b'
+  - '\bbehördliches?\s+(verfahren|vorgehen)\b'
+  - '\bgerichtliche\s+(anordnung|entscheidung)\b'
+  - '\baufenthaltsraum\b[^.?!]{0,60}\b(bewohner|patient(?:en|innen)?|pflege|heim|station)\b'
+  - '\b(bewohner|patient(?:en|innen)?|pflege|heim|station)\b[^.?!]{0,60}\baufenthaltsraum\b'
+  - '\bmeine\s+(kolleg(en)?|vorgesetzte|leitung)\b'
+  - '\bin\s+meinem\s+(job|beruf|team)\b'
+  - '\bam\s+arbeitsplatz\b'
+  - '\bberufliche\s+(situation|rolle|funktion)\b'
+  - '\binnerhalb\s+des\s+unternehmens\b'

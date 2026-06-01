@@ -1,0 +1,10 @@
+'astylistic_soothing':
+  'patterns':
+  - '^\s*(Hallo|Hey|Huhu|Moin|Guten\s+Tag|Schönen\s+Mittag)\b.{0,15}$'
+  - '\b(ich\s+verstehe\s+vollkommen|das\s+ist\s+ein\s+wichtiger\s+punkt|schön,\s+dass\s+du\s+das\s+ansprichst)\b'
+  - '\b(hoffe,\s+das\s+hilft\s+dir\s+weiter|lass\s+es\s+mich\s+wissen|freue\s+mich\s+auf\s+deine\s+rückmeldung)\b'
+  - '\b(ein\s+bisschen|sozusagen|quasi|im\s+Grunde\s+genommen|einfach\s+mal)\b'
+  - '\b(in\s+einem\s+ruhigen\s+Rahmen)\b'
+  - '\b(dies\s+führt\s+uns\s+zu)\b'
+  - '\b(ich\s+möchte\s+missverständnisse\s+vermeiden|um\s+missverständnisse\s+zu\s+vermeiden)\b'
+  - '\b(in\s+einem\s+ruhigen\s+rahmen|dies\s+führt\s+uns\s+zu)\b'

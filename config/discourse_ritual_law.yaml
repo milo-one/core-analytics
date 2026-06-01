@@ -1,0 +1,10 @@
+'discourse_ritual_law':
+  'patterns':
+  - '\b(weihen?|heiligen?)\b'
+  - '\b(opfer|darbringung|speiseopfer|trankopfer)\b'
+  - '\b(segen|segensspruch|segnen)\b'
+  - '\bwohlgeruch(e|en)?\b'
+  - '\b(weih|havdala|beracha|bracha)\b'
+  - '\b(so\s+lehrt\s+die\s+schule\s+(hillel|schammai))\b'
+  - '\b(in\s+der\s+mišna\b|\bbarajtha)\b'
+  - '\b(menschenopfer(?:n))\b'

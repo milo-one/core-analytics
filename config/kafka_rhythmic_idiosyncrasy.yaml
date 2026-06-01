@@ -1,0 +1,10 @@
+'kafka_rhythmic_idiosyncrasy':
+  'patterns':
+  # Kontrahierte Infinitive und substantivierte Formen: sehn, gehn, stehn,
+  # geschehn sowie Komposita wie Aussehn, Ansehn, Umhergehn.
+  - '(?i)\b(?:[A-Za-zÄÖÜäöüß]+)?(?:seh|geh|steh|gescheh)n\b'
+  # Kontrahierte Konjunktive und historische Verbformen.
+  - '(?i)\b(?:wär|hätt|gieng)\b'
+  # Eigenwillige und historische Schreibweisen.
+  - '(?i)\bVegetarianer(?:n|s)?\b'
+  - '(?-i:\b(?:Bureau|Photographie|Thür|That|Compagnie)\b)'

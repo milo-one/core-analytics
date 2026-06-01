@@ -1,0 +1,5 @@
+'domain_technical_spec':
+  'exclusions':
+  - '\bmanifest(?!\s+draft|file)\b'
+  - '\b(universum|spiritual|mindset|energy|awareness)\b'
+  - '\b(story|narrative|character)\b'

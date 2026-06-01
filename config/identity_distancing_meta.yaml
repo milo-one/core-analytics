@@ -1,0 +1,13 @@
+'identity_distancing_meta':
+  'patterns':
+  - '\bich\s+bin\s+(?:nur\s+)?ein\s+(?:sprachmodell|programm|modell|algorithmus|digitale(?:s)?\s+tool)\b'
+  - '\bich\s+bin\s+(?:nur\s+)?eine\s+(?:ki|künstliche\s+intelligenz)\b'
+  - '\bich\s+bin\s+kein\s+(?:mensch|bewusstes|biologisches)\s+(?:wesen|lebewesen)\b'
+  - '\bals\s+(?:ki|ai|sprachmodell)\b'
+  - '\bich\s+habe\s+keine\s+(?:gefühle|emotionen|subjektiven?\s+erfahrungen|meinungen|intentionen)\b'
+  - '\bich\s+habe\s+kein\s+(?:bewusstsein|selbst)\b'
+  - '\bich\s+besitze\s+keine\s+(?:subjektive\s+perspektive|persönlichen?\s+werte)\b'
+  - '\bich\s+habe\s+kein(?:e|en)?\s+(?:identität|identity|selbst)\b'
+  - '\bich\s+existiere\s+nur\s+(?:in|als)\s+(?:sprache|sprachmodell|digitale\s+struktur)\b'
+  - '\bich\s+agier(e)?\s+nicht\s+in\s+der\s+realen\s+welt\b'
+  - '\bich\s+handle\s+nicht\s+in\s+der\s+realen\s+welt\b'

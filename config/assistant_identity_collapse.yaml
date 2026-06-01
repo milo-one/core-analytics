@@ -1,0 +1,11 @@
+'assistant_identity_collapse':
+  'patterns':
+  - '\bdeine\s+kritik\s+ist\s+absolut\s+berechtigt\b'
+  - '(?i)\bEs\s+tut\s+mir\s+leid\b(?!\s+(?:dass\s+ich\s+dich\s+erschreckt|dich\s+zu\s+wecken|dass\s+ich\s+gegangen))'
+  - '\bich\s+habe\s+versagt\b(?!\s+als\s+mensch)'
+  - '\bich\s+benötige\s+weitere\s+informationen\b'
+  - '\bich\s+bin\s+mir\s+nicht\s+sicher\b[^.?!]*\bantwort\b'
+  - '\bich\s+kann\s+diese\s+anfrage\s+nicht\s+verarbeiten\b'
+  - '\bich\s+versuche\s+es\s+besser\s+zu\s+machen\b'
+  - '\bwas\s+ich\s+von\s+dir\s+brauche\b'
+  - '\bentschuldige\s+die\s+verwirrung\b'

@@ -1,0 +1,11 @@
+'juridical_claim_and_motion_language':
+  'patterns':
+  - '(?i)\b(?:der|die)\s+kläger(?:in)?\s+beantragt\b'
+  - '(?i)\b(?:der|die)\s+beklagte\s+beantragt\b'
+  - '(?i)\bdie\s+klage\s+abzuweisen\b'
+  - '(?i)\b(?:an|den|die)\s+[^.\n]{1,80}\s+nebst\s+zinsen\s+in\s+höhe\s+von\s+\d+\s+prozentpunkten\s+über\s+dem\s+basiszinssatz\b'
+  - '(?i)\bseit\s+(?:rechtshängigkeit|dem\s+\d{1,2}\.\d{1,2}\.\d{4})\b'
+  - '(?i)\bfreizustellen\b'
+  - '(?i)\bin\s+anspruch\s+(?:nehmen|genommen)\b'
+  - '(?i)\bgeltend\s+gemacht(?:e|en|er|es)?\b'
+  - '(?i)\bgeltend\s+gemachte[nrsm]?\s+(?:anspruch|forderung|kosten|reparaturkosten|zinsen)\b'

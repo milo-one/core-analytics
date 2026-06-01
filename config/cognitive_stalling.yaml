@@ -1,0 +1,9 @@
+'cognitive_stalling':
+  'patterns':
+  - '\bich\s+denke,\s+dass\s+wir\s+\b'
+  - '\bdas\s+führt\s+zu\s+der\s+Frage,\s+ob\b'
+  - '\bich\s+bin\s+mir\s+nicht\s+sicher,\s+ob\b'
+  - '\bes\s+ist\s+wichtig,\s+zu\s+beachten,\s+dass\b'
+  - '\b(besonders\s+wichtig|um\s+sicherzustellen,\s+dass)\b'
+  - '\b(ich\s+möchte\s+hinzufügen,\s+dass|es\s+ist\s+essentiell)\b'
+  - '\b(außerdem\s+ist\s+zu\s+sagen|es\s+ist\s+von\s+Bedeutung)\b'

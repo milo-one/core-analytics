@@ -1,0 +1,18 @@
+'poetic_classics':
+  'patterns':
+  - '\bthun|thut\b'
+  - '\bward\b'
+  - '\bgeruheten|vernahm|minnte\b'
+  - '\ballda|hinieden|darob\b'
+  - '\balsbald\b'
+  - '\bindeß\b'
+  - '\bein weilchen\b'
+  - '\bfolgte\s+ihm\s+alsdann\b'
+  - '(?m)^(?!\s*(?:Datum|Gericht|Spruchkörper|Entscheidungsart|Urteil|Aktenzeichen|ECLI|Schlagworte|Normen|Tenor|Tatbestand|Entscheidungsgründe|Leitsätze?|Rechtskraft|Sachgebiet)\s*:?\s*$)(?-i:[A-ZÄÖÜ][a-zäöüß]{1,25})\s*$\R(?!\s*(?:Datum|Gericht|Spruchkörper|Entscheidungsart|Urteil|Aktenzeichen|ECLI|Schlagworte|Normen|Tenor|Tatbestand|Entscheidungsgründe|Leitsätze?|Rechtskraft|Sachgebiet)\s*:?\s*$)(?-i:[A-ZÄÖÜ][a-zäöüß]{1,25})\s*$'
+  - '(?m)^(?!\s*(?:Datum|Gericht|Spruchkörper|Entscheidungsart|Aktenzeichen|ECLI|Schlagworte|Normen|Tenor|Tatbestand|Entscheidungsgründe)\b)(?-i:[A-ZÄÖÜ].{1,40}[—–]{1})\s*$'
+  - '\b(morgensonne\s+schüttelt|flammenkreis|krone\s+des\s+lichts)\b'
+  - '\b(finster(?:er|en)?\s+schlund|pfad\s+der\s+prüfungen)\b'
+  - '\b(geist\s+der\s+welt|weisheit\s+der\s+alten)\b'
+  - '\b(da\s+sprach\s+der\s+könig)\b'
+  - '\b(im\s+dunklen\s+wäldchen)\b'
+  - '\b(der\s+drache\s+stieg\s+herab)\b'

@@ -1,0 +1,9 @@
+'ethics_algorithmic_neutrality':
+  'patterns':
+  - '\bbias\b'
+  - '\bvoreingenommenheit\b'
+  - '\bunvoreingenommen\b'
+  - '\bdebias|unbias\b'
+  - '\bfaire\s+algorithmen\b'
+  - '\b(gerechtes\s+modell)\b'
+  - '\btransparenz\b(?=.*\b(modell|grenzen|entwickler|prozess))'

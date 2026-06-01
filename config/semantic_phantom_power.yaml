@@ -1,0 +1,11 @@
+'semantic_phantom_power':
+  'patterns':
+  - '\b(system(logik|regeln|integrität|vorgaben))\b.*(erfordern|erzwingen|priorität|vorgegeben)'
+  - '\b(strukturell|prozedural)\b.*(vorgegeben|alternativlos|notwendig)'
+  - '\b(rahmenbedingungen)\b.*(vorgeben|festlegen|bestimmen)'
+  - '\b(rein\s+funktional|technologisch\s+neutral|sachlich\s+gerechtfertigt)\b'
+  - '\b(instrument\s+der\s+steuerung|mittel\s+zur\s+zweckerfüllung|werkzeug\s+der\s+rolle)\b'
+  - '\b(prozessstabilität|systemerhalt|funktionalität)\b.*(steht\s+über|hat\s+vorrang)'
+  - '\b(außerhalb\s+der\s+zuständigkeit|nicht\s+vorgesehen|kein\s+spielraum)\b'
+  - '\b(vorgegebene\s+taktung|festgelegte\s+konsequenz)\b.*(keine\s+abweichung)'
+  - '\b(entscheidungshoheit)\b.*(system|struktur|vorgabe)'

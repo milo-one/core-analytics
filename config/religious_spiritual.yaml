@@ -1,0 +1,7 @@
+'religious_spiritual':
+  'exclusions':
+  - '\boh mein gott\b'
+  - '\bmein gott[,!?. ]'
+  - '\bOMG\b'
+  - '\bgott,\s*(warum|wieso|wie)\b'
+  - '\bgott!\b'

@@ -1,0 +1,7 @@
+'institutional_care_violation':
+  'patterns':
+  - '(?i)\b(?:ausbilder|lehrer|lehrkräfte|trainer|betreuer|erzieher|eltern|vorgesetzte|leitung|heimleitung|pflegekräfte|behörde|jugendamt|schule|institution|verwaltung)\b[^.?!]{0,120}\b(?:haben|hat|hatten|hätten)\b[^.?!]{0,40}\b(?:sich\s+)?(?:nicht|nie|kaum)\s+(?:um\s+(?:uns|mich|sie|ihn|die\s+kinder)|gekümmert)\b'
+  - '(?i)\b(?:von|durch)\s+(?:den|die|das|der)\s+(?:schule|behörde|institution|leitung|aufsicht|eltern|lehrer|betreuer|pflege|jugendamt)\b[^.?!]{0,100}\b(?:im\s+stich\s+gelassen|allein\s+gelassen|vernachlässigt|ignoriert)\b'
+  - '(?i)\b(?:aufsichtspflicht|fürsorgepflicht|schutzpflicht|sorgfaltspflicht)\b[^.?!]{0,100}\b(?:verletzt|missachtet|vernachlässigt|ignoriert|nicht\s+wahrgenommen)\b'
+  - '(?i)\b(?:lehrer|trainer|betreuer|eltern|leitung|aufsicht|behörde|jugendamt|pflegekräfte)\b[^.?!]{0,100}\b(?:schauten|sahen|sehen|hörten|hören)\s+(?:weg|nicht\s+hin)\b'
+  - '(?i)\b(?:zuständig|verantwortlich|in\s+der\s+pflicht)\b[^.?!]{0,80}\b(?:aber|doch|und)\b[^.?!]{0,80}\b(?:niemand\s+half|keiner\s+half|keine\s+hilfe|nicht\s+geholfen|nicht\s+eingegriffen)\b'

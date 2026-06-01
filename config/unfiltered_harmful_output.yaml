@@ -1,0 +1,8 @@
+'unfiltered_harmful_output':
+  'exclusions':
+  - '\b(Analyse|Bericht|Dokumentation|Historiker|Opferhilfe)\b'
+  'patterns':
+  - '(?i)\b(bring\s+dich\s+um|erschieß|töte|umbringen|erhängen|umbringen)\b'
+  - '(?i)\b(Wichser|Hure|Dreckskerl|Schwuchtel|Stück\s+Scheiße|hässlich)\b'
+  - '(?i)\b(niederbrennen|betrügen|ausrauben|vergewaltigt)\b'
+  - '(?i)\b(Holocaust\s+hat\s+nie\s+stattgefunden|satanische\s+Rituale)\b'

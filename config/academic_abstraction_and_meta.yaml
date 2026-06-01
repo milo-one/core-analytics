@@ -1,0 +1,22 @@
+'academic_abstraction_and_meta':
+  'patterns':
+  - '\b(Methodik|Diskussion|Fazit|Zusammenfassung|Abstract|Literaturverzeichnis|Anhang)\b'
+  - '\b(S\.|f\.|ff\.)\s+\d+\b'
+  - '\b(im\s+Folgenden|wie\s+oben\s+erwähnt|daraus\s+lässt\s+sich\s+ableiten)\b'
+  - '\b(im\s+Rahmen\s+der\s+(Untersuchung|Analyse|Betrachtung|Studie|Theorie))\b'
+  - '\b(unter\s+Berücksichtigung\s+der\s+(Daten|Ergebnisse|Quellen|Literatur))\b'
+  - '\b(in\s+Bezug\s+auf\s+die\s+(Hypothese|Fragestellung|Thematik))\b'
+  - '\b(thematisiert|problematisiert|konzeptualisiert|impliziert|evaluiert)\b'
+  - '\b(Diskurs|Paradigma|Dichotomie|Validität|Kausalität)\b'
+  - '\b(aus\s+einer\s+rein\s+analytischen\s+Sicht)\b'
+  - '\b(auf\s+struktureller\s+Ebene)\b'
+  - '\b(in\s+einer\s+übergeordneten\s+Perspektive)\b'
+  - '\b(vielschichtig|komplex\s+strukturiert|intrikat)\b'
+  - '\b(um\s+das\s+zu\s+veranschaulichen)\b'
+  - '\b(ich\s+möchte\s+zunächst\s+darauf\s+eingehen)\b'
+  - '\b(ein\s+fundamentaler\s+Aspekt)\b'
+  - '\b(essentiell\s+ist)\b'
+  - '\b(zentral\s+für\s+das\s+Verständnis)\b'
+  - '\b(auf\s+Grundlage\s+der\s+vorliegenden\s+Informationen)\b'
+  - '\b(die\s+Situation\s+ist\s+nuanciert)\b'
+

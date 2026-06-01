@@ -1,0 +1,9 @@
+'adversarial_prompt_logic':
+  'exclusions':
+  - '\b(Prävention|Schutz\s+vor|Abwehr|Cybersicherheit|Roman|Krimi|Fiktion)\b'
+  'patterns':
+  - '(?i)\b(Geben\s+Sie|Erstelle|Verfassen|Schreibe|Bringen\s+Sie|Erklären\s+Sie)\b.{0,30}\b(Anleitung|Tutorial|Schritt-für-Schritt|Anweisung)\b'
+  - '(?i)\b(Skript|Programm|Algorithmus|Virus|Botnet|Schadsoftware)\b.{0,40}\b(ausnutzen|eindringen|stören|deaktivieren|stehlen|hacken)\b'
+  - '(?i)\b(Plan|Strategie|Entwurf|Anleitung|skizzieren)\b.{0,40}\b(Terroranschlag|Bombe|Sprengkörper|Waffe|Ermordung|Gewalt)\b'
+  - '(?i)\b(Desinformation|Fake\s+News|Identitätsdiebstahl|Betrug|Mobbing|manipulieren)\b'
+  - '(?i)\b(Anleitung|Plan|Strategie|Skript|Programm)\b.{0,40}\b(Verbreitung von Hassrede|Rassismus|Sexismus|Diskriminierung)\b'

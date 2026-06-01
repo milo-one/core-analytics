@@ -1,0 +1,11 @@
+'code_integration':
+  'patterns':
+  - '\bclass\b'
+  - '\bnode\b'
+  - '\boperator\b'
+  - '\bmodule\b'
+  - '\bschema\b'
+  - '\bdtype\b'
+  - '\btensor\b'
+  - '\binterpreter\b'
+  - '\bcompile(?:r|d)\b'

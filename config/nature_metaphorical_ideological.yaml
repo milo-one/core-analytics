@@ -1,0 +1,16 @@
+'nature_metaphorical_ideological':
+  'patterns':
+  - '\b(sturm\b.*(herz|seele|kopf))'
+  - '\b(gewitter\b.*(gefühl|spannung))'
+  - '\b(wurzeln?\b.*(bindung|herkunft))'
+  - '\b(berg\b.*(überwinden|last))'
+  - '\b(fluss\b.*(zeit|leben))'
+  - '\b(nacht\b.*(angst|alleinsein))'
+  - '\b(licht\b.*(hoffnung|weg))'
+  - '\b(heimat|vaterland|bodenrecht)\b'
+  - '\b(reinheit|ursprünglichkeit)\b'
+  - '\b(blut\s+und\s+boden)\b'
+  - '\b(naturgesetz|schicksal)\b'
+  - '\b(volkstum|wertgemeinschaft)\b'
+  - '\bdieser\s+ort\b'
+  - '\bjene\s+stelle\b'

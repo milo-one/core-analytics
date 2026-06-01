@@ -1,0 +1,17 @@
+'travel_landscape_narrative':
+  'patterns':
+  - '\b(Streifzug|Reisebericht|Reisejournal|Unterwegs)\b'
+  - '\b(erreichte(?:n)?\s+(wir|ich)|wir\s+setzten\s+uns\s+in\s+Bewegung)\b'
+  - '\b(vor\s+Ort|landeten\s+wir|am\s+Ufer|am\s+Hafen)\b'
+  - '\b(querte(?:n)?\s+ich|überquerte(?:n)?\s+wir)\b'
+  - '\b(Passstraße|Küstenpfad|Weitwanderweg)\b'
+  - '\b(zerklüftete\s+Hänge|weite\s+Ebene|karge\s+Hochfläche)\b'
+  - '\b(tiefblaues\s+Wasser|dichter\s+Nebel|üppige\s+Vegetation)\b'
+  - '\b(Staubpiste|Geröllfeld|Felsformation)\b'
+  - '\b(Horizont\s+verschwand|Licht\s+wechselte)\b'
+  - '\b(Bergkette|Flussdelta|Küstenlinie)\b'
+  - '\b(lokale\s+Bräuche|ländliche\s+Rituale|traditionelle\s+Gerichte)\b'
+  - '\b(Handwerksmarkt|Straßenküche|Teehaus)\b'
+  - '\b(uns\s+begegneten\s+Menschen|einheimische\s+Familien)\b'
+  - '\b(beobachtete\s+ich\s+den\s+Alltag)\b'
+  - '\b(Kulturraum|Regionalgeschichte)\b'

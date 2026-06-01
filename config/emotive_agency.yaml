@@ -1,0 +1,11 @@
+'emotive_agency':
+  'patterns':
+  - '\b(ich\s+habe|hab\s+ich)\s+(angst|furcht|panik|sorge|zweifel|hoffnung|wut)\b'
+  - '\b(ich\s+fühle|fühl\s+ich|ich\s+empfinde|empfinde\s+ich)\b'
+  - '\b(ich\s+spüre|spür\s+ich|ich\s+merke|merk\s+ich)\b'
+  - '\bich\s+bin\s+(traurig|glücklich|wütend|froh|erleichtert|müde|fertig|entsetzt|überfordert)\b'
+  - '\b(mir\s+ist\s+nach|mir\s+steht\s+der\s+sinn\s+nach)\b'
+  - '\b(ich\s+brauche|ich\s+benötige|ich\s+sehne\s+mich\s+nach)\b'
+  - '\b(mein\s+bedürfnis|meine\s+sehnsucht)\b'
+  - '\b(ich\s+verlange|ich\s+fordere)\b'
+  - '\b(es\s+verlangt\s+mich\s+nach|ich\s+bestehe\s+auf)\b'

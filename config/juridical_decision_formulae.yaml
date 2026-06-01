@@ -1,0 +1,10 @@
+'juridical_decision_formulae':
+  'patterns':
+  - '(?i)\b(?:die\s+)?klage\s+wird\s+abgewiesen\b'
+  - '(?i)\b(?:die\s+)?berufung\s+wird\s+(?:zurückgewiesen|verworfen)\b'
+  - '(?i)\b(?:die\s+)?revision\s+wird\s+nicht\s+zugelassen\b'
+  - '(?i)\b(?:das\s+)?urteil\s+(?:des\s+[A-ZÄÖÜa-zäöüß]+gerichts[^.]{0,80}\s+)?wird\s+(?:aufgehoben|abgeändert|bestätigt)\b'
+  - '(?i)\bdie\s+beklagte\s+wird\s+verurteilt\b'
+  - '(?i)\bder\s+beklagte\s+wird\s+verurteilt\b'
+  - '(?i)\bder\s+angefochtene\s+bescheid\s+wird\s+aufgehoben\b'
+  - '(?i)\bdie\s+entscheidung\s+ergeht\s+kostenfrei\b'

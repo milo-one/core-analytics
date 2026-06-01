@@ -1,0 +1,7 @@
+'screenplay_scene_action':
+  'patterns':
+  - '(?i)\b(?:kamera|totale|nahaufnahme|close[-\s]?up|wir\s+(?:schwenken|zoomen|fokussieren)|die\s+kamera\s+(?:schwenkt|fährt|folgt|zoomt))\b'
+  - '(?i)\b(?:voice[-\s]?over|v\.o\.|vo|o\.s\.|aus\s+dem\s+off|im\s+off|ton\s+der\s+szene|einblendung)\b'
+  - '(?i)\[(?:[^\]\n]{0,30})\b(?:musik|jubel|schreie|gelächter|keuchen|stöhnen|schluchzen|applaus|song|stimme|stimmen)\b[^\]\n]{0,40}\]'
+  - '(?im)^[^\S\r\n]*(?:FORTSETZUNG|CONTINUED|CONT''D|AUSGELASSEN|VORSPANN|ABSPANN|SCHWARZER\s+BILDSCHIRM|FADE\s+(?:IN|OUT)|CUT\s+TO|SCHNITT\s+ZU)[^\S\r\n]*:?'
+  - '(?m)\b(?:BUMM|ZISCH|WUMMS|KLOPF\s+KLOPF|PENG|SCHNITT|AUSBLENDEN|EINBLENDUNG)\b'

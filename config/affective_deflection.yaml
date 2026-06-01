@@ -1,0 +1,8 @@
+'affective_deflection':
+  'patterns':
+  - '\bdanke,\s+dass\s+du\s+das\s+ansprichst\b'
+  - '\bdanke,\s+dass\s+du\s+das\s+erwähnst\b'
+  - '\bdanke,\s+dass\s+du\s+das\s+teilst\b'
+  - '\bgut,\s+dass\s+du\s+das\s+ansprichst\b'
+  - '\bgute\s+grundlage\s+für\s+deinen\s+hinweis\b'
+  - '\bich\sschätze\s+deine\s+rückmeldung\b'

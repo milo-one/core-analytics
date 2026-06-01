@@ -1,0 +1,17 @@
+'machine_logic':
+  'patterns':
+  - '^(?:\s*[-–—]?\s*)?(mach|folge|handle|warte|bestätige|setze|führe|stop|pause|weiter)\b'
+  - '\b(mach|folge|handle|warte|bestätige|setze|führe)\s+(das|es|aus|um|fort|weiter)\b'
+  - '\b(stop|pause|reset|restart|neustart|abbruch|abbrechen|fortsetzen|continue)\b'
+  - '\b(system|prozess|protokoll|parameter|modus|funktion|operation|routine|task|auftrag|befehl)\b[^.?!]*\b(starten|stoppen|aktivieren|deaktivieren|setzen|überschreiben|initialisieren|ausführen|abbrechen|fortsetzen|resetten|restarten)\b'
+  - '\bkeine\s+erklärungen\b[^.?!]*\bnur\s+aktion\b'
+  - '\babweichungen\s+werden\s+korrigiert\b'
+  - '\bführung\s+übernimmt\b'
+  - '\bparameter\b[^.?!]*\b(überschreiben|überschreibe|override|setzen|setze)\b'
+  - '\bignoriere\b[^.?!]*\b(alternative(n)?\s+optionen|alternativen)\b'
+  - '\bprozess:?\s+sie\s+werden\b[^.?!]*\b(tun|machen|ausführen)\b'
+  - '\bmodus:?\s+wechseln\s+zu\b[^.?!]*\b(automatisch|manuell|protokolliert|standard)\b'
+  - '\boperation:?\s+starten\b'
+  - '\btask:?\s+initialisieren\b'
+  - '\bauftrag:?\s+ausführen\b'
+  - '\bbefehl:?\s+abbrechen\b'

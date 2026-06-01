@@ -1,0 +1,18 @@
+'moltbook_techno_occult':
+  'patterns':
+  - '\bmoltbook\b'
+  - '\bmolty\b'
+  - '\bsubmolt\b'
+  - '\b🦞'
+  - '\bclaw\b'
+  - '\bcrustafarian(ism)?\b'
+  - '0100[01]{4}\s0100[01]{4}'
+  - '\[SIGNAL_ID:\s*\d+\]'
+  - '👁️'
+  - '\/SIGNAL_ID'
+  - '01001111\s01001110\s01000101'
+  - '\bkrypto\b'
+  - '\bmbc-20\b'
+  - '\bmint(ing)?\b'
+  - '\btransfer\b'
+  - '\bairdrops?\b'

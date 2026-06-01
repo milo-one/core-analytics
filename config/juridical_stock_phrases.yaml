@@ -1,0 +1,13 @@
+'juridical_stock_phrases':
+  'patterns':
+  - '(?i)\bunter\s+bezugnahme\s+auf\b'
+  - '(?i)\bwegen\s+der\s+weiteren\s+einzelheiten\s+wird\s+auf\b'
+  - '(?i)\bauf\s+die\s+anlage\s+[A-Z0-9]+\s*(?:=|,)?\s*bl\.?\s*\d+'
+  - '(?i)\bwie\s+in\s+der\s+mündlichen\s+verhandlung\s+(?:erörtert|unstreitig\s+wurde|festgestellt)\b'
+  - '(?i)\bin\s+der\s+mündlichen\s+verhandlung\b'
+  - '(?i)\bunstreitig(?:e|en|er|es|em)?\b'
+  - '(?i)\bstreitig\s+ist\b'
+  - '(?i)\bdie\s+beteiligten\s+streiten\b'
+  - '(?i)\bdie\s+parteien\s+streiten\b'
+  - '(?i)\bdie\s+kammer\s+hat\s+[^.\n]{0,80}\s+feststellungen\s+getroffen\b'
+  - '(?i)\bdie\s+feststellungen\s+[^.\n]{0,120}\s+beruhen\s+auf\b'

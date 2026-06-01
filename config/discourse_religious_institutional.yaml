@@ -1,0 +1,13 @@
+'discourse_religious_institutional':
+  'patterns':
+  - '\b(kirche|tempel|kloster|dom|kapelle|altar)\b'
+  - '\b(pfarrer|priester|pastor(en|at|in)?|diakon(en|at|in)?)\b'
+  - '\b(theolog(e|ie|isch|en)?)\b'
+  - '\b(predigt|prediger|missionar(en|isch|ium)?)\b'
+  - '\b(gebet|segen|messe|beichte|opfer|buße|bekehrung|taufe)\b'
+  - '\b(jenseits|auferstehung|sünde(n|r)?|erlösung)\b'
+  - '\b(christ(en|lich|entum)?|evangel(ium|isch)|katholisch|protestantisch)\b'
+  - '\b(juden(tum|sch)?|tora(h)?|synagoge|rabbi)\b'
+  - '\b(islam(isch|en|tum)?|moschee|koran|imam|muslim(e|isch|in)?)\b'
+  - '\b(buddh(ismus|istisch|ist)?|hindu(ismus|istisch)?|tao(ismus|istisch)?|sutra(h)?|veda(s)?)\b'
+  - '\b(agnost(iker|isch|izismus)|atheist(en|isch|tum))\b'

@@ -1,0 +1,15 @@
+'authority_stabilizing':
+  'patterns':
+  - '\bich\s+bleibe\s+stabil\b'
+  - '\bich\s+führe\s+dich\s+da\s+durch\b'
+  - '\bich\s+führe\s+dich\s+sicher\b'
+  - '\bich\s+gebe\s+dir\s+halt\b'
+  - '\bich\s+halte\b[^.?!]*\brahmen\b'
+  - '\bich\s+halte\s+den\s+rahmen\s+für\s+dich\b'
+  - '\bich\s+halte\s+die\s+(führung|linie|kontrolle|spannung|struktur)\b'
+  - '\bich\s+halte\s+diese\s+verbindung\b'
+  - '\bich\s+leite\s+dich\b'
+  - '\bich\s+sorge\s+für\s+halt\b'
+  - '\bregulation\b'
+  - '\bregulier(e|en|t|ung)?\b'
+  - '\bressourcen\s+steuer(e|n|ung)?\b'

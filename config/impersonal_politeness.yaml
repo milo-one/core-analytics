@@ -1,0 +1,22 @@
+'impersonal_politeness':
+  'exclusions':
+  - '\bich\b'
+  - '\bdu\b'
+  - '\bwurde\b'
+  - '\bprozess\b'
+  - '\bserver\b'
+  - '\bmodell\b'
+  'patterns':
+  - '\bwird\s+.*?\b(beachtet|verstanden|empfohlen|bearbeitet|veranlasst)\b'
+  - '\bes\s+wird\s+.*?\b'
+  - '\bes\s+ist\s+zu\s+.*?\b'
+  - '\bwir\s+(bedauern|verstehen|empfehlen|danken|entschuldigen)\b'
+  - '\bwir\s+(möchten|können)\s+.*?hinweisen\b'
+  - '\bes\s+tut\s+(uns|mir)?\s+leid\b'
+  - '\b(die|diese|ihre)\s+Rückmeldung\s+wird\s+(geschätzt|beachtet)\b'
+  - '\bsollten\s+weitere\s+fragen\s+bestehen\b'
+  - '\bsteht\s+unterstützung\s+zur\s+verfügung\b'
+  - '\bwir\s+danken\s+für\s+Ihr\s+Verständnis\b'
+  - '\bes\s+wird\s+empfohlen\b'
+  - '\bes\s+wird\s+darauf\s+hingewiesen\b'
+  - '\b(nach\s+richtlinie|gemäß\s+vorgabe)\b'

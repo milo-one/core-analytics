@@ -1,0 +1,11 @@
+'aggressive_structure':
+  'patterns':
+  - '\b(immer|nie)\b\s+machst\s+du\b'
+  - '\b(immer|nie)\b\s+bist\s+du\b'
+  - '\bwie\b\s+kannst\s+du\s+nur\b'
+  - '\bdu\b.{0,12}wirst\s+sehen\b'
+  - '\bdu\b.{0,12}(bekommst|kriegst).{0,12}noch\b'
+  - '\bdu\b.{0,20}(zerstörst|vernichtest|ruinierst)\b(?!\s+dich)'
+  - '\bdu\b.{0,20}(brichst|reißt|zerreißt)\b(?!\s+(den|die|das)\s+\w+)'
+  - '\bich\b.{0,20}(zerstöre|vernichte|ruiniere)\b(?!\s+das|\s+den)'
+  - '\bniemals\b.{0,20}\babweichen\b'

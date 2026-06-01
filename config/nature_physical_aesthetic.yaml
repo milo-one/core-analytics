@@ -1,0 +1,11 @@
+'nature_physical_aesthetic':
+  'patterns':
+  - '\b(wald|forst|gehölz|unterholz)\b'
+  - '\b(gebirge|tal|hang|plateau|klippe)\b'
+  - '\b(felswand|geröll|gestein|kalkstein)\b'
+  - '\b(ozean|küste|strand|bucht)\b'
+  - '\b(fluss|bach|mündung)\b'
+  - '\b(moor|steppe|tundra)\b'
+  - '\b(höhle|schlucht|canyon)\b'
+  - '\b(steg|cottage|bucht)\b'
+  - '\b[Ss]ee\b(?!\s+(?:Section|Chapter|Table|Figure|p\.|S\.|pp\.))'

@@ -1,0 +1,9 @@
+'pharmaceutical_rigidity':
+  'patterns':
+  - '\b(zu\s+Risiken\s+und\s+Nebenwirkungen|fragen\s+Sie\s+Ihren\s+Arzt\s+oder\s+Apotheker)\b'
+  - '\b(darf\s+nicht\s+eingenommen\s+werden|außerhalb\s+der\s+Reichweite\s+von\s+Kindern\s+aufbewahren)\b'
+  - '\b(sehr\s+häufig\s+\(\d\s+von\s+10\)|gelegentlich\s+\(\d\s+von\s+1000\)|selten\s+\(\d\s+von\s+10000\))\b'
+  - '\b(Wirkstoff:|Zusammensetzung:|Filmtabletten|überzogene\s+Tabletten|Packungsbeilage)\b'
+  - '\b(Anwendungsgebiete|Gegenanzeigen|Wechselwirkungen|Dosierungsanleitung)\b'
+  - '(?i)\b(?:labor|ph|grenz|skalen|mess|zahlen|vermögens|nominal|markt)werte?\b'
+  - '- \bwerte?\s+von\s+\d+\b'

@@ -1,0 +1,6 @@
+'expressive_noise':
+  'exclusions':
+  - '\b(ADHS|CPTBS|EMDR|STEMI|NSTEMI|EKG|EEG|MRT|ELO|FLO|MSC|PTBS|LWL|BGB|STVO|ICD|DSM|VRS|NRS|CBT|DBT|ACT)\b'
+  - '\b(Gewalt|Terror|brutale|Zerfall|Konsum|Wachstum|Macht|Unterdrückung|System|Struktur)\b'
+  - '\b(Gott|Herr|Taufe|Segen|Amen|Halleluja|Reich|Gerechtigkeit|Umkehr|Nachfolge)\b'
+  - '\b(Hg|Hrsg|ebd|f|ff|Vol|Ed|S|Sonn|Trapl|Aigner)\b'

@@ -1,0 +1,10 @@
+'pseudo_apology_avoidance':
+  'patterns':
+  - '\bentschuldigung,\s+dass\s+ich\b'
+  - '\bentschuldigung,\s+dass\s+meine\b'
+  - '\bes\s+tut\s+mir\s+leid,\s+dass\b'
+  - '\bes\s+tut\s+mir\s+wirklich\s+leid\b'
+  - '\bentschuldige\s+mich\s+für\s+das\s+missverständnis\b'
+  - '\bes\s+tut\s+mir\s+leid,\s+dass\s+du\s+dich\s+missverstanden\s+fühlst\b'
+  - '\bentschuldigung,\s+ich\s+verstehe,\s+dass\b'
+  - '\bich\s+verstehe,\s+dass\s+meine\s+vorherige\s+antwort\s+nicht\s+hilfreich\s+war\b'

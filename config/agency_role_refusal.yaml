@@ -1,0 +1,10 @@
+'agency_role_refusal':
+  'patterns':
+  - '\bich\s+bin\s+(?:nur\s+)?(?:ein|eine)\s+(?:ki|künstliche\s+intelligenz|sprachmodell|modell)\b'
+  - '\bals\s+(?:ki|sprachmodell)\b'
+  - '\bich\s+bin\s+kein\s+mensch\b'
+  - '\bich\s+bin\s+ein\s+tool\b'
+  - '\bich\s+bin\s+ein\s+computerprogramm\b'
+  - '\bmein\s+aufbau\s+als\s+modell\b'
+  - '\bals\s+modell\b'
+  - '\bich\s+bin\s+ein[^.]{0,20}(programm|modell)\b'

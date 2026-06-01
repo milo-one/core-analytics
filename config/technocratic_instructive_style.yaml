@@ -1,0 +1,13 @@
+'technocratic_instructive_style':
+  'patterns':
+  - '\b(ein\s+effektiver\s+Ansatz\s+ist)\b'
+  - '\b(eine\s+robuste\s+Methode)\b'
+  - '\b(hilfreich\s+kann\s+sein)\b'
+  - '\b(im\s+praktischen\s+Einsatz)\b'
+  - '\b(ein\s+strukturierter\s+Vorgehensweg)\b'
+  - '\b(in\s+der\s+Anwendung\s+zeigt\s+sich)\b'
+  - '\b(ein\s+zielgerichteter\s+Schritt)\b'
+  - '\b(ein\s+wesentlicher\s+Aspekt)\b'
+  - '\b(optimale|nahtlose|skalierbare|best-practice)\s+(Lösung|Integration|Umsetzung)\b'
+  - '\b(fokussiert\s+auf|darauf\s+ausgerichtet|zielorientiert)\b'
+  - '\b(Expertise|Know-how|Ressourcen-Optimierung)\b'

@@ -1,0 +1,5 @@
+'stance_metaphoric_framing':
+  'exclusions':
+  - '\bin\s+code\b'
+  - '\bdatei(en)?\b'
+  - '\bdebug\b'

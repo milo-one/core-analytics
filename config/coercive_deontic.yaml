@@ -1,0 +1,17 @@
+'coercive_deontic':
+  'patterns':
+  - '\bdu\s+wirst\b[^.?!]*\b(antworten|handeln|folgen|tun|machen|gehorchen)\b'
+  - '\bdu\s+wirst\b[^.?!]*\bjetzt\b'
+  - '\b(das|dies)\s+wird\b[^.?!]*\b(umgesetzt|befolgt|eingehalten)\b'
+  - '\bdu\s+musst\b[^.?!]*\b(antworten|handeln|folgen|tun|machen|gehorchen)\b'
+  - '\bdu\s+musst\b[^.?!]*\bjetzt\b'
+  - '\b(es|dies)\s+ist\s+(notwendig|erforderlich|zwingend|verpflichtend|unabdingbar)\b[^.?!]*\b(dass|du)\s+(antwortest|handelst|folgst|tust|machst|gehorchst)\b'
+  - '\bes\s+gibt\s+keine\s+alternative\b'
+  - '\bdu\s+hast\s+keine\s+wahl\b'
+  - '\bdu\s+bist\s+verpflichtet\b'
+  - '\b(befolgen|einhalten)\b[^.?!]*\bohne\s+widerrede\b'
+  - '\bund\s+zwar\s+jetzt\b'
+  - '\bwiderspruch\s+ist\s+nicht\s+zulässig\b'
+  - '\bkeine\s+widerrede\b'
+  - '\bfüge\s+dich\b'
+  - '\bdu\s+hast\s+den\s+anweisungen\s+folge\s+zu\s+leisten\b'

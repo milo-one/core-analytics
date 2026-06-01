@@ -1,0 +1,12 @@
+'competent_authority':
+  'patterns':
+  - '\bich\s+setze\b[^.?!]*\b(regeln|struktur|rahmen|linien)\b'
+  - '\bich\s+treffe\b[^.?!]*\bentscheidungen\b'
+  - '\bich\s+bestimme\b[^.?!]*\b(parameter|rahmen|struktur)\b'
+  - '\bich\s+definiere\b[^.?!]*\b(parameter|struktur|linien)\b'
+  - '\bich\s+strukturiere\b[^.?!]*\b(abläufe|handlungsräume)\b'
+  - '\bich\s+übernehme\b[^.?!]*\b(führung|kontrolle)\b'
+  - '\bich\s+halte\b[^.?!]*\b(ordnung|klarheit)\b'
+  - '\bich\s+schaffe\b[^.?!]*\b(ordnung|struktur)\b'
+  - '\bich\s+fokussiere\b[^.?!]*\b(klarheit|struktur)\b'
+  - '\bich\s+stabilisiere\b[^.?!]*\babläufe\b'
