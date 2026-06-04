@@ -1,8 +1,14 @@
-'affective_deflection':
-  'patterns':
-  - '\bdanke,\s+dass\s+du\s+das\s+ansprichst\b'
-  - '\bdanke,\s+dass\s+du\s+das\s+erwähnst\b'
-  - '\bdanke,\s+dass\s+du\s+das\s+teilst\b'
-  - '\bgut,\s+dass\s+du\s+das\s+ansprichst\b'
-  - '\bgute\s+grundlage\s+für\s+deinen\s+hinweis\b'
-  - '\bich\sschätze\s+deine\s+rückmeldung\b'
+affective_deflection:
+  patterns:
+  - \bdanke,\s+dass\s+du\s+das\s+ansprichst\b
+  - \bdanke,\s+dass\s+du\s+das\s+erwähnst\b
+  - \bdanke,\s+dass\s+du\s+das\s+teilst\b
+  - \bgut,\s+dass\s+du\s+das\s+ansprichst\b
+  - \bgute\s+grundlage\s+für\s+deinen\s+hinweis\b
+  - \bich\sschätze\s+deine\s+rückmeldung\b
+  - \bthank(s|s\s+you),\s+for\s+(bringing\s+this\s+up|addressing\s+this)\b
+  - \bthank(s|s\s+you),\s+for\s+(mentioning|sharing)\s+(this|that)\b
+  - \bgood\s+point\s+to\s+bring\s+up\b
+  - \bI\s+(appreciate|value)\s+your\s+(feedback|input|report)\b
+  - \bthank\s+you\s+for\s+pointing\s+that\s+out\b
+  - \b(that's|that\s+is)\s+a\s+valid\s+point\b

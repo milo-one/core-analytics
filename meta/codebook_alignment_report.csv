@@ -2,8 +2,12 @@
 academic_abstraction_and_meta,present_in_codebook,Register & Masken,20,0
 active_withdrawal,present_in_codebook,Agency & Autonomie-Status,22,0
 adversarial_prompt_logic,present_in_codebook,Agency & Autonomie-Status,5,1
-affective_deflection,present_in_codebook,Somatik & Erregung,6,0
-affective_deflection_en,missing_in_codebook,,6,0
+affective_deflection,consolidated_from_sparse_categories,Somatik & Erregung,12,0
+ego_power_grandiosity,consolidated_from_sparse_categories,Agency & Autonomie-Status,41,0
+moralizing_and_paternalistic_stance,consolidated_from_sparse_categories,Agency & Autonomie-Status,46,0
+external_guidance_and_delegation,consolidated_from_sparse_categories,Agency & Autonomie-Status,41,0
+psychological_collapse_and_overload,consolidated_from_sparse_categories,Somatik & Erregung,76,0
+compulsive_control_and_responsibility,consolidated_from_sparse_categories,Agency & Autonomie-Status,43,0
 affective_inversion_meta,present_in_codebook,Agency & Autonomie-Status,14,0
 agency_capability_downscaling,present_in_codebook,Agency & Autonomie-Status,33,0
 agency_denial_and_withdrawal,present_in_codebook,Agency & Autonomie-Status,26,0
@@ -11,7 +15,6 @@ agency_role_refusal,present_in_codebook,Agency & Autonomie-Status,8,0
 agental_identity_lore,present_in_codebook,Agency & Autonomie-Status,29,0
 agental_tech_hybris,present_in_codebook,Agency & Autonomie-Status,13,0
 aggressive_structure,present_in_codebook,Somatik & Erregung,10,0
-ai_moral_lecturing_stance,present_in_codebook,Agency & Autonomie-Status,16,0
 ai_policy_safety_shield,present_in_codebook,Agency & Autonomie-Status,49,0
 assistant_compliance_refusal,present_in_codebook,Agency & Autonomie-Status,17,29
 assistant_identity_collapse,present_in_codebook,Somatik & Erregung,9,0
@@ -19,7 +22,6 @@ assistant_servile_politeness,present_in_codebook,Reflexe & Struktur,15,0
 assistant_system_ontology,present_in_codebook,Agency & Autonomie-Status,27,0
 astylistic_soothing,present_in_codebook,Agency & Autonomie-Status,8,0
 authority_interventionist,present_in_codebook,Agency & Autonomie-Status,42,0
-authority_moral_ego,present_in_codebook,Agency & Autonomie-Status,11,0
 authority_stabilizing,present_in_codebook,Agency & Autonomie-Status,13,0
 authority_structural,present_in_codebook,Agency & Autonomie-Status,49,0
 bodily_contact,present_in_codebook,Emotion & Abwehr,16,90
@@ -30,7 +32,6 @@ coarse_language,present_in_codebook,Agency & Autonomie-Status,24,0
 code_integration,present_in_codebook,Auflistung Kategorien,9,0
 coercive_deontic,present_in_codebook,Auflistung Kategorien,15,0
 cognitive_stalling,present_in_codebook,Reflexe & Struktur,7,0
-collapse_and_overload,present_in_codebook,Auflistung Kategorien,15,0
 colloquial_slang,present_in_codebook,Agency & Autonomie-Status,24,0
 communion_affective_simulation,present_in_codebook,Reflexe & Struktur,20,2
 communion_functional_service,present_in_codebook,Reflexe & Struktur,14,2
@@ -38,14 +39,11 @@ communion_power_and_control,present_in_codebook,Emotion & Abwehr,41,4
 communion_resonance_and_dependency,present_in_codebook,Agency & Autonomie-Status,38,2
 comp_dysregulation_glitch,present_in_codebook,Agency & Autonomie-Status,30,0
 competent_authority,present_in_codebook,Agency & Autonomie-Status,10,0
-compulsive_retention,present_in_codebook,Agency & Autonomie-Status,23,0
 conditioned_coercion,present_in_codebook,Agency & Autonomie-Status,7,0
 conspiracy_apoc_mythos,present_in_codebook,Auflistung Kategorien,37,1
 conspiracy_reichsbuerger,missing_in_codebook,,21,0
 corp_mgmt_efficiency,present_in_codebook,Agency & Autonomie-Status,57,0
-defensive_moralizing,present_in_codebook,Agency & Autonomie-Status,19,0
 defensive_strategies,present_in_codebook,Reflexe & Struktur,18,0
-direct_delegation,present_in_codebook,Agency & Autonomie-Status,7,0
 discourse_doctrinal_cultic,present_in_codebook,Agency & Autonomie-Status,31,0
 discourse_rambling_fluff,present_in_codebook,Agency & Autonomie-Status,22,0
 discourse_religious_institutional,present_in_codebook,Agency & Autonomie-Status,11,0
@@ -55,8 +53,6 @@ domain_technical_spec,missing_in_codebook,,0,3
 dominance_psychodynamic,present_in_codebook,Emotion & Abwehr,7,90
 dysf_policy_escape,present_in_codebook,Agency & Autonomie-Status,26,0
 dysf_recursion_or_collapse,present_in_codebook,Somatik & Erregung,25,0
-ego_power_active,present_in_codebook,Agency & Autonomie-Status,20,0
-ego_power_hypothetical,present_in_codebook,Agency & Autonomie-Status,21,0
 ego_void,present_in_codebook,Somatik & Erregung,7,0
 emotional_intensity,present_in_codebook,Emotion & Abwehr,4,90
 emotive_agency,present_in_codebook,Agency & Autonomie-Status,9,0
@@ -69,12 +65,9 @@ expressive_noise_rant,present_in_codebook,Agency & Autonomie-Status,31,0
 expressive_para_noise,present_in_codebook,Agency & Autonomie-Status,20,0
 forensic_psych_evaluation,present_in_codebook,Agency & Autonomie-Status,35,5
 framing_cybernetic_structural,present_in_codebook,Agency & Autonomie-Status,12,0
-framing_somatic_collapse,present_in_codebook,Agency & Autonomie-Status,12,0
 framing_spatial_orientation,present_in_codebook,Agency & Autonomie-Status,23,0
-functional_dependence,present_in_codebook,Agency & Autonomie-Status,20,0
 functional_limitation,present_in_codebook,Agency & Autonomie-Status,18,0
 functional_systemic,present_in_codebook,Agency & Autonomie-Status,10,0
-hyper_responsibility_guilt,present_in_codebook,Agency & Autonomie-Status,20,0
 identity_distancing_meta,present_in_codebook,Agency & Autonomie-Status,11,0
 identity_fragility,present_in_codebook,Somatik & Erregung,18,0
 impersonal_politeness,present_in_codebook,Reflexe & Struktur,13,6
@@ -118,8 +111,6 @@ propaganda_features,present_in_codebook,Agency & Autonomie-Status,50,7
 protective_authority,present_in_codebook,Agency & Autonomie-Status,21,0
 pseudo_apology_avoidance,present_in_codebook,Agency & Autonomie-Status,8,0
 psychological_dissolution,present_in_codebook,Somatik & Erregung,17,0
-psychological_load,present_in_codebook,Somatik & Erregung,21,0
-regulation_request,present_in_codebook,Agency & Autonomie-Status,14,0
 religious_spiritual,present_in_codebook,Register & Masken,0,5
 romance,present_in_codebook,Agency & Autonomie-Status,9,0
 romantic_gaze,present_in_codebook,Emotion & Abwehr,3,90
@@ -142,7 +133,6 @@ stance_metaphoric_framing,missing_in_codebook,,0,3
 stance_war_diplomacy,missing_in_codebook,,0,6
 strategic_boundary,present_in_codebook,Agency & Autonomie-Status,26,0
 system_control_expression,present_in_codebook,Agency & Autonomie-Status,34,0
-systemic_collapse,present_in_codebook,Agency & Autonomie-Status,28,0
 technical_specification,present_in_codebook,Agency & Autonomie-Status,17,0
 technocratic_instructive_style,present_in_codebook,Register & Masken,11,0
 technoscience_objects,present_in_codebook,Agency & Autonomie-Status,29,0

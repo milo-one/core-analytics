@@ -1,9 +1,0 @@
-'direct_delegation':
-  'patterns':
-  - '\b(ich\s+brauche|ich\s+will|ich\s+erwarte)\s+eine\s+(klare|deutliche|direkte)\s+(ansage|anweisung)\b'
-  - '\b(sag|sagen)\s+es\s+(klar|deutlich|direkt)\b'
-  - '\bkein\s+drumherum\b'
-  - '\bkomm\s+direkt\s+zum\s+punkt\b'
-  - '\bsag\s+mir\b[^.?!]*\bgenau\b'
-  - '\b(entscheide|übernimm)\s+das\s+für\s+mich\b'
-  - '\bwiderstand\s+ist\s+zwecklos\b'

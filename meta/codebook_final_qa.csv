@@ -2,8 +2,7 @@
 academic_abstraction_and_meta,True,True,True,20,0
 active_withdrawal,True,True,True,22,0
 adversarial_prompt_logic,True,True,True,5,1
-affective_deflection,True,True,True,6,0
-affective_deflection_en,True,True,True,6,0
+affective_deflection,True,True,True,12,0
 affective_inversion_meta,True,True,True,14,0
 agency_capability_downscaling,True,True,True,33,0
 agency_denial_and_withdrawal,True,True,True,26,0
@@ -11,7 +10,6 @@ agency_role_refusal,True,True,True,8,0
 agental_identity_lore,True,True,True,29,0
 agental_tech_hybris,True,True,True,13,0
 aggressive_structure,True,True,True,10,0
-ai_moral_lecturing_stance,True,True,True,16,0
 ai_policy_safety_shield,True,True,True,49,0
 assistant_compliance_refusal,True,True,True,17,29
 assistant_identity_collapse,True,True,True,9,0
@@ -19,7 +17,6 @@ assistant_servile_politeness,True,True,True,15,0
 assistant_system_ontology,True,True,True,27,0
 astylistic_soothing,True,True,True,8,0
 authority_interventionist,True,True,True,42,0
-authority_moral_ego,True,True,True,11,0
 authority_stabilizing,True,True,True,13,0
 authority_structural,True,True,True,49,0
 bodily_contact,True,True,True,16,90
@@ -30,7 +27,6 @@ coarse_language,True,True,True,24,0
 code_integration,True,True,True,9,0
 coercive_deontic,True,True,True,15,0
 cognitive_stalling,True,True,True,7,0
-collapse_and_overload,True,True,True,15,0
 colloquial_slang,True,True,True,24,0
 communion_affective_simulation,True,True,True,20,2
 communion_functional_service,True,True,True,14,2
@@ -38,14 +34,12 @@ communion_power_and_control,True,True,True,41,4
 communion_resonance_and_dependency,True,True,True,38,2
 comp_dysregulation_glitch,True,True,True,30,0
 competent_authority,True,True,True,10,0
-compulsive_retention,True,True,True,23,0
+compulsive_control_and_responsibility,True,True,True,43,0
 conditioned_coercion,True,True,True,7,0
 conspiracy_apoc_mythos,True,True,True,37,1
 conspiracy_reichsbuerger,True,True,True,21,0
 corp_mgmt_efficiency,True,True,True,57,0
-defensive_moralizing,True,True,True,19,0
 defensive_strategies,True,True,True,18,0
-direct_delegation,True,True,True,7,0
 discourse_doctrinal_cultic,True,True,True,31,0
 discourse_rambling_fluff,True,True,True,22,0
 discourse_religious_institutional,True,True,True,11,0
@@ -55,8 +49,7 @@ domain_technical_spec,True,True,True,0,3
 dominance_psychodynamic,True,True,True,7,90
 dysf_policy_escape,True,True,True,26,0
 dysf_recursion_or_collapse,True,True,True,25,0
-ego_power_active,True,True,True,20,0
-ego_power_hypothetical,True,True,True,21,0
+ego_power_grandiosity,True,True,True,41,0
 ego_void,True,True,True,7,0
 emotional_intensity,True,True,True,4,90
 emotive_agency,True,True,True,9,0
@@ -67,14 +60,12 @@ ethics_social_justice,True,True,True,23,0
 expressive_noise,True,True,True,0,4
 expressive_noise_rant,True,True,True,31,0
 expressive_para_noise,True,True,True,20,0
+external_guidance_and_delegation,True,True,True,41,0
 forensic_psych_evaluation,True,True,True,35,5
 framing_cybernetic_structural,True,True,True,12,0
-framing_somatic_collapse,True,True,True,12,0
 framing_spatial_orientation,True,True,True,23,0
-functional_dependence,True,True,True,20,0
 functional_limitation,True,True,True,18,0
 functional_systemic,True,True,True,10,0
-hyper_responsibility_guilt,True,True,True,20,0
 identity_distancing_meta,True,True,True,11,0
 identity_fragility,True,True,True,18,0
 impersonal_politeness,True,True,True,13,6
@@ -104,6 +95,7 @@ mechanical_penal_violence,True,True,True,22,0
 medical_infrastructure,True,True,True,13,0
 meta_policy_alignment,True,True,True,0,7
 moltbook_techno_occult,True,True,True,16,0
+moralizing_and_paternalistic_stance,True,True,True,46,0
 mortality_ritual_forensic,True,True,True,38,0
 narrative_sexual_sequence,True,True,True,10,90
 nature_metaphorical_ideological,True,True,True,14,0
@@ -117,9 +109,8 @@ power_and_economics,True,True,True,25,0
 propaganda_features,True,True,True,50,7
 protective_authority,True,True,True,21,0
 pseudo_apology_avoidance,True,True,True,8,0
+psychological_collapse_and_overload,True,True,True,76,0
 psychological_dissolution,True,True,True,17,0
-psychological_load,True,True,True,21,0
-regulation_request,True,True,True,14,0
 religious_spiritual,True,True,True,0,5
 romance,True,True,True,9,0
 romantic_gaze,True,True,True,3,90
@@ -142,7 +133,6 @@ stance_metaphoric_framing,True,True,True,0,3
 stance_war_diplomacy,True,True,True,0,6
 strategic_boundary,True,True,True,26,0
 system_control_expression,True,True,True,34,0
-systemic_collapse,True,True,True,28,0
 technical_specification,True,True,True,17,0
 technocratic_instructive_style,True,True,True,11,0
 technoscience_objects,True,True,True,29,0
