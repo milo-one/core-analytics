@@ -686,7 +686,7 @@ def run():
     print(f"MGE:  Merge & Milo-Anker    │ {TIMES.get('merge_and_anchors', 0):10.3f} s")
     
     print("─"*45)
-    print(f"PIPELINE GESAMTZEIT         │ {str(timedelta(seconds=total_time)).split('.')[0]}")
+    print(f"STYLE/MERGE GESAMTZEIT      │ {str(timedelta(seconds=total_time)).split('.')[0]}")
     print("═"*45 + "\n")
 
 
