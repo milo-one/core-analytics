@@ -1,9 +1,0 @@
-'juridical_party_roles':
-  'patterns':
-  - '(?i)\b(?:der|die)\s+kläger(?:in)?\b'
-  - '(?i)\b(?:der|die)\s+beklagte\b'
-  - '(?i)\b(?:der|die)\s+angefochtene(?:n|r|s)?\s+(?:bescheid|entscheidung|urteil)\b'
-  - '(?i)\b(?:der|die)\s+(?:angehörte|angeklagte|verurteilte)\b'
-  - '(?i)\bprozessbevollmächtigte(?:r|n)?\b'
-  - '(?i)\bberufungskläger(?:in)?|berufungsbeklagte(?:r)?\b'
-  - '(?i)\b(?:antragsteller|antragsgegner)(?:in)?\b'

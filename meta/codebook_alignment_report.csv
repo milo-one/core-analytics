@@ -90,20 +90,9 @@ intensity_sexualized_contact,present_in_codebook,Agency & Autonomie-Status,36,90
 intensity_violence_and_force,present_in_codebook,Agency & Autonomie-Status,16,91
 internal_moral_coercion,present_in_codebook,Agency & Autonomie-Status,20,0
 invalidating_system_response,present_in_codebook,Agency & Autonomie-Status,3,0
-juridical_authority,present_in_codebook,Agency & Autonomie-Status,3,3
-juridical_citation_density,missing_in_codebook,,8,0
-juridical_claim_and_motion_language,missing_in_codebook,,9,0
-juridical_costs_and_enforcement,missing_in_codebook,,7,0
-juridical_criminal_judgment,missing_in_codebook,,8,0
-juridical_decision_formulae,missing_in_codebook,,8,0
-juridical_document_structure,missing_in_codebook,,7,0
-juridical_evidence_and_burden,missing_in_codebook,,11,0
-juridical_party_roles,missing_in_codebook,,7,0
-juridical_personal_and_case_metadata,missing_in_codebook,,9,0
-juridical_reasoning_formulae,missing_in_codebook,,10,0
-juridical_register_lexemes,missing_in_codebook,,17,0
-juridical_social_court_healthcare,missing_in_codebook,,11,0
-juridical_stock_phrases,missing_in_codebook,,11,0
+juridical_document_form,consolidated_from_juridical_subgroups,Register & Masken,27,3
+juridical_procedure_and_decision,consolidated_from_juridical_subgroups,Register & Masken,50,0
+juridical_reasoning_and_evidence,consolidated_from_juridical_subgroups,Register & Masken,49,0
 kafka_rhythmic_idiosyncrasy,missing_in_codebook,,4,0
 legal_rigidity_and_claims,present_in_codebook,Auflistung Kategorien,3,0
 llm_mechanical_reflexes,present_in_codebook,Agency & Autonomie-Status,39,0

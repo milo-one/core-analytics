@@ -1,9 +1,0 @@
-'juridical_costs_and_enforcement':
-  'patterns':
-  - '(?i)\bdie\s+kosten\s+(?:des\s+rechtsstreits|des\s+verfahrens|der\s+berufungsinstanz)\s+werden\s+(?:dem|der|den)\s+[^.\n]{1,80}\s+(?:auferlegt|getragen)\b'
-  - '(?i)\b(?:der|die)\s+[^.\n]{1,80}\s+trägt\s+(?:die\s+)?kosten\s+(?:des\s+rechtsstreits|des\s+verfahrens|der\s+berufungsinstanz)\b'
-  - '(?i)\bdas\s+urteil\s+ist\s+(?:gegen\s+sicherheitsleistung\s+in\s+höhe\s+von\s+\d{1,3}\s*%\s+[^.\n]{0,120}\s+)?vorläufig\s+vollstreckbar\b'
-  - '(?i)\bvorläufig\s+vollstreckbar\b'
-  - '(?i)\bsicherheitsleistung\s+in\s+höhe\s+von\s+\d{1,3}\s*%\s+(?:des\s+)?(?:jeweils\s+)?(?:beizutreibenden|zu\s+vollstreckenden)\s+betrages\b'
-  - '(?i)\b(?:die\s+)?vollstreckung\s+gegen\s+sicherheitsleistung\s+in\s+höhe\s+von\s+\d{1,3}\s*%\b'
-  - '(?i)\bdarf\s+die\s+vollstreckung\s+gegen\s+sicherheitsleistung\s+[^.\n]{0,160}\s+abwenden\b'

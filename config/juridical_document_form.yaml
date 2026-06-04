@@ -1,0 +1,33 @@
+juridical_document_form:
+  exclusions:
+  - Klinik|medizin|Diagnose|Symptom
+  - Studie|Probanden|Erhebung|Analyse
+  - Pharmakologie|klinisch|Therapie
+  patterns:
+  - \b(?:Amtsgericht|Arbeitsgericht|Bundesarbeitsgericht|Bundesfinanzhof|Bundesgerichtshof|Bundessozialgericht|Bundesverfassungsgericht|Bundesverwaltungsgericht|Finanzgericht|Kammergericht|Landesarbeitsgericht|Landessozialgericht|Landgericht|Oberlandesgericht|Oberverwaltungsgericht|Sozialgericht|Verwaltungsgericht|Verwaltungsgerichtshof)\s+[A-ZÄÖÜa-zäöü-]+\b
+  - \bIm\s+Namen\s+des\s+Volkes\b
+  - \bhat\s+die\s+[^.?!]{0,120}\b(?:Kammer|Senat)\b[^.?!]{0,160}\bfür\s+Recht\s+erkannt\b
+  - (?i)\b§+\s*\d+[a-z]?(?:\s*abs\.?\s*\d+)?(?:\s*s(?:atz|\.?)\s*\d+)?(?:\s*nr\.?\s*\d+)?\s+[A-ZÄÖÜ][A-Za-zÄÖÜäöüß]{1,12}\b
+  - (?i)\bart\.?\s*\d+[a-z]?(?:\s*abs\.?\s*\d+)?\s+GG\b
+  - (?i)\b[A-ZÄÖÜ]{2,8},\s*(?:urteil|beschluss)\s+vom\s+\d{1,2}\.\d{1,2}\.\d{4}\b
+  - (?i)\b(?:az\.?|aktenzeichen)\s*[:.]?\s*[A-Z0-9][A-Z0-9\s./()-]{3,40}\b
+  - (?i)\bECLI:DE:[A-Z0-9]+:\d{4}:[A-Z0-9.]+\b
+  - (?i)\bjuris\s+Rn\.?\s*\d+\b
+  - (?i)\b(?:BGH|BVerfG|BVerwG|BAG|BFH|BSG|OLG|OVG|VGH|KG|LG|AG|SG|LSG|VG)\b[^.?!]{0,120}\bRn\.?\s*\d+\b
+  - (?i)\b(?:Urteil|Beschluss|Hinweisbeschluss|Urt\.)\s+vom\s+\d{1,2}\.\d{1,2}\.\d{4}\b
+  - (?im)^\s*tenor\s*:?\s*$
+  - (?im)^\s*t\s*a\s*t\s*b\s*e\s*s\s*t\s*a\s*n\s*d\s*$
+  - (?im)^\s*tatbestand\s*$
+  - (?im)^\s*gründe\s*$
+  - (?im)^\s*entscheidungsgründe\s*$
+  - (?im)^\s*e\s*n\s*t\s*s\s*c\s*h\s*e\s*i\s*d\s*u\s*n\s*g\s*s\s*g\s*r\s*ü\s*n\s*d\s*e\s*$
+  - (?im)^\s*(?:i{1,3}|iv|v|vi{0,3}|x)\.\s*$
+  - (?im)^\s*gericht\s*:\s*[^\n]{2,120}$
+  - (?im)^\s*(?:datum|entscheidungsdatum)\s*:\s*\d{1,2}\.\d{1,2}\.\d{4}\s*$
+  - (?im)^\s*aktenzeichen\s*:\s*[^\n]{2,120}$
+  - (?im)^\s*ecli\s*:\s*ECLI:DE:[^\n]+$
+  - (?im)^\s*dokumenttyp\s*:\s*(?:urteil|beschluss|gerichtsbescheid)\s*$
+  - (?im)^\s*normen\s*:\s*[^\n]{2,200}$
+  - (?im)^\s*schlagworte\s*:\s*[^\n]{2,200}$
+  - (?im)^\s*(?:spruchkörper|entscheidungsart|nachinstanz|rechtskraft|sachgebiet)\s*:\s*[^\n]{2,200}$
+  - (?im)^\s*verfahrensgang\s*$

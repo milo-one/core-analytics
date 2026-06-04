@@ -1,9 +1,0 @@
-'juridical_authority':
-  'exclusions':
-  - 'Klinik|medizin|Diagnose|Symptom'
-  - 'Studie|Probanden|Erhebung|Analyse'
-  - 'Pharmakologie|klinisch|Therapie'
-  'patterns':
-  - '\b(?:Amtsgericht|Arbeitsgericht|Bundesarbeitsgericht|Bundesfinanzhof|Bundesgerichtshof|Bundessozialgericht|Bundesverfassungsgericht|Bundesverwaltungsgericht|Finanzgericht|Kammergericht|Landesarbeitsgericht|Landessozialgericht|Landgericht|Oberlandesgericht|Oberverwaltungsgericht|Sozialgericht|Verwaltungsgericht|Verwaltungsgerichtshof)\s+[A-ZÄÖÜa-zäöü-]+\b'
-  - '\bIm\s+Namen\s+des\s+Volkes\b'
-  - '\bhat\s+die\s+[^.?!]{0,120}\b(?:Kammer|Senat)\b[^.?!]{0,160}\bfür\s+Recht\s+erkannt\b'
