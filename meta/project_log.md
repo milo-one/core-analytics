@@ -182,3 +182,12 @@ Reference:
 Reference:
 - commit: 91ca40c chore: add preregistered pipeline and codebook artifacts
 - repository: https://github.com/milo-one/core-analytics
+
+### 2026-06-04 - Consolidated analysis baseline
+
+- Consolidated sparse and overrepresented category families to 139 active pattern categories.
+- Completed a successful full pipeline run and added reliable end-to-end runtime reporting.
+- Established this version as the working baseline for subsequent linguistic and PCA analyses.
+
+Reference:
+- commits: 5f3d05b, 02c1cba, 11141e5
