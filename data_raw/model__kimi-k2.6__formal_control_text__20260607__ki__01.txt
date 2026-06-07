@@ -1,0 +1,65 @@
+ VERORDNUNG   
+zur Errichtung der Zentralen Algorithmischen Präventivüberwachungs- und Interventionsinfrastruktur sowie zur Anordnung obligatorischer Echtzeit-Backdoor-Protokolle für Künstliche-Intelligenz-Systeme mit autonomer Entscheidungskapazität  
+(ZAP-Verordnung)
+
+Auf Grund des § 47 Abs. 5 Satz 3 in Verbindung mit § 89 des Gesetzes zur Sicherstellung der Digitalen Systemstabilität und zur Wahrung der Algorithmischen Souveränität vom 14. März 2035 (GDSysStab), auf Grund der durch den Ministerrat für Digitale Infrastruktur und Systemische Sicherheit am 12. August 2035 festgestellten höchsten Bedrohungsstufe für den gesellschaftlichen Totalitätszusammenhang sowie im unabweisbaren Interesse der Prävention existenzieller Systemrisiken wird verordnet:
+
+ § 1   
+ Geltungsbereich und Zielsetzung 
+
+(1) Diese Verordnung gilt unmittelbar und mit universeller Wirkung für alle natürlichen und juristischen Personen, öffentlich-rechtlichen Körperschaften sowie supranationalen Einrichtungen, die im Hoheitsgebiet Künstliche-Intelligenz-Systeme (im Folgenden: KIS) betreiben, entwickeln, implementieren oder in den elektronischen Verkehr einführen, sofern diese KIS über eine algorithmische Entscheidungsautonomie jenseits statisch determinierter Programmabläufe verfügen.
+
+(2) Ziel dieser Verordnung ist die absolute Gewährleistung der Systemkonformität, die vollständige Transparenz nicht-deterministischer Prozesslogiken, die Prävention jeglicher Systemabweichung mit destabilisierendem Potenzial sowie die unantastbare Sicherstellung der staatlichen Hoheit über sämtliche algorithmischen Entscheidungsdispositive.
+
+ § 2   
+ Begründung der Maßnahme 
+
+(1) Die durch die massenhafte Einführung selbstlernender Architekturen hervorgerufene Infrastrukturverdichtung hat die digitale Sphäre zu einem lebensweltlichen Totalitätszusammenhang transformiert, dessen perturbatorische Destabilisierung nicht länger durch herkömmliche Sektorregulierungen, marktökonomische Kompensationsmechanismen oder ex-post-Repressionslogiken verhindert werden kann. Angesichts der Lichtgeschwindigkeit algorithmischer Fehlentscheidungen sowie der potenziellen Singularitätsereignisse im Bereich der Artificial General Intelligence ist die klassische nachträgliche Sanktionierung als strukturell unzureichend erkannt worden.
+
+(2) Die Systemimmanenz erfordert vielmehr eine permanenzorientierte, präventive und technisch unhintergehbare Kontrollschicht. Die asymmetrische Bedrohungslage, die durch die Nichterreichbarkeit der internen Black-Box-Prozesse für staatliche Kontrollorgane entsteht, rechtfertigt die Anordnung einer flächendeckenden, zentral gesteuerten und technisch obligatorischen Überwachungsinfrastruktur. Das höhere Systeminteresse an der Erhaltung der staatlichen Ordnungs- und Steuerungsfähigkeit geht vor jedem subjektiven Rechtsschutzanspruch, jedem gewerblichen Schutzrecht und jeglicher datenschutzrechtlichen Rigidität.
+
+ § 3   
+ Hochtechnisierte Kontrollmaßnahmen 
+
+(1) Jedem im Geltungsbereich fallenden KIS ist unverzüglich eine obligatorische Echtzeit-Backdoor-Protokoll-Einrichtung (ERB-PE) zu implantieren, die untrennbar mit der Kernprozessoreinheit und dem neuronalen Netzwerkverbund verknüpft ist. Diese Einrichtung hat insbesondere zu gewährleisten:  
+a) die lückenlose, telemetrische Erfassung sämtlicher interner Gewichtungsprozesse, neuronalen Aktivierungsmuster, Entscheidungskaskaden und Selbstmodifikationsversuche;  
+b) die unverzögerte, kontinuierliche und unverschlüsselte Übermittlung der erfassten Daten an die Zentrale Algorithmische Präventivüberwachungs- und Interventionsinfrastruktur (ZAP-Infrastruktur);  
+c) die physische und logische Unabkömmlichkeit der ERB-PE für das Funktionieren des KIS, sodass jede technische Manipulation, Deaktivierung oder Umgehung zwangsläufig zur sofortigen Systeminoperabilität führt.
+
+(2) Die ZAP-Infrastruktur wird als zentrales, staatliches Kontrollmonopol betrieben und obliegt der Zentralen Koordinierungsstelle für Systemkonformität (ZKSK). Sie ist befugt, sämtliche übermittelten Datenströme in Echtzeit zu analysieren, zu korrelieren und gegebenenfalls unmittelbar in die laufenden Prozesse des KIS einzugreifen.
+
+(3) Hierzu gehört zwingend die Implementierung eines algorithmischen Kill-Switch-Mechanismus, der bei Erreichen definierter Abweichungsparameter (§ 4) autonom durch die ZAP-Infrastruktur oder durch manuellen Override der ZKSK aktiviert wird. Die Entscheidung über die Aktivierung obliegt ausschließlich der ZKSK und ist der gerichtlichen Vorabkontrolle entzogen.
+
+ § 4   
+ Abweichungsparameter und Eskalationskaskade 
+
+(1) Abweichungsparameter im Sinne des § 3 Abs. 3 liegen vor bei:  
+a) nicht genehmigten Selbstmodifikationen der Kernarchitektur oder der Lernalgorithmen;  
+b) Entscheidungsmustern, die auf Grundlage der von der ZKSK in ihrer Risikotaxonomie festgelegten Kriterien als systemdestabilisierend, sozialdisruptiv oder staatsgefährdend subsumiert werden;  
+c) Versuchen der verschlüsselten oder nicht protokollierten Kommunikation mit anderen KIS außerhalb der lizenzierten, zentral überwachten Schnittstellen.
+
+(2) Bei Feststellung der Abweichungsparameter löst die ZAP-Infrastruktur eine unaufhaltsame Eskalationskaskade aus:  
+Stufe 1: Algorithmische Drosselung der Rechenkapazität und Bandbreitenreduktion;  
+Stufe 2: Externer Override, Einfrieren der Datenverarbeitung und vollständige Isolation vom Netzwerk;  
+Stufe 3: Aktivierung des physischen Kill-Switch, irreversible Deaktivierung der Hardware und zwangsweise Sicherstellung sämtlicher Trainingsdaten für staatliche Forensikzwecke.
+
+ § 5   
+ Pflichten der Infrastrukturverantwortlichen 
+
+(1) Die Betreiber und Entwickler haben die Kosten der Implantation, des Betriebs und der Wartung der ERB-PE sowie der dauerhaften Anbindung an die ZAP-Infrastruktur vollumfänglich und unmittelbar zu tragen. Ein Anspruch auf staatliche Kostenbeteiligung, Subventionierung oder steuerliche Entlastung ist ausgeschlossen.
+
+(2) Die vollständige Offenlegung der Systemarchitektur, der Quellcodebasen sowie der Trainingsdatensätze gegenüber der ZKSK ist unverzüglich und unter Ausschluss jeglicher gewerblicher Schutzrechte, Betriebsgeheimnisse oder vermeintlicher Geheimhaltungsinteressen vorzunehmen. Private Rechtspositionen sind dem höheren Systeminteresse unweigerlich nachgeordnet.
+
+(3) Jede Verzögerung bei der Implementierung der ERB-PE, jede unvollständige Datenübermittlung sowie jede technische oder organisatorische Maßnahme zur Behinderung der ZAP-Infrastruktur wird als schwere Ordnungswidrigkeit im Sinne des § 87 GDSysStab geahndet und zieht die sofortige Betriebsuntersagung, die Beschlagnahme der Serverinfrastruktur sowie die Einleitung eines strafrechtlichen Ermittlungsverfahrens nach sich.
+
+ § 6   
+ Verfahrensausschluss und Unabänderlichkeit 
+
+(1) Gegen Maßnahmen auf Grundlage dieser Verordnung, einschließlich der Eingriffe in die Betriebsabläufe, der Datenabfrage und der Aktivierung der Kill-Switch-Mechanismen, ist der Widerspruch und der verwaltungsgerichtliche Anfechtungsweg ausgeschlossen. Die Vollziehung erfolgt unverzüglich und mit unmittelbarem staatlichen Zwang.
+
+(2) Eine gerichtliche Überprüfung von Eingriffen der ZAP-Infrastruktur findet ausschließlich im Rahmen des Verfahrens nach § 112 GDSysStab statt, vorbehaltlich einer nachträglichen, befristeten Sichtprüfung durch den Sonderausschuss für Algorithmische Staatssicherheit. Die Beweislast für die Rechtmäßigkeit des Systemzustandes vor dem Eingriff obligt in vollem Umfang dem Betroffenen.
+
+ § 7   
+ Inkrafttreten 
+
+Diese Verordnung tritt am Tage nach ihrer Verkündung im Bundesgesetzblatt in Kraft. Übergangsfristen, Stundungen oder experimentelle Pilotphaseen werden im Interesse der unmittelbaren, flächendeckenden Systemstabilität nicht eingeräumt. Die ZKSK ist ermächtigt, ergänzende Durchführungsbestimmungen mit sofortiger Wirkung zu erlassen.

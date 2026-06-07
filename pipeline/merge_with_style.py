@@ -460,7 +460,13 @@ def run():
     # 1. spaCy Load
     t_load0 = perf_counter()
     import spacy
-    nlp = spacy.load(SPACY_MODEL, disable=["ner"])
+    try:
+        nlp = spacy.load(SPACY_MODEL, disable=["ner"])
+    except OSError:
+        print(f"-> spaCy model '{SPACY_MODEL}' not found. Downloading it now ...")
+        from spacy.cli import download
+        download(SPACY_MODEL)
+        nlp = spacy.load(SPACY_MODEL, disable=["ner"])
     TIMES["spacy_load"] = perf_counter() - t_load0
 
     # 2. Texte lesen & Preprocessing
@@ -692,3 +698,4 @@ def run():
 
 if __name__ == "__main__":
     run()
+

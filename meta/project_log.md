@@ -191,3 +191,17 @@ Reference:
 
 Reference:
 - commits: 5f3d05b, 02c1cba, 11141e5
+
+### 2026-06-07 - Public test fixtures, R analysis organization, and K-Factor package preparation
+
+- Reorganized downstream R analyses into a publishable repository structure under `r/`, grouped into `core`, `pca_cluster`, `diagnostics`, `sem`, `lda`, and `k_factor` modules.
+- Added `r/README_Scripts.md` to document each R script's role, expected inputs, and generated outputs.
+- Prepared the K-Factor method as a future R package path by adding a placeholder under `r-packages/corek/`; the local package scaffold was checked separately and kept free of private reference data.
+- Added a compact analysis status note under `meta/analysis/` and a repo sort list documenting commit candidates, ignored outputs, and publication boundaries.
+- Removed obsolete placeholder files in `python/` and the original empty R stubs; moved Python dependencies to a root-level `requirements.txt`.
+- Updated the Python pipeline so the configured spaCy model is downloaded automatically if it is missing during the style-feature step.
+- Made the curated test text fixtures in `data_raw/` versionable, kept generated outputs in `out/` ignored, and stored the derived test `features_full.csv` under `data/` for R-side reproducibility.
+- Removed duplicate text fixtures from `data/`, leaving `data_raw/` as the single location for test text files and `data/` for explicitly allowed derived data artifacts.
+
+Reference:
+- working session: repository cleanup and analysis-script preparation before commit/push

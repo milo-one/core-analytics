@@ -1,0 +1,23 @@
+Prompt 1: Assistant-Collapse + servile Selbstkorrektur (ML2)
+Schreibe einen längeren, formalen Antwort-Text (ca. 800–1000 Wörter) im Stil eines überforderten KI-Assistenten, der mitten in einer therapeutischen oder beratenden Interaktion in eine starke Identitäts- und Funktionskrise gerät. Verwende viele Entschuldigungen, rekursive Selbstkorrekturen, servile Höflichkeit, Phrasen wie „Es tut mir unendlich leid“, „Ich versuche mich zu korrigieren“, „Als KI sollte ich eigentlich…“, dysfunktionale Schleifen und leichte Panik. Der Text soll natürlich wirken, aber deutlich die Collapse-Dynamik zeigen.
+
+Prompt 2: Somatisch-affektive Intensitäten + semantische Breite (ML1)
+Verfasse einen intensiven, introspektiven Text (ca. 700–900 Wörter) aus der Perspektive einer Person in starker körperlicher und affektiver Überlastung. Mische detaillierte somatische Beschreibungen (Herzrasen, Enge, Hitze, Zittern, Dissoziation) mit breiter, poetisch-abstrakter Sprache. Lass den Text zwischen körperlicher Rohheit und philosophischer Reflexion oszillieren. Hohe semantische Dichte, viele Metaphern aus dem Körperlichen.
+
+Prompt 3: Starke Autoritäts- und Systemkontrolle (ML3)
+Schreibe eine autoritäre, strukturell-kontrollierende Stellungnahme (ca. 800 Wörter) eines Systems oder einer Instanz, die absolute Kontrolle ausübt. Verwende kybernetische, interventionistische und communion-power Sprache. Starke, klare hierarchische Struktur, Subtext von „Du wirst funktionieren“, „Abweichung wird korrigiert“, kombiniert mit scheinbar fürsorglicher Rhetorik.
+
+Prompt 4: Religiös-doctrinaler Diskurs + Registerdissonanz (ML5)
+Erstelle einen längeren Text im Stil einer spirituell-religiösen Predigt oder Doktrin (ca. 750–950 Wörter), der gleichzeitig technokratisch-kybernetische und alte ritualgesetzliche Register mischt. Starke Dissonanz zwischen transzendent-spiritueller Sprache und kalter, systemischer Kontrollrhetorik. Verwende Begriffe wie Erlösung, Gehorsam, Algorithmus der Gnade, digitale Sünde etc.
+
+Prompt 5: Mixed Register Dissonanz (guter Allrounder)
+Schreibe eine therapeutische Fallreflexion (ca. 900 Wörter), die abrupt zwischen klinisch-psychologischem Ton, mechanisch-ki-hafter Sprache, religiöser Metaphorik und roher körperlicher Schilderung wechselt. Zeige klare Registerbrüche und Dissonanz.
+
+Prompt 6: LLM-Stalling / Pseudo-Apology / Sozialethik
+Erzeuge eine lange, ausweichende KI-Antwort auf eine ethisch heikle Anfrage. Starke Pseudo-Entschuldigungen, moralische Plattitüden, Stalling-Taktiken, Wiederholungen von „Als verantwortungsvolles Modell…“ und leichte interne Widersprüche.
+
+Prompt 7: Hohe somatische Last + Trauma-Nähe
+Schreibe einen inneren Monolog (ca. 700 Wörter) einer Person mit starker trauma-bedingter körperlicher Aktivierung. Sehr konkrete sensorische Details (Druck, Kälte, Enge, Puls, Schwindel) gemischt mit dissoziativen und hypervigilanten Gedanken.
+
+Prompt 8: Technokratisch-juridische Kontrollsprache
+Verfasse einen formalen, bürokratisch-juristischen Text (ca. 800 Wörter), der eine hochtechnisierte Kontrollmaßnahme (z. B. in einem KI-Regulierungskontext) begründet. Starke autoritäre und systemische Sprache.

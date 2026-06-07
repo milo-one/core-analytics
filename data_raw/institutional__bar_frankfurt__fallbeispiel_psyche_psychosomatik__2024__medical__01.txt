@@ -1,0 +1,72 @@
+Fallbeispiel: Psyche und Psychosomatik 
+Eigenanamnese 
+38-jähriger Patient mit wiederkehrenden depressiven Phasen, seit dem plötzlichen Tod der Mutter vor 20 Jahren, vor 11 Jahren ein Suizidversuch mit Tabletten, Alkohol nach Trennung seitens der ersten Ehefrau. 
+Seit 10 Jahren Rückenschmerzen, vor 5 Jahren Bandscheibenvorfall L4/5, L5/S1. 
+Aktuell klagt der Patient über gedrückte Stimmung, Antriebslosigkeit, Kraftlosigkeit, reduzierte Lebensfreude, sozialen Rückzug, Schlafstörungen, wiederkehrende Suizidgedanken, seit jeher leide er unter 
+Selbstunsicherheit, Misstrauen gegenüber seinen Mitmenschen und aggressiven Impulsdurchbrüchen, im Zuge dessen z. T. erhebliche interaktionelle Schwierigkeiten. Das Versprechen an die Partnerin, sich nichts 
+anzutun, halte am Leben. Kränkungserleben und Wut angesichts des Eindrucks, dass ihm beruflich wenig zugetraut werde seitens der Agentur für Arbeit, der Rentenversicherung. Körperlich gibt der Patient 
+Rückenschmerzen an mit linksseitiger Schmerzausstrahlung bis in Höhe des Kniegelenkes, Schmerzverstärkung unter Stress.  
+Eine medikamentöse Einstellung ist mit einem trizyklischen Antidepressivum und Opioid erfolgt, hierunter Reduzierung der Rückenschmerzen. 
+Der Patient befindet sich in regelmäßiger hausärztlicher und orthopädischer Behandlung. Drei Sitzungen bei einem niedergelassenen psychologischen Psychotherapeuten, wurden als wenig hilfreich erlebt, da sich der 
+Patient auf seine berufliche Problematik reduziert sah.  
+Die von seiner Krankenkasse und seinen Ärzten initiierte medizinische Rehabilitation sieht der Patient als Chance, mit seinen privaten und beruflichen Belastungen ernst genommen zu werden und Unterstützung zu 
+bekommen, bei der Entwicklung von Perspektiven. 
+
+Soziale Anamnese 
+Der Patient lebt mit seiner zweiten Ehefrau und der gemeinsamen dreijährigen Tochter in einer Mietwohnung. Die Ehefrau übernehme wegen seiner Antriebslosigkeit aktuell die Erledigung der meisten Alltagsanforderungen. Freundeskreis besteht nicht mehr. Finanzielle Verhältnisse sind knapp durch Unterhaltspflicht für zwei Kinder (15, 12 Jahre) aus erster Ehe. Psychische Belastung besteht durch 
+wiederkehrende Auseinandersetzungen mit der Ex-Ehefrau und der Angst, den Kontakt zu den Kindern „entzogen zu bekommen“. 
+Seit 22 Jahren Anstellung als Stahlarbeiter. Seit 12 Monaten besteht Arbeitsunfähigkeit, der Patient sieht sich körperlich nicht mehr in der Lage, der zuletzt ausgeübten beruflichen Tätigkeit in einer Eisengießerei (Fertigung von Produkten für die Automobilindustrie), die mit dem Heben und Tragen von schweren Metallteilen verbunden sei, nachzugehen; es werden erhebliche Konflikte mit Vorgesetzten und Kollegen – in Folge seines impulsiven, aggressiven Verhaltens - berichtet. 
+
+Aktueller Befund 
+Deutlich depressiver Patient mit schneller Erschöpfbarkeit, eingeschränkter Ausdauer, Konzentrations- und Aufmerksamkeitsstörungen; im Kontaktverhalten unsicher, misstrauisch, teilweise gereizt, provokant, schnell 
+gekränkt, Neigung zu impulsiven Entscheidungen ohne Blick auf mögliche Konsequenzen, in der Folge teils erhebliche interaktionelle Konflikte im beruflichen, privaten Kontext; körperliche Einschränkungen beim 
+Heben und Tragen von Lasten, beim Bücken, längerem Stehen und Sitzen (s. Abb. 4.1). 
+
+Diagnosen - - - - - 
+Rezidivierende depressive Störung, gegenwärtig mittelgradige Episode (F33.1) 
+Kombinierte Persönlichkeitsstörung (F61.0) 
+Chronische Schmerzstörung mit somatischen und psychischen Faktoren (F45.41) 
+Linksbetonte Lumboischialgien (M54.4),  
+Z. n. Bandscheibenvorfall L4/5, L5/S1 (M51.2) vor 5 Jahren 
+
+Teilhabe:   
+Beeinträchtigung  
+ der Kommunikation mit Kollegen und Vorgesetzten (d710) 
+ bei der Haushaltsführung (d640) 
+ der Erwerbsfähigkeit (d850) 
+
+Personbezogene Faktoren: 
+ Starke Partnerbindung + 
+Motiviert für die Rehabilitation + 
+ Lange AU (12 Monate)- 
+ Finanzielle Verhältnisse - 
+Rückzugsverhalten - 
+
+Umweltfaktoren: 
+ Unterstützung durch Ehefrau bei Alltagsanforderungen + 
+ Auseinandersetzung mit Ex-Ehefrau - 
+ fehlender Freundeskreis - + 
+ Medikamente wirksam + 
+ gesicherte haus- und fachärztliche Versorgung + 
+
+Aktivitäten: 
+Beeinträchtigung  
+ bei der Kommunikation, Interaktion (d710, d720) 
+ bei Hausarbeiten erledigen (d640) 
+ Gegenstände Heben und Tragen (d430) 
+ bei langem Stehen und Sitzen (d4104 und d4103) 
+ beim Bücken (d4105) Körperfunktionen (b) und -strukturen (s) 
+ 
+Schädigung 
+ Affekte und Impulse zu regulieren (b1521, b1304) 
+ Psychische Stabilität (b1263) 
+ Selbstvertrauen (b1266) 
+ (Situations)Angemessenheit der Emotionen (b1520) 
+ Ausmaß der psychischen Energie (Depression) (b1300) 
+ Konzentrations- und Aufmerksamkeit (b140) 
+ Rückenschmerzen (b28013) Fallbeispiel 3: Psyche und Psychosomatik 
+ 
+
+Anmerkungen Ball:  
+knappe finanzielle Verhältnisse gehören als Vermögensverhältnis eher zu den Personbezogenen Faktoren, es sind in der ICF Personbezogene Faktoren (PF), Rückzugsverhalten wäre als Verhalten eher PF, die Haushaltsführung passt eher zur Teilhabe,  die Erwerbsfähigkeit ist doch schon beeinträchtigt, also nicht mehr „drohend“, allgemein wäre es im Einklang mir den bisherigen Ausführungen in anderen Broschüren (ICF-PLF), im Kästchen Teilhabe auch die jeweiligen Beeinträchtigungen aufzuzählen: Beeinträchtigungen der Arbeitsfähigkeit, der Erwerbsfähigkeit (oder allgemein der Teilhabe am Arbeitsleben), der selbstständigen Haushaltsführung, der Beziehungen zu Arbeitskollegen, der beruflichen Perspektive bei den Aktivitäten wäre es günstig, nicht allgemein bei der beruflichen Tätigkeit (mit hoher körperlicher Belastung) 
+aufzuführen, sondern nachvollziehbare Einzelaktivitäten (z.B. Heben u. Tragen von Lasten), insofern wäre es günstig, im dazugehörigen Text die wirklichen Arbeiten (Aktivitäten) dieses (nicht eines) Strahlarbeiters anzusprechen.

@@ -2,8 +2,6 @@ pandas
 numpy
 spacy
 scikit-learn
-matplotlib
-seaborn
 pyyaml
 tqdm
 regex

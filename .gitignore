@@ -2,10 +2,11 @@
 # MILO.ONE - SENSITIVE DATA LOCK (Open Science)
 # ==========================================
 
-data/
-
-!data/synthetic_sample.csv
+data/*
+!data/
 !data/README_data.md
+!data/features_full.csv
+archive/
 
 # ==========================================
 # STANDARD R TEMPLATE 
@@ -80,5 +81,7 @@ venv/
 ENV/
 
 # Pipeline local inputs/outputs
-data_raw/
 out/
+
+
+

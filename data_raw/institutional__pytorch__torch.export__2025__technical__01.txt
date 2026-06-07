@@ -1,0 +1,550 @@
+(torch.export)=
+
+# torch.export
+
+## Übersicht
+
+{func}`torch.export.export` nimmt ein {class}`torch.nn.Module` und erzeugt einen verfolgten Graphen, der die Tensorberechnung der Funktion in einem Ahead-of-Time-Modell darstellt
+(AOT)-Modus, der anschließend mit verschiedenen Ausgaben ausgeführt werden kann oder serialisiert.
+
+```{code-cell}
+Importieren Sie torch
+aus torch.export importieren Sie export, ExportedProgram
+
+class Mod(torch.nn.Module):
+    def forward(self, x: torch.Tensor, y: torch.Tensor) -> torch.Tensor:
+        a = torch.sin(x)
+        b = torch.cos(y)
+        gib a + b zurück
+
+example_args = (torch.randn(10, 10), torch.randn(10, 10))
+
+exported_program: ExportedProgram = export(Mod(), args=example_args)
+print(exported_program)
+```
+
+`torch.export` erzeugt eine saubere Zwischenrepräsentation (IR) mit der
+Folgende Invarianten. Weitere Spezifikationen zur IR finden Sie hier.
+{ref}`hier`.
+
+- **Klangqualität**: Es ist garantiert eine klangliche Wiedergabe des Originals
+  Das Programm behält die gleichen Aufrufkonventionen wie das Originalprogramm bei.
+- **Normalisiert**: Der Graph enthält keine Python-Semantik. Untermodule
+  Die ursprünglichen Programme werden ineinander überführt, um ein vollständig flaches Programm zu bilden.
+  Berechnungsdiagramm.
+- **Eigenschaften des Graphen**: Der Graph ist rein funktional, d. h. er ist nicht
+  Operationen mit Nebenwirkungen wie Mutationen oder Aliasing enthalten. Das tut es.
+  Es dürfen keine Zwischenwerte, Parameter oder Puffer verändert werden.
+- **Metadaten**: Der Graph enthält während der Ablaufverfolgung erfasste Metadaten, wie z. B.
+  Stacktrace aus dem Code des Benutzers.
+
+Im Hintergrund nutzt `torch.export` die folgenden neuesten Technologien:
+
+- **TorchDynamo (torch._dynamo)** ist eine interne API, die eine CPython-Funktion verwendet.
+  Die Frame Evaluation API wurde aufgerufen, um PyTorch-Graphen sicher zu verfolgen.
+  bietet ein massiv verbessertes Erlebnis bei der Diagrammerfassung, mit wesentlich weniger
+  Um den PyTorch-Code vollständig nachvollziehen zu können, sind Überarbeitungen erforderlich.
+- **AOT Autograd** stellt einen funktionalisierten PyTorch-Graphen bereit und gewährleistet dessen Funktion.
+  wird in die Menge der ATen-Operatoren zerlegt/reduziert.
+- **Torch FX (torch.fx)** ist die zugrundeliegende Darstellung des Graphen,
+  ermöglicht flexible, auf Python basierende Transformationen.
+
+### Bestehende Frameworks
+
+{func}`torch.compile` verwendet ebenfalls denselben PT2-Stack wie `torch.export`, aber
+ist etwas anders:
+
+- **JIT vs. AOT**: {func}`torch.compile` ist ein JIT-Compiler, während
+  das nicht dazu bestimmt ist, kompilierte Artefakte außerhalb von
+  Bereitstellung.
+- **Teilweise vs. vollständige Grapherfassung**: Wenn {func}`torch.compile` auf einen Fehler stößt
+  Wenn ein Teil eines Modells nicht nachvollziehbar ist, wird es zu einem „Graph-Break“ führen und auf die Ausführung zurückgreifen.
+  Das Programm wird in der Eager-Python-Laufzeitumgebung ausgeführt. Im Vergleich dazu zielt `torch.export` darauf ab, ...
+  Um eine vollständige Graphdarstellung eines PyTorch-Modells zu erhalten, wird ein Fehler auftreten.
+  wenn etwas nicht nachverfolgbares erreicht wird. Da `torch.export` ein vollständiges
+  Dieser Graph ist disjunkt zu allen Python-Funktionen und der Laufzeitumgebung und kann dann wie folgt berechnet werden:
+  Gespeichert, geladen und in verschiedenen Umgebungen und Sprachen ausgeführt.
+- **Kompromiss hinsichtlich der Benutzerfreundlichkeit**: Da {func}`torch.compile` auf die Fallback-Funktion zurückgreifen kann
+  Immer wenn die Python-Laufzeitumgebung auf etwas nicht Nachvollziehbares stößt, ist das viel mehr.
+  flexibel. `torch.export` wird stattdessen von den Benutzern mehr Informationen verlangen.
+  Informationen oder ihren Code so umschreiben, dass er nachvollziehbar wird.
+
+Im Vergleich zu `torch.fx.symbolic_trace` (siehe {func}) werden mit `torch.export` Traces erstellt, die von `torch.export` erstellt werden.
+TorchDynamo arbeitet auf der Ebene des Python-Bytecodes und bietet dadurch folgende Möglichkeiten:
+um beliebige Python-Konstrukte zu verfolgen, die nicht durch den Python-Operator eingeschränkt sind.
+Überlastung unterstützt. Darüber hinaus verfolgt `torch.export` detailliert, Tensor-Metadaten, so dass Bedingungen, die beispielsweise auf Tensorformen basieren, nicht Fehlerverfolgung. Im Allgemeinen wird erwartet, dass `torch.export` auf mehr Benutzern funktioniert.
+Programme und erzeugen Graphen auf niedrigerer Ebene (am `torch.ops.aten`-Operator).
+Beachten Sie, dass Benutzer {func}`torch.fx.symbolic_trace` weiterhin als verwenden können.
+Vorverarbeitungsschritt vor `torch.export`.
+
+Im Vergleich zu `torch.jit.script` erfasst `torch.export` kein Python.
+Kontrollfluss oder Datenstrukturen, es sei denn, es werden explizite {ref}`Kontrollflussoperatoren verwendet
+    `,
+aber es unterstützt aufgrund seiner umfassenden Abdeckung mehr Python-Sprachfunktionen über Python-Bytecodes. Die resultierenden Graphen sind einfacher und enthalten nur gerade Linien.
+Kontrollflusssteuerung, mit Ausnahme expliziter Kontrollflussoperatoren.
+
+Im Vergleich zu `torch.jit.trace` ist `torch.export` solide:
+Es kann Code aufspüren, der Ganzzahlberechnungen mit Größen und Datensätzen durchführt.
+alle Nebenbedingungen, die notwendig sind, um sicherzustellen, dass ein bestimmtes
+Die Ablaufverfolgung ist auch für andere Eingaben gültig.
+
+## Exportieren eines PyTorch-Modells
+
+Der Haupteinstiegspunkt ist {func}`torch.export.export`, das einen
+{class}`torch.nn.Module` und Beispiel-Eingaben, und
+erfasst den Berechnungsgraphen in einem {class}`torch.export.ExportedProgram`.
+Beispiel:
+
+```{code-cell}
+Importieren Sie torch
+aus torch.export importieren Sie export, ExportedProgram
+
+# Einfaches Demonstrationsmodul
+class M(torch.nn.Module):
+    def __init__(self) -> None:
+        super().__init__()
+        self.conv = torch.nn.Conv2d(
+            Eingangskanäle=3, Ausgangskanäle=16, Kernelgröße=3, Padding=1
+        )
+        self.relu = torch.nn.ReLU()
+        self.maxpool = torch.nn.MaxPool2d(kernel_size=3)
+
+    def forward(self, x: torch.Tensor, *, constant=None) -> torch.Tensor:
+        a = self.conv(x)
+        a.add_(constant)
+        return self.maxpool(self.relu(a))
+
+example_args = (torch.randn(1, 3, 256, 256),)
+example_kwargs = {"constant": torch.ones(1, 16, 256, 256)}
+
+exportiertes_Programm: ExportiertesProgramm = export(
+    M(), args=example_args, kwargs=example_kwargs
+)
+print(exported_program)
+
+# Um das exportierte Programm auszuführen, können wir die Methode `module()` verwenden
+print(exported_program.module()(torch.randn(1, 3, 256, 256), constant=torch.ones(1, 16, 256, 256)))
+```
+
+Bei der Untersuchung des `ExportedProgram` können wir Folgendes feststellen:
+
+- Die {class}`torch.fx.Graph` enthält den Berechnungsgraphen des ursprünglichen
+  Das Programm sowie Aufzeichnungen des Originalcodes erleichtern das Debuggen.
+- Der Graph enthält nur `torch.ops.aten`-Operatoren, die [hier](https://github.com/pytorch/pytorch/blob/main/aten/src/ATen/native/native_functions.yaml) zu finden sind.
+  und kundenspezifische Betreiber.
+- Die Parameter (Gewichtung und Bias für die Faltung) werden als Eingaben in den Graphen übernommen.
+  was dazu führt, dass keine `get_attr`-Knoten mehr im Graphen vorhanden sind, die zuvor in
+  das Ergebnis von {func}`torch.fx.symbolic_trace`.
+Die {class}`torch.export.ExportGraphSignature` modelliert die Eingabe und Ausgabe.
+  Signatur sowie die Angabe, welche Eingaben Parameter sind.
+- Die resultierende Form und der Datentyp der von jedem Knoten im Graphen erzeugten Tensoren sind
+  Zur Kenntnis genommen. Beispielsweise erzeugt der Knoten `conv2d` einen Tensor vom Datentyp .
+  `torch.float32` und shape (1, 16, 256, 256).
+
+## Dynamik ausdrücken
+
+Standardmäßig verfolgt `torch.export` das Programm unter der Annahme, dass alle Eingabeformen **statisch**, und das exportierte Programm auf diese Dimensionen spezialisieren. Eins 
+Die Folge davon ist, dass das Programm zur Laufzeit nicht mit Eingaben funktioniert, die unterschiedliche Formen, selbst wenn sie im Eager-Modus gültig sind.
+
+Ein Beispiel:
+
+```{code-cell}
+Importieren Sie torch
+import traceback as tb
+
+class M(torch.nn.Module):
+    def __init__(self):
+        super().__init__()
+
+        self.branch1 = torch.nn.Sequential(
+            torch.nn.Linear(64, 32), torch.nn.ReLU()
+        )
+        self.branch2 = torch.nn.Sequential(
+            torch.nn.Linear(128, 64), torch.nn.ReLU()
+        )
+        self.buffer = torch.ones(32)
+
+    def forward(self, x1, x2):
+        out1 = self.branch1(x1)
+        out2 = self.branch2(x2)
+        return (out1 + self.buffer, out2)
+
+example_args = (torch.randn(32, 64), torch.randn(32, 128))
+
+ep = torch.export.export(M(), example_args)
+print(ep)
+
+example_args2 = (torch.randn(64, 64), torch.randn(64, 128))
+try:
+    ep.module()(*example_args2) # schlägt fehl
+Ausnahme:
+    tb.print_exc()
+```
+
+Einige Dimensionen, wie z. B. eine Batch-Dimension, können jedoch dynamisch sein und variieren von Lauf zu Lauf. Diese Dimensionen müssen mithilfe der folgenden Angaben festgelegt werden:
+{func}`torch.export.Dim()` API, um sie zu erstellen und sie zu übergeben an {func}`torch.export.export()` über das Argument `dynamic_shapes`.
+
+```{code-cell}
+Importieren Sie torch
+
+class M(torch.nn.Module):
+    def __init__(self):
+        super().__init__()
+
+        self.branch1 = torch.nn.Sequential(
+            torch.nn.Linear(64, 32), torch.nn.ReLU()
+        )
+        self.branch2 = torch.nn.Sequential(
+            torch.nn.Linear(128, 64), torch.nn.ReLU()
+        )
+        self.buffer = torch.ones(32)
+
+    def forward(self, x1, x2):
+        out1 = self.branch1(x1)
+        out2 = self.branch2(x2)
+        return (out1 + self.buffer, out2)
+
+example_args = (torch.randn(32, 64), torch.randn(32, 128))
+
+# Dynamische Batchgröße erstellen
+batch = torch.export.Dim("batch")
+# Geben Sie an, dass die erste Dimension jeder Eingabe die Batchgröße ist
+dynamic_shapes = {"x1": {0: batch}, "x2": {0: batch}}
+
+ep = torch.export.export(
+    M(), args=example_args, dynamic_shapes=dynamic_shapes
+)
+print(ep)
+
+example_args2 = (torch.randn(64, 64), torch.randn(64, 128))
+ep.module()(*example_args2) # Erfolg
+```
+
+Einige weitere Hinweise:
+
+- Mithilfe der {func}`torch.export.Dim`-API und dem `dynamic_shapes`-Argument haben wir die erste 
+  Die Dimension jedes Eingangs soll dynamisch sein. Betrachten wir die Eingänge `x1` und
+  `x2`, sie haben eine symbolische Form von `(s0, 64)` und `(s0, 128)`, anstatt
+  die Tensoren der Form `(32, 64)` und `(32, 128)`, die wir als Beispieleingaben übergeben haben.
+  `s0` ist ein Symbol, das angibt, dass diese Dimension ein Bereich sein kann.
+  von Werten.
+- `exported_program.range_constraints` beschreibt die Bereiche jedes Symbols   im Diagramm dargestellt. In diesem Fall sehen wir, dass `s0` den Bereich hat [0, int_oo]. Aus technischen Gründen, die hier schwer zu erläutern sind, sind sie   Es wird davon ausgegangen, dass der Wert weder 0 noch 1 ist. Dies ist kein Fehler und bedeutet nicht zwangsläufig 
+  Das exportierte Programm funktioniert nicht für Dimensionen 0 oder 1. Siehe
+  [Das 0/1-Spezialisierungsproblem](https://docs.google.com/document/d/16VPOa3d-Liikf48teAOmxLc92rgvJdfosIy-yoT38Io/edit?fbclid=IwAR3HNwmmexcitV0pbZm_x1a4ykdXZ9th_eJWK-3hBtVgKnrkmemz6Pm5jRQ#heading=h.ez923tomjvyk)
+  für eine ausführliche Diskussion dieses Themas.
+
+Im Beispiel haben wir `Dim("batch")` verwendet, um eine dynamische Dimension zu erstellen.
+Die expliziteste Methode, Dynamik zu spezifizieren. Wir können auch `Dim.DYNAMIC` verwenden.
+Mit `Dim.AUTO` lässt sich Dynamik spezifizieren. Wir werden beide Methoden im nächsten Abschnitt besprechen.
+
+### Benannte Dimensionen
+
+Für jede mit `Dim("name")` angegebene Dimension wird ein symbolischer Speicherbereich zugewiesen
+Die Angabe eines `Dim` mit demselben Namen führt zum gleichen Symbol.
+zu generieren. Dies ermöglicht es Benutzern anzugeben, welche Symbole für
+jede Eingabedimension.
+
+```python
+batch = Dim("batch")
+dynamic_shapes = {"x1": {0: dim}, "x2": {0: batch}}
+```
+
+Für jede `Dim` können wir Minimal- und Maximalwerte angeben. Wir erlauben auch die Angabe von Beziehungen zwischen `Dim`s in univariaten linearen Ausdrücken: `A * dim + B`
+Dies ermöglicht es Benutzern, komplexere Einschränkungen wie die Teilbarkeit von ganzen Zahlen anzugeben.
+für dynamische Dimensionen. Diese Funktionen ermöglichen es Benutzern, explizite Dimensionen zu platzieren.
+Es wurden Einschränkungen hinsichtlich des dynamischen Verhaltens des erzeugten `ExportedProgram` vorgenommen.
+
+```python
+dx = Dim("dx", min=4, max=256)
+dh = Dim("dh", max=512)
+dynamische_Formen = {
+    "x": (dx, None),
+    "y": (2 * dx, dh),
+}
+```
+
+Jedoch werden `ConstraintViolationErrors` ausgelöst, wenn beim Tracing Guards ausgegeben werden die mit den angegebenen Relationen oder statischen/dynamischen Spezifikationen in Konflikt stehen. Für
+Beispielsweise wird in der obigen Spezifikation Folgendes behauptet:
+
+* `x.shape[0]` soll den Wertebereich `[4, 256]` haben und mit `y.shape[0]` durch `y.shape[0] == 2 * x.shape[0]` in Beziehung stehen.
+* `x.shape[1]` ist statisch.
+* `y.shape[1]` hat den Wertebereich `[0, 512]` und steht in keiner Beziehung zu anderen Dimensionen.
+
+Sollte sich bei der Nachverfolgung herausstellen, dass eine dieser Behauptungen unrichtig ist (z. B. `x.shape[0]` ist statisch, oder `y.shape[1]` hat einen kleineren Wertebereich, oder Wenn `y.shape[0] != 2 * x.shape[0]`, dann wird ein `ConstraintViolationError` ausgelöst.
+wird ausgelöst, und der Benutzer muss seine `dynamic_shapes`-Spezifikation ändern.
+
+### Dim-Hinweise
+
+Anstatt die Dynamik explizit mit `Dim("name")` anzugeben, können wir `torch.export` leitet die Bereiche und Beziehungen der dynamischen Werte ab mithilfe von `Dim.DYNAMIC`. Dies ist auch eine bequemere Möglichkeit, Dynamik anzugeben, wenn Sie Ich weiß nicht genau, *wie* dynamisch Ihre dynamischen Werte sind.
+
+```python
+dynamische_Formen = {
+    "x": (Dim.DYNAMIC, None),
+    "y": (Dim.DYNAMIC, Dim.DYNAMIC),
+}
+```
+
+Wir können auch Minimal-/Maximalwerte für `Dim.DYNAMIC` festlegen, die als Hinweise dienen.
+zum Exportieren. Sollte sich jedoch beim Nachverfolgen des Exports herausstellen, dass der Bereich abweicht, wird er Der Bereich wird automatisch aktualisiert, ohne einen Fehler auszulösen. Wir können auch nicht spezifizieren Beziehungen zwischen dynamischen Werten. Stattdessen wird dies durch den Export abgeleitet.
+und den Nutzern durch eine Überprüfung der Aussagen innerhalb des Graphen zugänglich gemacht.
+Bei dieser Methode zur Spezifizierung der Dynamik werden `ConstraintViolationErrors` **nur** Wird ausgelöst, wenn der angegebene Wert als **statisch** angesehen wird.
+
+Eine noch bequemere Möglichkeit, Dynamik festzulegen, ist die Verwendung von `Dim.AUTO`, was verhält sich wie `Dim.DYNAMIC`, löst aber **keinen** Fehler aus, wenn die Dimension wird als statisch angenommen. Dies ist nützlich, wenn man keine Ahnung hat, wie die Dynamik aussieht.
+Die Werte sind festgelegt, und das Programm soll mit einem dynamischen Ansatz nach dem "bestmöglichen Aufwand" exportiert werden.
+
+### ShapesCollection
+
+Wenn wir über `dynamic_shapes` festlegen, welche Eingaben dynamisch sind, müssen wir Folgendes angeben:
+die Dynamik jedes Eingangs. Zum Beispiel bei folgenden Eingangsgrößen:
+
+```python
+args = {"x": tensor_x, "others": [tensor_y, tensor_z]}
+```
+
+Wir müssten die Dynamik von `tensor_x`, `tensor_y` und `tensor_z` spezifizieren
+zusammen mit den dynamischen Formen:
+
+```python
+# Mit benannten Dimensionen
+dim = torch.export.Dim(...)
+dynamic_shapes = {"x": {0: dim, 1: dim + 1}, "others": [{0: dim * 2}, None]}
+
+torch.export(..., args, dynamic_shapes=dynamic_shapes)
+```
+
+Dies ist jedoch besonders kompliziert, da wir die dynamischen Formen angeben müssen Die `dynamic_shapes`-Spezifikation befindet sich in derselben verschachtelten Eingabestruktur wie die Eingabe.
+Argumente. Stattdessen bietet sich die Verwendung des Helfers an, um dynamische Formen einfacher anzugeben.
+utility {class}`torch.export.ShapesCollection`, wobei anstelle der Angabe der Aufgrund der Dynamik jedes einzelnen Eingangs können wir einfach direkt zuweisen, welcher Eingang 
+Die Dimensionen sind dynamisch.
+
+```{code-cell}
+Importieren Sie torch
+
+class M(torch.nn.Module):
+    def forward(self, inp):
+        x = inp["x"] * 1
+        y = inp["others"][0] * 2
+        z = inp["others"][1] * 3
+        Rückgabe x, y, z
+
+tensor_x = torch.randn(3, 4, 8)
+tensor_y = torch.randn(6)
+tensor_z = torch.randn(6)
+args = {"x": tensor_x, "others": [tensor_y, tensor_z]}
+
+dim = torch.export.Dim("dim")
+sc = torch.export.ShapesCollection()
+sc[tensor_x] = (dim, dim + 1, 8)
+sc[tensor_y] = {0: dim * 2}
+
+print(sc.dynamic_shapes(M(), (args,)))
+ep = torch.export.export(M(), (args,), dynamic_shapes=sc)
+print(ep)
+```
+
+### Zusätzliche Eingaben
+
+Falls Sie nicht wissen, wie dynamisch Ihre Eingaben sind, aber Sie eine ausreichende Menge an Test- oder Profilingdaten, die einen guten Eindruck vermitteln können Repräsentative Eingabewerte für ein Modell, die Sie verwenden können {class}`torch.export.AdditionalInputs` anstelle von `dynamic_shapes`. Sie können Geben Sie alle möglichen Eingaben an, die zur Verfolgung des Programms verwendet werden, und `AdditionalInputs` ermittelt anhand der Eingabe, welche Eingaben dynamisch sind.
+Formen ändern sich.
+
+Beispiel:
+
+```{code-cell}
+import dataclasses
+Importieren Sie torch
+import torch.utils._pytree as pytree
+
+@dataclasses.dataclass
+Klasse D:
+    b: bool
+    i: int
+    f: Gleitkomma
+    t: torch.Tensor
+
+pytree.register_dataclass(D)
+
+class M(torch.nn.Module):
+    def forward(self, d: D):
+        return di + df + dt
+
+input1 = (D(True, 3, 3.0, torch.ones(3)),)
+input2 = (D(True, 4, 3.0, torch.ones(4)),)
+ai = torch.export.AdditionalInputs()
+ai.add(input1)
+ai.add(input2)
+
+print(ai.dynamic_shapes(M(), input1))
+ep = torch.export.export(M(), input1, dynamic_shapes=ai)
+print(ep)
+```
+
+## Serialisierung
+
+Um das `ExportedProgram` zu speichern, können Benutzer die {func}`torch.export.save` verwenden und {func}`torch.export.load` APIs. Die resultierende Datei ist eine ZIP-Datei mit einem bestimmten
+Struktur. Die Details der Struktur sind in der {ref}`PT2 Archivspezifikation
+     `.
+
+Ein Beispiel:
+
+```python
+Importieren Sie torch
+
+class MyModule(torch.nn.Module):
+    def forward(self, x):
+        Rückgabe x + 10
+
+exported_program = torch.export.export(MyModule(), (torch.randn(5),))
+
+torch.export.save(exported_program, 'exported_program.pt2')
+saved_exported_program = torch.export.load('exported_program.pt2')
+```
+
+(training-export)=
+
+## Export IR, Zerlegungen
+
+Der von `torch.export` erzeugte Graph gibt einen Graphen zurück, der nur [ATen-Operatoren](https://pytorch.org/cppdocs/#aten), die die Grundeinheit von Berechnungen in PyTorch. Da es über 3000 ATen-Betreiber, Export bietet eine Möglichkeit, die verwendete Betreibergruppe einzugrenzen im Diagramm basierend auf bestimmten Merkmalen, wodurch unterschiedliche IRs erstellt werden.
+
+Standardmäßig erzeugt der Export die generischste IR-Datei, die alle ATen enthält.
+Operatoren, einschließlich funktionaler und nicht-funktionaler Operatoren. Ein funktionaler Ein solcher Operator enthält keine Mutationen oder Aliasing der Eingaben.
+Sie können eine Liste aller ATen-Betreiber finden.
+[hier](https://github.com/pytorch/pytorch/blob/main/aten/src/ATen/native/native_functions.yaml)
+und Sie können überprüfen, ob ein Operator funktional ist, indem Sie prüfen `op._schema.is_mutable`.
+
+Diese generische IR kann zum Trainieren in Eager PyTorch Autograd verwendet werden
+
+```{code-cell}
+Importieren Sie torch
+
+class M(torch.nn.Module):
+    def __init__(self) -> None:
+        super().__init__()
+        self.conv = torch.nn.Conv2d(1, 3, 1, 1)
+        self.bn = torch.nn.BatchNorm2d(3)
+
+    def forward(self, x):
+        x = self.conv(x)
+        x = self.bn(x)
+        return (x,)
+
+ep_for_training = torch.export.export(M(), (torch.randn(1, 1, 3, 3),))
+print(ep_for_training.graph_module.print_readable(print_output=False))
+```
+
+Wenn Sie jedoch die IR für die Inferenz verwenden oder die Menge verringern möchten
+Durch die Verwendung von Operatoren können Sie den Graphen durch die {func}`ExportedProgram.run_decompositions` API. Diese Methode zerlegt die ATen-Operatoren in die in der Zerlegungstabelle angegebenen Operatoren zerlegen, und funktionalisiert den Graphen.
+
+Durch die Angabe einer leeren Menge führen wir nur eine Funktionalisierung durch, und tut Es werden keine weiteren Zerlegungen durchgeführt. Dies führt zu einer IR-Datei, die ~2000 enthält.
+Operatoren (anstelle der oben genannten 3000 Operatoren) und ist ideal für Inferenzfälle.
+
+```{code-cell}
+Importieren Sie torch
+
+class M(torch.nn.Module):
+    def __init__(self) -> None:
+        super().__init__()
+        self.conv = torch.nn.Conv2d(1, 3, 1, 1)
+        self.bn = torch.nn.BatchNorm2d(3)
+
+    def forward(self, x):
+        x = self.conv(x)
+        x = self.bn(x)
+        return (x,)
+
+ep_for_training = torch.export.export(M(), (torch.randn(1, 1, 3, 3),))
+mit torch.no_grad():
+    ep_for_inference = ep_for_training.run_decompositions(decomp_table={})
+print(ep_for_inference.graph_module.print_readable(print_output=False))
+```
+
+Wie wir sehen können, ist der zuvor in-place-Operator,
+`torch.ops.aten.add_.default` has now been replaced with
+`torch.ops.aten.add.default`, a functional operator.
+
+We can also further lower this exported program to an operator set which only
+contains the
+`Core ATen Operator Set 
+      `__,
+which is a collection of only ~180 operators. This IR is optimal for backends
+who do not want to reimplement all ATen operators.
+
+```{code-cell}
+import torch
+
+class M(torch.nn.Module):
+    def __init__(self) -> None:
+        super().__init__()
+        self.conv = torch.nn.Conv2d(1, 3, 1, 1)
+        self.bn = torch.nn.BatchNorm2d(3)
+
+    def forward(self, x):
+        x = self.conv(x)
+        x = self.bn(x)
+        return (x,)
+
+ep_for_training = torch.export.export(M(), (torch.randn(1, 1, 3, 3),))
+with torch.no_grad():
+    core_aten_ir = ep_for_training.run_decompositions(decomp_table=None)
+print(core_aten_ir.graph_module.print_readable(print_output=False))
+```
+
+We now see that `torch.ops.aten.conv2d.default` has been decomposed
+into `torch.ops.aten.convolution.default`. This is because `convolution`
+is a more "core" operator, as operations like `conv1d` and `conv2d` can be
+implemented using the same op.
+
+We can also specify our own decomposition behaviors:
+
+```{code-cell}
+class M(torch.nn.Module):
+    def __init__(self) -> None:
+        super().__init__()
+        self.conv = torch.nn.Conv2d(1, 3, 1, 1)
+        self.bn = torch.nn.BatchNorm2d(3)
+
+    def forward(self, x):
+        x = self.conv(x)
+        x = self.bn(x)
+        return (x,)
+
+ep_for_training = torch.export.export(M(), (torch.randn(1, 1, 3, 3),))
+
+my_decomp_table = torch.export.default_decompositions()
+
+def my_awesome_custom_conv2d_function(x, weight, bias, stride=[1, 1], padding=[0, 0], dilation=[1, 1], groups=1):
+    return 2 * torch.ops.aten.convolution(x, weight, bias, stride, padding, dilation, False, [0, 0], groups)
+
+my_decomp_table[torch.ops.aten.conv2d.default] = my_awesome_custom_conv2d_function
+my_ep = ep_for_training.run_decompositions(my_decomp_table)
+print(my_ep.graph_module.print_readable(print_output=False))
+```
+
+Notice that instead of `torch.ops.aten.conv2d.default` being decomposed
+into `torch.ops.aten.convolution.default`, it is now decomposed into
+`torch.ops.aten.convolution.default` and `torch.ops.aten.mul.Tensor`,
+which matches our custom decomposition rule.
+
+(limitations-of-torch-export)=
+
+## Limitations of torch.export
+
+As `torch.export` is a one-shot process for capturing a computation graph from
+a PyTorch program, it might ultimately run into untraceable parts of programs as
+it is nearly impossible to support tracing all PyTorch and Python features. In
+the case of `torch.compile`, an unsupported operation will cause a "graph
+break" and the unsupported operation will be run with default Python evaluation.
+In contrast, `torch.export` will require users to provide additional
+information or rewrite parts of their code to make it traceable.
+
+{ref}`Draft-export 
+       ` is a great resource for listing out
+graphs breaks that will be encountered when tracing the program, along with
+additional debug information to solve those errors.
+
+{ref}`ExportDB 
+        
+         ` ist auch eine hervorragende Ressource, um mehr über unterstützte und nicht unterstützte Programmarten sowie über Möglichkeiten zur Programmumschreibung für eine nachverfolgbare Programmstruktur zu erfahren. ### TorchDynamo wird nicht unterstützt. Bei Verwendung von `torch.export` mit `strict=True` wird TorchDynamo verwendet, um das Programm auf Python-Bytecode-Ebene auszuwerten und in einem Graphen nachzuverfolgen. Im Vergleich zu früheren Tracing-Frameworks sind deutlich weniger Umschreibungen erforderlich, um ein Programm nachverfolgbar zu machen. Dennoch werden einige Python-Funktionen nicht unterstützt. Eine Möglichkeit, diese Graphfehler zu umgehen, ist die Verwendung von `non-strict export`.
+         
+          durch Ändern des `strict`-Flags auf `strict=False`. (daten-formabhängiger Kontrollfluss)= ### Daten-/formabhängige Kontrollflussgraphbrüche können auch bei datenabhängigem Kontrollfluss (`if x.shape[0] > 2`) auftreten, wenn Formen nicht spezialisiert werden, da ein Tracing-Compiler dies nicht ohne die Generierung von Code für eine kombinatorisch explodierende Anzahl von Pfaden bewältigen kann. In solchen Fällen müssen Benutzer ihren Code mithilfe spezieller Kontrollflussoperatoren neu schreiben. Derzeit unterstützen wir {ref}`torch.cond
+          
+           ` um if-else-ähnlichen Kontrollfluss auszudrücken (weitere folgen in Kürze!). Weitere Möglichkeiten zur Behandlung datenabhängiger Fehler finden Sie in diesem [Tutorial](https://docs.pytorch.org/tutorials/intermediate/torch_export_tutorial.html#data-dependent-errors). ### Fehlende Fake-/Meta-Kernel für Operatoren Beim Tracing wird für alle Operatoren ein FakeTensor-Kernel (auch Meta-Kernel genannt) benötigt. Dieser dient dazu, die Eingabe-/Ausgabeformen des jeweiligen Operators zu bestimmen. Weitere Informationen finden Sie in diesem [Tutorial](https://docs.pytorch.org/tutorials/advanced/custom_ops_landing_page.html). Sollte Ihr Modell einen ATen-Operator verwenden, für den noch keine FakeTensor-Kernel-Implementierung existiert, melden Sie bitte ein Problem. ## Weiterlesen ```{toctree} :caption: Zusätzliche Links für Export-Benutzer :maxdepth: 1 export/api_reference export/programming_model export/ir_spec export/pt2_archive export/draft_export export/joint_with_descriptors cond generated/exportdb/index torch.compiler_aot_inductor torch.compiler_ir ``` ```{toctree} :caption: Vertiefung für PyTorch-Entwickler :maxdepth: 1 torch.compiler_dynamic_shapes torch.compiler_fake_tensor torch.compiler_transformations ```
