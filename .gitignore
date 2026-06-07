@@ -59,7 +59,9 @@ vignettes/*.pdf
 .Renviron
 
 # pkgdown site
-docs/
+docs/*
+!docs/
+!docs/reproduce_full_analysis.md
 
 # translation temp files
 po/*~
@@ -82,6 +84,7 @@ ENV/
 
 # Pipeline local inputs/outputs
 out/
+
 
 
 

@@ -20,6 +20,14 @@ This repository documents the computational pipeline and codebook artifacts for 
 3. **Integration:** Category and style features are merged into `features_full.csv`.
 4. **Analysis:** R scripts in `r/` operate on the feature matrix for PCA, clustering, diagnostics, SEM, LDA and K-Factor analysis.
 
+
+## Reproduce The Analysis
+
+For a step-by-step reproduction path from `git clone` through the Python pipeline and downstream R scripts, see:
+
+```text
+docs/reproduce_full_analysis.md
+```
 ## Python Setup
 
 ```bash
@@ -65,3 +73,4 @@ r/k_factor/
 ## Data Policy
 
 Only the curated test fixtures in `data_raw/` and explicitly allowed files in `data/` are intended for version control. Generated outputs in `out/`, archived local runs in `archive/`, and private/raw study material must not be committed.
+
