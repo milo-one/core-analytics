@@ -106,6 +106,20 @@ axis. A high `k_factor` only becomes meaningful when `k_axis_distance` is also
 low. A text can project strongly in the same direction while still being far
 away from the reference axis.
 
+## Relation To Existing Methods
+
+`corek` builds upon established multivariate techniques (PCA, vector projection, orthogonal distances) and packages them into a focused workflow for **personalized stylistic axis modeling**.
+
+- **Computational Stylometry** (e.g., [`stylo`](https://cran.r-project.org/package=stylo)):
+
+Classic toolkits focus on authorship attribution, clustering, or binary classification. `corek` does not. It treats stylistic proximity as a **continuous trajectory** along a user-defined reference axis and explicitly separates axial projection (`k_factor`) from orthogonal distance.
+
+- **One-Class Models & SIMCA** (e.g., `mdatools`, `rrcovHD`):
+
+These frameworks primarily determine whether a sample lies "inside" or "outside" a class. `corek` remains interpretive: It distinguishes between strong movement along the axis (structural mimicry) and true proximity to the reference axis.
+
+In summary, `corek` is not a general-purpose stylometry or chemometrics toolkit. It provides a simple, transparent workflow for longitudinal drift analysis, custom profile modeling, and interpretable feature contributions—especially where feature matrices are already available.
+
 ## Package Status
 
 This is a preparation scaffold. It is intentionally compact and should be
