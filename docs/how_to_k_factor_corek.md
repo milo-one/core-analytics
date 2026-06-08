@@ -18,15 +18,24 @@ The workbench expects:
 - a reference corpus for one person or author, used to fit the person axis
 - optionally, a target corpus to score against the same axis
 
+The package includes a small Kafka demonstration feature file:
+
+```text
+r-packages/corek/inst/extdata/kafka_features_full.csv
+```
+
+It contains derived features only, not raw text.
+
 Default paths in the local example are:
 
 ```r
 BASELINE_FEATURE_FILE <- "C:/Users/Kathrin Preuß/OneDrive/Dokumente/core-analytics/data/features_full.csv"
-REFERENCE_FEATURE_FILE <- "out/features_full.csv"
+REFERENCE_FEATURE_FILE <- "inst/extdata/kafka_features_full.csv"
 TARGET_FEATURE_FILE <- NULL
 ```
 
-For a GitHub-safe run, replace these paths with local files on your machine.
+For other authors or target texts, replace these paths with local
+`features_full.csv` files on your machine.
 
 ## 2. Start R in the Package Folder
 
@@ -42,6 +51,9 @@ from the `R/` folder. If it is installed, it can use `library(corek)` instead.
 ```r
 source("inst/examples/k_factor_corek_workbench.R")
 ```
+
+By default, this uses the repository test feature fixture as the baseline corpus
+and the included Kafka feature file as the reference author corpus.
 
 The script writes results to:
 
@@ -185,3 +197,17 @@ person_axis_bundle.rds
 ```
 
 The `.rds` bundle stores the fitted PCA space and person axis for reuse.
+
+## Source Note For The Kafka Demo
+
+The Kafka example file contains derived numeric/stylistic features only. The
+underlying source texts were obtained from Project Gutenberg. Kafka's original
+German works are public domain in Germany/EU because Franz Kafka died in 1924
+and the 70-year post mortem auctoris term has expired. They are also treated as
+public-domain works for the relevant Project Gutenberg releases in the United
+States.
+
+This repository does not redistribute Kafka raw text and does not present the
+feature file as an official Project Gutenberg dataset. Please observe Project
+Gutenberg's terms and trademark guidance when obtaining or redistributing source
+texts.

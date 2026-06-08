@@ -37,6 +37,19 @@ raw_texts/
 
 The method can be public while the empirical reference spaces remain private.
 
+## Included Example Data
+
+The package includes one small demonstration feature file:
+
+```text
+inst/extdata/kafka_features_full.csv
+```
+
+It contains derived feature values for Franz Kafka texts and no raw text. The
+underlying original texts were obtained from Project Gutenberg and are used here
+only to demonstrate the workflow. This is not an official Project Gutenberg
+dataset.
+
 ## Minimal Workflow
 
 ```r
