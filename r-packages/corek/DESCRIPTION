@@ -1,0 +1,24 @@
+Package: corek
+Title: Personalized K-Factor Axis for Text Feature Spaces
+Version: 0.1.0
+Authors@R: person("Kathrin", "Preuss", role = c("aut", "cre"), email = "not-public@example.com")
+Author: Kathrin Preuss
+Maintainer: Kathrin Preuss <not-public@example.com>
+Description: Fits a personalized K-Factor axis in a PCA-transformed text-feature
+    space and scores new texts by projection, normalized axis position and
+    orthogonal distance. The package contains the method, not private reference
+    data, proprietary model bundles or forensic thresholds.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Depends:
+    R (>= 4.1.0)
+Imports:
+    stats,
+    utils
+Suggests:
+    plotly,
+    htmlwidgets,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

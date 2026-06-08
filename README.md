@@ -10,7 +10,7 @@ This repository documents the computational pipeline and codebook artifacts for 
 - `data/` - explicitly allowed test artifacts, including `features_full.csv`.
 - `out/` - generated pipeline output, ignored by Git.
 - `r/` - downstream R analysis scripts, grouped by analysis stage.
-- `r-packages/corek/` - placeholder for the future K-Factor R package.
+- `r-packages/corek/` - optional K-Factor R package/workbench for personalized author axes.
 - `meta/` - codebook, regex audit, project log and compact analysis notes.
 
 ## Pipeline Architecture
@@ -27,6 +27,12 @@ For a step-by-step reproduction path from `git clone` through the Python pipelin
 
 ```text
 docs/reproduce_full_analysis.md
+```
+
+For the optional personalized K-Factor/corek workflow, see:
+
+```text
+docs/how_to_k_factor_corek.md
 ```
 ## Python Setup
 

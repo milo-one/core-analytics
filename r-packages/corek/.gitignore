@@ -1,0 +1,10 @@
+private/
+data_raw/
+out/
+examples_out/
+autor_kafka/
+*.rds
+!inst/examples/*.rds
+*.html
+*_files/
+.Rproj.user/

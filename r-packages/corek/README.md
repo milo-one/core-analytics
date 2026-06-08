@@ -1,15 +1,90 @@
-# corek placeholder
+# corek
 
-This folder is reserved for the future `corek` R package.
+`corek` is a small R package skeleton for the CoRE Analytics K-Factor method.
+It exposes the method but does not include private reference texts, real author
+features, trained axes, forensic thresholds or raw data.
 
-Current status:
+## What The Package Does
 
-- package scaffold exists locally in the analysis workspace
-- package check status: `R CMD build` + `R CMD check` passed with `Status: OK`
-- no private reference data, trained axes, thresholds or raw texts should be committed here
+- fits a PCA feature space from a baseline feature matrix
+- projects arbitrary `features_full.csv` data into that PCA space
+- fits a personalized K-Factor axis from reference texts
+- scores target texts by:
+  - `k_projection`
+  - `k_factor`
+  - `k_axis_distance`
+  - `k_center_distance`
+  - `k_axis_similarity`
+- reconstructs original feature contributions to the K-axis
+- searches nearest texts in the shared PCA space
+- estimates movement toward the axis, its center or another text
+- optionally creates 3D Plotly visualizations
+- writes a compact Markdown report
 
-Planned location once released:
+## What Stays Private
+
+Do not commit these into the package:
 
 ```text
-r-packages/corek/
+private/
+data_raw/
+out/
+real_author_reference_features.csv
+*_axis_bundle.rds
+forensic_thresholds*.rds
+raw_texts/
 ```
+
+The method can be public while the empirical reference spaces remain private.
+
+## Minimal Workflow
+
+```r
+library(corek)
+
+baseline <- k_read_features("C:/path/to/baseline/features_full.csv")
+reference <- k_read_features("C:/path/to/author_reference/features_full.csv")
+target <- k_read_features("C:/path/to/new_texts/features_full.csv")
+
+pca_space <- fit_pca_space(baseline, pc_count = 52)
+reference_scores <- project_pca_space(reference, pca_space)
+target_scores <- project_pca_space(target, pca_space)
+
+axis <- fit_k_axis(reference_scores)
+scored <- score_k_axis(target_scores, axis)
+contrib <- k_feature_contributions(axis, pca_space, top_n = 40)
+
+k_write_report(scored, axis, contrib, "k_factor_report.md")
+
+nearest <- k_nearest_texts(scored, n = 20, order_by = "axis_distance")
+movement <- k_move_toward(
+  scored,
+  from_text_id = scored$text_id[1],
+  to = "axis",
+  axis = axis,
+  pca_space = pca_space,
+  top_n = 20
+)
+
+bundle <- list(
+  pca_space = pca_space,
+  axis = axis,
+  created_at = Sys.time()
+)
+save_k_axis_bundle(bundle, "private/example_axis_bundle.rds")
+```
+
+## Reading The Metric
+
+`k_factor` is not a class label. It is a normalized projection on a reference
+axis. A high `k_factor` only becomes meaningful when `k_axis_distance` is also
+low. A text can project strongly in the same direction while still being far
+away from the reference axis.
+
+## Package Status
+
+This is a preparation scaffold. It is intentionally compact and should be
+extended with roxygen documentation, vignettes, tests and a formal method note
+before publication.
+
+See `docs/how_to_k_factor_corek.md` for the full workbench workflow.

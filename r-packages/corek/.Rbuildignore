@@ -1,0 +1,10 @@
+^README\.Rmd$
+^\.github$
+^\.gitignore$
+^private$
+^data_raw$
+^out$
+^examples_out$
+^autor_kafka$
+^.*\.Rproj$
+^\.Rproj\.user$

@@ -62,6 +62,7 @@ vignettes/*.pdf
 docs/*
 !docs/
 !docs/reproduce_full_analysis.md
+!docs/how_to_k_factor_corek.md
 
 # translation temp files
 po/*~
