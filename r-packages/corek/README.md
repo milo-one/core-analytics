@@ -52,27 +52,28 @@ dataset.
 
 ## Minimal Workflow
 
+Use this minimal path when you only want to build and inspect an author/person
+axis. A `target` file is not required for this.
+
 ```r
 library(corek)
 
 baseline <- k_read_features("C:/path/to/baseline/features_full.csv")
 reference <- k_read_features("C:/path/to/author_reference/features_full.csv")
-target <- k_read_features("C:/path/to/new_texts/features_full.csv")
 
 pca_space <- fit_pca_space(baseline, pc_count = 52)
 reference_scores <- project_pca_space(reference, pca_space)
-target_scores <- project_pca_space(target, pca_space)
 
 axis <- fit_k_axis(reference_scores)
-scored <- score_k_axis(target_scores, axis)
+scored_reference <- score_k_axis(reference_scores, axis)
 contrib <- k_feature_contributions(axis, pca_space, top_n = 40)
 
-k_write_report(scored, axis, contrib, "k_factor_report.md")
+k_write_report(scored_reference, axis, contrib, "k_factor_report.md")
 
-nearest <- k_nearest_texts(scored, n = 20, order_by = "axis_distance")
+nearest_reference <- k_nearest_texts(scored_reference, n = 20, order_by = "axis_distance")
 movement <- k_move_toward(
-  scored,
-  from_text_id = scored$text_id[1],
+  scored_reference,
+  from_text_id = scored_reference$text_id[1],
   to = "axis",
   axis = axis,
   pca_space = pca_space,
@@ -85,6 +86,17 @@ bundle <- list(
   created_at = Sys.time()
 )
 save_k_axis_bundle(bundle, "private/example_axis_bundle.rds")
+```
+
+To score new or external texts against the same axis, add a target file after
+the axis has been fitted:
+
+```r
+target <- k_read_features("C:/path/to/new_texts/features_full.csv")
+target_scores <- project_pca_space(target, pca_space)
+scored_target <- score_k_axis(target_scores, axis)
+
+k_write_report(scored_target, axis, contrib, "target_k_factor_report.md")
 ```
 
 ## Reading The Metric

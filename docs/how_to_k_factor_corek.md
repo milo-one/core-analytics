@@ -68,16 +68,64 @@ Set variables before sourcing the script:
 ```r
 BASELINE_FEATURE_FILE <- "C:/path/to/baseline/features_full.csv"
 REFERENCE_FEATURE_FILE <- "C:/path/to/author/features_full.csv"
-TARGET_FEATURE_FILE <- "C:/path/to/target/features_full.csv"
+TARGET_FEATURE_FILE <- NULL
 OUTPUT_DIR <- "examples_out/kafka_axis"
 
 source("inst/examples/k_factor_corek_workbench.R")
 ```
 
+Set `TARGET_FEATURE_FILE` only when you want to score additional/new texts
+against the fitted author axis:
+
+```r
+TARGET_FEATURE_FILE <- "C:/path/to/target/features_full.csv"
+```
+
 The same settings can be supplied as environment variables with the prefix
 `COREK_`, for example `COREK_REFERENCE_FEATURE_FILE`.
 
-## 5. Search Nearest Texts
+## 5. Build Only The Author Axis
+
+If you only need the author/person axis, no target file is needed. The default
+Workbench still writes:
+
+```text
+reference_scored.csv
+axis_feature_contributions.csv
+nearest_reference_corpus_to_axis.csv
+k_factor_workbench_report.md
+person_axis_bundle.rds
+person_axis_3d.html
+person_axis_context_3d.html
+```
+
+`reference_scored.csv` contains the reference texts projected onto their own
+axis. `person_axis_bundle.rds` stores the fitted PCA space and author axis for
+later reuse.
+
+The equivalent direct package workflow is:
+
+```r
+library(corek)
+
+baseline <- k_read_features("C:/path/to/baseline/features_full.csv")
+reference <- k_read_features("C:/path/to/author_reference/features_full.csv")
+
+pca_space <- fit_pca_space(baseline, pc_count = 52)
+reference_scores <- project_pca_space(reference, pca_space)
+
+axis <- fit_k_axis(reference_scores)
+scored_reference <- score_k_axis(reference_scores, axis)
+contrib <- k_feature_contributions(axis, pca_space, top_n = 40)
+
+k_write_report(scored_reference, axis, contrib, "k_factor_report.md")
+save_k_axis_bundle(
+  list(pca_space = pca_space, axis = axis, created_at = Sys.time()),
+  "person_axis_bundle.rds"
+)
+```
+
+## 6. Search Nearest Texts
 
 To find the nearest texts to a specific text in the shared PCA space:
 
@@ -97,7 +145,7 @@ query_nearest_texts.csv
 The table contains Euclidean distance to the query text, K-Factor projection,
 axis distance and center distance.
 
-## 6. Find Texts Closest to the Person Axis
+## 7. Find Texts Closest to the Person Axis
 
 Without `QUERY_TEXT_ID`, the workbench writes the closest texts from the
 baseline corpus to the person axis:
@@ -109,7 +157,7 @@ nearest_reference_corpus_to_axis.csv
 This is useful for asking: Which texts in the comparison corpus lie nearest to
 the author/person axis?
 
-## 7. Estimate Movement Toward the Axis
+## 8. Estimate Movement Toward the Axis
 
 To ask how a text would need to move toward the nearest point on the person
 axis:
@@ -135,7 +183,7 @@ feature space; `decrease` means it would move downward.
 
 These are diagnostic directions, not causal rewriting instructions.
 
-## 8. Move Toward the Axis Center
+## 9. Move Toward the Axis Center
 
 ```r
 MOVEMENT_TEXT_ID <- "author__bush__farewell_address__2009__speech__01"
@@ -146,7 +194,7 @@ source("inst/examples/k_factor_corek_workbench.R")
 
 This estimates movement toward the central tendency of the reference texts.
 
-## 9. Move Toward a Specific Text
+## 10. Move Toward a Specific Text
 
 ```r
 MOVEMENT_TEXT_ID <- "author__bush__farewell_address__2009__speech__01"
@@ -160,7 +208,7 @@ source("inst/examples/k_factor_corek_workbench.R")
 This estimates feature-level movement from one text toward another selected
 text in the same PCA space.
 
-## 10. Inspect 3D Plots
+## 11. Inspect 3D Plots
 
 The workbench writes two Plotly files when `plotly` and `htmlwidgets` are
 available:
@@ -180,7 +228,7 @@ person_axis_context_3d.html
 Open the HTML file in a browser and rotate the scene to inspect the axis,
 nearest texts and outliers.
 
-## 11. Key Output Files
+## 12. Key Output Files
 
 ```text
 reference_scored.csv
