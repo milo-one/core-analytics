@@ -205,3 +205,26 @@ Reference:
 
 Reference:
 - working session: repository cleanup and analysis-script preparation before commit/push
+
+### 2026-06-08 - First public release of corek R package
+
+- Released `corek` v0.1.0 as the first public version of the K-Factor workflow for personalized stylistic axis modeling.
+- Published corresponding GitHub Release and created Zenodo record (DOI: 10.5281/zenodo.18878138).
+- Updated repository documentation and linked Zenodo, GitHub, and project homepage.
+- The package provides tools for axis fitting, scoring, feature contribution analysis, and compact reporting in PCA-transformed stylistic feature spaces.
+
+Reference:
+- GitHub Release: https://github.com/milo-one/core-analytics/releases/tag/v0.1.0
+- Zenodo: https://doi.org/10.5281/zenodo.18878138
+- Repository: https://github.com/milo-one/core-analytics/tree/main/r-packages/corek
+
+### 2026-06-09 - Separation of technical analysis and theoretical reporting
+
+- Created and structured the new `core-theory` repository to separate methodological/analytical work from interpretive and theoretical documentation.
+- Established clear folder structure (`analysis/`, `reports/`, `handbook/`, `decisions/`) to distinguish technical decisions from narrative findings.
+- Wrote first version of `reports/integrated_findings.md`, integrating PCA, cluster analysis (k=7), MANOVA/CDA, SEM (Strict-5F), and MILO-LDA results into a coherent interpretive summary.
+- Connected cross-platform references between Zenodo, GitHub (`core-analytics` and `core-theory`), Hugging Face, project homepage, and ORCID.
+- Added proper LICENSE file and improved repository documentation.
+
+Reference:
+- Repository: https://github.com/milo-one/core-theory
