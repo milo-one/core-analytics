@@ -8,3 +8,5 @@
 ^autor_kafka$
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^check_corek\.R$
+^docs$
