@@ -228,3 +228,12 @@ Reference:
 
 Reference:
 - Repository: https://github.com/milo-one/core-theory
+
+### 2026-07-27 - Final Corpus Sanitation and Dataset Lock (T1–T4)
+
+- Completed final corpus sanitation and regex audit across the longitudinal multi-model dataset, resolving stray reasoning artifacts and meta-prompts in raw text files.
+- Locked the final analysis baseline at exactly 1,682 structured instances across 88 unique master models (incorporating historical split-checkpoints, specialized tasks, and pilot waves).
+- Secured local raw data storage under `.gitignore` compliance while preserving derived feature tables and reproducibility scripts in the repository structure.
+
+Reference:
+- local working session: Corpus audit, regex cleaning, and secure git-ignore isolation of 1,682 raw data instances.
