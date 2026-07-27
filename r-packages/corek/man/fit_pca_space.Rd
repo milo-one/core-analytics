@@ -7,9 +7,11 @@
 fit_pca_space(features, pc_count = 52, exclude = k_analysis_columns())
 }
 \arguments{
+\item{features}{Data frame containing numerical features.}
+
 \item{pc_count}{Integer, number of principal components to keep. Default 52.}
 
-\item{data}{Data frame containing numerical features.}
+\item{exclude}{Character vector of column names to exclude from PCA.}
 }
 \value{
 A list containing the PCA model and components.

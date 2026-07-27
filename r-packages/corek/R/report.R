@@ -4,8 +4,9 @@
 #'
 #' @param scored Scored texts data frame.
 #' @param axis Fitted K-axis object.
-#' @param contrib Feature contributions data frame.
-#' @param output_path File path for the output markdown report.
+#' @param contributions Feature contributions data frame.
+#' @param path File path for the output markdown report.
+#' @param top_n Number of top features to include in the report.
 #' @return Invisible NULL.
 #' @export
 k_write_report <- function(scored, axis, contributions = NULL, path = "k_factor_report.md", top_n = 12) {

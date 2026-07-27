@@ -2,7 +2,9 @@
 #'
 #' Fits the personalized K-factor reference axis in the PCA space.
 #'
-#' @param scored_reference Projected reference scores data frame.
+#' @param reference_scores Projected reference scores data frame.
+#' @param pc_cols Character vector of PC column names to use.
+#' @param orient Logical or direction specifying axis orientation.
 #' @return A list representing the fitted K-axis.
 #' @export
 fit_k_axis <- function(reference_scores, pc_cols = NULL, orient = c("auto", "none")) {
@@ -64,7 +66,7 @@ fit_k_axis <- function(reference_scores, pc_cols = NULL, orient = c("auto", "non
 #'
 #' Scores new texts by projection onto the fitted K-axis.
 #'
-#' @param scored_data Projected scores data frame.
+#' @param scores Projected scores data frame.
 #' @param axis Fitted K-axis object.
 #' @return Data frame with added K-factor and distance metrics.
 #' @export
@@ -209,6 +211,10 @@ k_axis_movement <- function(scored, axis, pca_space = NULL, text_id = NULL, top_
 #' @param scored Scored dataset.
 #' @param n Number of nearest items to return.
 #' @param order_by Sorting metric.
+#' @param query_text_id ID of the target query text.
+#' @param pc_cols Character vector of PC columns to consider.
+#' @param pool Data frame of candidate texts to search through.
+#' @param exclude_query Logical, whether to exclude the query text itself.
 #' @return Data frame of nearest texts.
 #' @export
 k_nearest_texts <- function(

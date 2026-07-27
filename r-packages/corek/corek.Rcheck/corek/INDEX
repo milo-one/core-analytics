@@ -1,0 +1,21 @@
+corek                   corek: Computational Behavioral Linguistics &
+                        K-Factor Analysis
+fit_k_axis              Fit K-Axis
+fit_k_axis              K-Factor axis workflow functions
+fit_pca_space           Fit PCA Space
+k_analysis_columns      Preprocess Text Features
+k_axis_movement         Calculate Axis Movement
+k_clean_numeric         Clean Numeric Features
+k_feature_contributions
+                        Calculate Feature Contributions
+k_move_toward           Move Toward Target
+k_nearest_texts         Find Nearest Corpus Texts
+k_nearest_to_axis       Find Nearest Texts to Axis
+k_read_features         Read Features CSV
+k_write_report          Write K-Factor Report
+plot_k_axis_3d          3D K-Factor Axis Plot
+plot_k_axis_context_3d
+                        3D K-Factor Axis Context Plot
+plot_k_space            Interactive 3D K-Space Visualization
+project_pca_space       Project Data into PCA Space
+score_k_axis            Score K-Axis

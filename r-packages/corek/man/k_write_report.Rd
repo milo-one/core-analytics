@@ -17,9 +17,11 @@ k_write_report(
 
 \item{axis}{Fitted K-axis object.}
 
-\item{contrib}{Feature contributions data frame.}
+\item{contributions}{Feature contributions data frame.}
 
-\item{output_path}{File path for the output markdown report.}
+\item{path}{File path for the output markdown report.}
+
+\item{top_n}{Number of top features to include in the report.}
 }
 \value{
 Invisible NULL.

@@ -2,7 +2,7 @@
 #'
 #' Cleans and prepares raw feature vectors for analysis.
 #'
-#' @param data Raw feature data frame.
+#' @param n Number of columns or components.
 #' @return Preprocessed data frame.
 #' @export
 k_analysis_columns <- function(n = 500) {

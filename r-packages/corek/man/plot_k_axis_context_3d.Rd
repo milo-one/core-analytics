@@ -26,6 +26,20 @@ plot_k_axis_context_3d(
 \item{nearest}{Nearest points data frame.}
 
 \item{top_n}{Top N nearest points to highlight.}
+
+\item{label_reference}{Label for reference points.}
+
+\item{label_nearest}{Label for nearest points.}
+
+\item{axis_scale}{Scale factor for the axis display.}
+
+\item{background_color}{Color code for background corpus points.}
+
+\item{reference_color}{Color code for reference points.}
+
+\item{nearest_color}{Color code for nearest neighbor points.}
+
+\item{axis_color}{Color code for the axis line.}
 }
 \value{
 A plotly 3D scene object.

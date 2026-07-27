@@ -7,9 +7,11 @@
 project_pca_space(features, pca_space, fill_missing = 0)
 }
 \arguments{
+\item{features}{Data frame with features.}
+
 \item{pca_space}{Fitted PCA space object from fit_pca_space().}
 
-\item{data}{Data frame with features.}
+\item{fill_missing}{Logical, whether to fill missing features with zeros or defaults.}
 }
 \value{
 Data frame with projected PC scores.

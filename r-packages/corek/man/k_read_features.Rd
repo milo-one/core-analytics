@@ -8,6 +8,8 @@ k_read_features(path, text_id_col = "text_id")
 }
 \arguments{
 \item{path}{Path to feature CSV}
+
+\item{text_id_col}{Name of the column containing text identifiers.}
 }
 \value{
 Data frame

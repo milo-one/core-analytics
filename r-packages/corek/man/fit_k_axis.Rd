@@ -7,7 +7,11 @@
 fit_k_axis(reference_scores, pc_cols = NULL, orient = c("auto", "none"))
 }
 \arguments{
-\item{scored_reference}{Projected reference scores data frame.}
+\item{reference_scores}{Projected reference scores data frame.}
+
+\item{pc_cols}{Character vector of PC column names to use.}
+
+\item{orient}{Logical or direction specifying axis orientation.}
 }
 \value{
 A list representing the fitted K-axis.

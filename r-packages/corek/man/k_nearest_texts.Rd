@@ -17,7 +17,15 @@ k_nearest_texts(
 \arguments{
 \item{scored}{Scored dataset.}
 
+\item{query_text_id}{ID of the target query text.}
+
 \item{n}{Number of nearest items to return.}
+
+\item{pc_cols}{Character vector of PC columns to consider.}
+
+\item{pool}{Data frame of candidate texts to search through.}
+
+\item{exclude_query}{Logical, whether to exclude the query text itself.}
 
 \item{order_by}{Sorting metric.}
 }

@@ -1,8 +1,9 @@
 #' Read Features CSV
 #' 
 #' @param path Path to feature CSV
+#' @param text_id_col
 #' @return Data frame
-#' @export
+#' @param text_id_col Name of the column containing text identifiers.
 k_read_features <- function(path, text_id_col = "text_id") {
   if (!file.exists(path)) {
     stop("Feature file not found: ", path, call. = FALSE)

@@ -92,6 +92,13 @@ plot_k_axis_3d <- function(scored, axis, label_n = 60, axis_scale = 4) {
 #' @param axis Fitted K-axis object.
 #' @param nearest Nearest points data frame.
 #' @param top_n Top N nearest points to highlight.
+#' @param label_reference Label for reference points.
+#' @param label_nearest Label for nearest points.
+#' @param axis_scale Scale factor for the axis display.
+#' @param background_color Color code for background corpus points.
+#' @param reference_color Color code for reference points.
+#' @param nearest_color Color code for nearest neighbor points.
+#' @param axis_color Color code for the axis line.
 #' @return A plotly 3D scene object.
 #' @export
 plot_k_axis_context_3d <- function(

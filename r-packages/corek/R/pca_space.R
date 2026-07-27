@@ -2,8 +2,9 @@
 #'
 #' Fits a PCA model on baseline feature data.
 #'
-#' @param data Data frame containing numerical features.
+#' @param features Data frame containing numerical features.
 #' @param pc_count Integer, number of principal components to keep. Default 52.
+#' @param exclude Character vector of column names to exclude from PCA.
 #' @return A list containing the PCA model and components.
 #' @export
 fit_pca_space <- function(features, pc_count = 52, exclude = k_analysis_columns()) {
@@ -44,8 +45,9 @@ fit_pca_space <- function(features, pc_count = 52, exclude = k_analysis_columns(
 #'
 #' Projects new text features onto an existing PCA space.
 #'
-#' @param data Data frame with features.
+#' @param features Data frame with features.
 #' @param pca_space Fitted PCA space object from fit_pca_space().
+#' @param fill_missing Logical, whether to fill missing features with zeros or defaults.
 #' @return Data frame with projected PC scores.
 #' @export
 project_pca_space <- function(features, pca_space, fill_missing = 0) {

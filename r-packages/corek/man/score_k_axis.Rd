@@ -7,9 +7,9 @@
 score_k_axis(scores, axis)
 }
 \arguments{
-\item{axis}{Fitted K-axis object.}
+\item{scores}{Projected scores data frame.}
 
-\item{scored_data}{Projected scores data frame.}
+\item{axis}{Fitted K-axis object.}
 }
 \value{
 Data frame with added K-factor and distance metrics.

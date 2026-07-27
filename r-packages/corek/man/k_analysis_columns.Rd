@@ -7,7 +7,7 @@
 k_analysis_columns(n = 500)
 }
 \arguments{
-\item{data}{Raw feature data frame.}
+\item{n}{Number of columns or components.}
 }
 \value{
 Preprocessed data frame.

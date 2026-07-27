@@ -34,3 +34,13 @@ setwd("C:/Temp")
 Sys.setenv(HOME = "C:/Temp", R_USER = "C:/Temp")
 system("R CMD build corek")
 system("R CMD check corek_0.1.0.tar.gz --no-manual --no-build-vignettes")
+
+
+setwd("C:/Users/Kathrin Preuß/OneDrive/Dokumente/core-analytics/r-packages/corek")
+# 1. Neues Paket-Archiv für 0.2.0 bauen
+devtools::build() 
+
+# 2. Und dann das neue 0.2.0-Archiv prüfen:
+system("R CMD check ../corek_0.2.0.tar.gz --no-manual --no-build-vignettes")
+devtools::check(args = c("--no-manual", "--no-build-vignettes"))
+

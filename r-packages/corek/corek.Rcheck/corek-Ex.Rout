@@ -1,0 +1,80 @@
+
+R version 4.6.1 (2026-06-24 ucrt) -- "Happy Hop"
+Copyright (C) 2026 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> pkgname <- "corek"
+> source(file.path(R.home("share"), "R", "examples-header.R"))
+> options(warn = 1)
+> options(pager = "console")
+> library('corek')
+> 
+> base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
+> base::assign(".old_wd", base::getwd(), pos = 'CheckExEnv')
+> cleanEx()
+> nameEx("k_factor_functions")
+> ### * k_factor_functions
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: fit_k_axis
+> ### Title: K-Factor axis workflow functions
+> ### Aliases: fit_k_axis score_k_axis fit_pca_space project_pca_space
+> ###   k_clean_numeric k_feature_contributions k_axis_movement
+> ###   k_nearest_texts k_move_toward k_read_features k_write_report
+> ###   plot_k_axis_3d save_k_axis_bundle load_k_axis_bundle
+> ###   plot_k_axis_context_3d
+> 
+> ### ** Examples
+> 
+> set.seed(1)
+> baseline <- data.frame(text_id = paste0("b", 1:20), a = rnorm(20), b = rnorm(20))
+> reference <- data.frame(text_id = paste0("r", 1:5), a = rnorm(5, 1), b = rnorm(5))
+> pca_space <- fit_pca_space(baseline, pc_count = 2)
+> reference_scores <- project_pca_space(reference, pca_space)
+> axis <- fit_k_axis(reference_scores)
+> score_k_axis(reference_scores, axis)
+  text_id        PC1         PC2 k_projection   k_factor k_axis_distance
+1      r1  1.0682445  0.06950709    0.9970410  1.1924017       0.4801721
+2      r2  0.1294765 -0.73169114   -0.2178926 -0.2605865       0.2630537
+3      r3  0.5374832 -1.79530460   -0.4031675 -0.4821643       0.8609642
+4      r4  1.1436800 -0.97184685    0.5360099  0.6410359       0.4566091
+5      r5 -0.6267939 -0.81373479   -0.9119908 -1.0906868       0.5743474
+  k_center_distance k_axis_similarity k_on_reference_axis
+1         1.1066417         0.6755971                TRUE
+2         0.3415764         0.7917320                TRUE
+3         0.9506857         0.5373559                TRUE
+4         0.7041295         0.6865260                TRUE
+5         1.0777765         0.6351838                TRUE
+> 
+> 
+> 
+> ### * <FOOTER>
+> ###
+> cleanEx()
+> options(digits = 7L)
+> base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
+Time elapsed:  0.08 0 0.08 NA NA 
+> grDevices::dev.off()
+null device 
+          1 
+> ###
+> ### Local variables: ***
+> ### mode: outline-minor ***
+> ### outline-regexp: "\\(> \\)?### [*]+" ***
+> ### End: ***
+> quit('no')
