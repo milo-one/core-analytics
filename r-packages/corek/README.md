@@ -106,6 +106,14 @@ axis. A high `k_factor` only becomes meaningful when `k_axis_distance` is also
 low. A text can project strongly in the same direction while still being far
 away from the reference axis.
 
+## 3D Visualizations
+
+`corek` includes interactive `plotly` tools for spatial inspection:
+
+- `plot_k_space()`: Interactive 3D scatter plot of baseline vs. target projections onto the custom K-axis (customizable color palette).
+- `plot_k_axis_3d()`: Renders the isolated K-Factor axis vector and reference points directly in the PCA space.
+- `plot_k_axis_context_3d()`: Embeds the full background corpus cloud, maps reference scores, and highlights nearest neighbor trajectories as distinct markers along the axis.
+
 ## Relation To Existing Methods
 
 `corek` builds upon established multivariate techniques (PCA, vector projection, orthogonal distances) and packages them into a focused workflow for **personalized stylistic axis modeling**.

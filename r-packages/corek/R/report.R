@@ -1,3 +1,13 @@
+#' Write K-Factor Report
+#'
+#' Generates a markdown report summarizing the analysis.
+#'
+#' @param scored Scored texts data frame.
+#' @param axis Fitted K-axis object.
+#' @param contrib Feature contributions data frame.
+#' @param output_path File path for the output markdown report.
+#' @return Invisible NULL.
+#' @export
 k_write_report <- function(scored, axis, contributions = NULL, path = "k_factor_report.md", top_n = 12) {
   dir.create(dirname(path), recursive = TRUE, showWarnings = FALSE)
 

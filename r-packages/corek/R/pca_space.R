@@ -1,3 +1,11 @@
+#' Fit PCA Space
+#'
+#' Fits a PCA model on baseline feature data.
+#'
+#' @param data Data frame containing numerical features.
+#' @param pc_count Integer, number of principal components to keep. Default 52.
+#' @return A list containing the PCA model and components.
+#' @export
 fit_pca_space <- function(features, pc_count = 52, exclude = k_analysis_columns()) {
   cleaned <- k_clean_numeric(features, exclude = exclude)
   pca <- stats::prcomp(cleaned$scaled, center = FALSE, scale. = FALSE)
@@ -32,6 +40,14 @@ fit_pca_space <- function(features, pc_count = 52, exclude = k_analysis_columns(
   )
 }
 
+#' Project Data into PCA Space
+#'
+#' Projects new text features onto an existing PCA space.
+#'
+#' @param data Data frame with features.
+#' @param pca_space Fitted PCA space object from fit_pca_space().
+#' @return Data frame with projected PC scores.
+#' @export
 project_pca_space <- function(features, pca_space, fill_missing = 0) {
   if (!"text_id" %in% names(features)) {
     features$text_id <- paste0("row_", seq_len(nrow(features)))

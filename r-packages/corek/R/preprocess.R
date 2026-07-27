@@ -1,3 +1,10 @@
+#' Preprocess Text Features
+#'
+#' Cleans and prepares raw feature vectors for analysis.
+#'
+#' @param data Raw feature data frame.
+#' @return Preprocessed data frame.
+#' @export
 k_analysis_columns <- function(n = 500) {
   c(
     paste0("PC", seq_len(n)),
@@ -11,6 +18,17 @@ k_analysis_columns <- function(n = 500) {
   )
 }
 
+#' Clean Numeric Features
+#'
+#' Cleans, imputes, filters zero-variance and scales features.
+#'
+#' @param data Raw data frame.
+#' @param exclude Columns to exclude.
+#' @param id_cols Metadata ID columns to preserve.
+#' @param center Logical, whether to center.
+#' @param scale Logical, whether to scale.
+#' @return A list containing cleaned, scaled data and metadata.
+#' @export
 k_clean_numeric <- function(
     data,
     exclude = k_analysis_columns(),

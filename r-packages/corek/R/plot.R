@@ -1,19 +1,27 @@
+#' 3D K-Factor Axis Plot
+#'
+#' @param scored Data frame containing scores and PCs.
+#' @param axis Fitted K-axis object.
+#' @param label_n Number of labels to show.
+#' @param axis_scale Scale factor for the axis line.
+#' @return A plotly 3D scene object.
+#' @export
 plot_k_axis_3d <- function(scored, axis, label_n = 60, axis_scale = 4) {
   if (!requireNamespace("plotly", quietly = TRUE)) {
     stop("Package 'plotly' is required for plot_k_axis_3d().", call. = FALSE)
   }
-
+  
   needed <- c("PC1", "PC2", "PC3")
   missing <- setdiff(needed, names(scored))
   if (length(missing) > 0) {
     stop("3D plotting requires PC1, PC2 and PC3 in scored data.", call. = FALSE)
   }
-
+  
   idx <- match(needed, axis$pc_cols)
   if (any(is.na(idx))) {
     stop("Axis must include PC1, PC2 and PC3 for 3D plotting.", call. = FALSE)
   }
-
+  
   center <- axis$center[idx]
   direction <- axis$direction[idx]
   direction <- direction / sqrt(sum(direction^2))
@@ -22,7 +30,7 @@ plot_k_axis_3d <- function(scored, axis, label_n = 60, axis_scale = 4) {
     PC2 = center[2] + c(-axis_scale, axis_scale) * direction[2],
     PC3 = center[3] + c(-axis_scale, axis_scale) * direction[3]
   )
-
+  
   scored$k_hover <- paste0(
     "ID: ", if ("text_id" %in% names(scored)) scored$text_id else seq_len(nrow(scored)),
     "<br>K-Factor: ", round(scored$k_factor, 3),
@@ -30,10 +38,10 @@ plot_k_axis_3d <- function(scored, axis, label_n = 60, axis_scale = 4) {
     "<br>Projection: ", round(scored$k_projection, 3)
   )
   scored$k_color <- ifelse(scored$k_on_reference_axis, "reference", "scored")
-
+  
   label_df <- scored[order(scored$k_axis_distance), , drop = FALSE]
   label_df <- label_df[seq_len(min(label_n, nrow(label_df))), , drop = FALSE]
-
+  
   plotly::plot_ly() |>
     plotly::add_markers(
       data = scored,
@@ -77,6 +85,15 @@ plot_k_axis_3d <- function(scored, axis, label_n = 60, axis_scale = 4) {
     )
 }
 
+
+#' 3D K-Factor Axis Context Plot
+#'
+#' @param scored Data frame containing scores and PCs.
+#' @param axis Fitted K-axis object.
+#' @param nearest Nearest points data frame.
+#' @param top_n Top N nearest points to highlight.
+#' @return A plotly 3D scene object.
+#' @export
 plot_k_axis_context_3d <- function(
     scored,
     axis,
@@ -93,7 +110,7 @@ plot_k_axis_context_3d <- function(
   if (!requireNamespace("plotly", quietly = TRUE)) {
     stop("Package 'plotly' is required for plot_k_axis_context_3d().", call. = FALSE)
   }
-
+  
   needed <- c("PC1", "PC2", "PC3")
   missing <- setdiff(needed, names(scored))
   if (length(missing) > 0) {
@@ -105,12 +122,12 @@ plot_k_axis_context_3d <- function(
   if (!"k_on_reference_axis" %in% names(scored)) {
     scored$k_on_reference_axis <- FALSE
   }
-
+  
   idx <- match(needed, axis$pc_cols)
   if (any(is.na(idx))) {
     stop("Axis must include PC1, PC2 and PC3 for 3D plotting.", call. = FALSE)
   }
-
+  
   center <- axis$center[idx]
   direction <- axis$direction[idx]
   direction <- direction / sqrt(sum(direction^2))
@@ -119,7 +136,7 @@ plot_k_axis_context_3d <- function(
     PC2 = center[2] + c(-axis_scale, axis_scale) * direction[2],
     PC3 = center[3] + c(-axis_scale, axis_scale) * direction[3]
   )
-
+  
   if (is.null(nearest)) {
     nearest <- k_nearest_texts(scored, n = top_n, order_by = "axis_distance")
   } else {
@@ -128,12 +145,12 @@ plot_k_axis_context_3d <- function(
   if (!"text_id" %in% names(nearest)) {
     nearest$text_id <- paste0("nearest_", seq_len(nrow(nearest)))
   }
-
+  
   nearest_ids <- nearest$text_id
   background <- scored[!scored$text_id %in% c(axis$reference_ids, nearest_ids), , drop = FALSE]
   reference <- scored[scored$text_id %in% axis$reference_ids, , drop = FALSE]
   nearest_points <- scored[scored$text_id %in% nearest_ids, , drop = FALSE]
-
+  
   make_hover <- function(data, prefix) {
     paste0(
       prefix, "<br>ID: ", data$text_id,
@@ -144,11 +161,11 @@ plot_k_axis_context_3d <- function(
       "<br>Center distance: ", round(data$k_center_distance, 3)
     )
   }
-
+  
   background$k_hover <- make_hover(background, "Corpus text")
   reference$k_hover <- make_hover(reference, "Person-axis reference")
   nearest_points$k_hover <- make_hover(nearest_points, "Nearest corpus match")
-
+  
   p <- plotly::plot_ly()
   if (nrow(background) > 0) {
     p <- plotly::add_markers(
@@ -189,7 +206,7 @@ plot_k_axis_context_3d <- function(
       name = paste0("Nearest top ", min(top_n, nrow(nearest_points)))
     )
   }
-
+  
   p <- plotly::add_trace(
     p,
     data = axis_line,
@@ -201,7 +218,7 @@ plot_k_axis_context_3d <- function(
     line = list(color = axis_color, width = 9),
     name = "Person axis"
   )
-
+  
   if (label_reference && nrow(reference) > 0) {
     p <- plotly::add_text(
       p,
@@ -228,7 +245,7 @@ plot_k_axis_context_3d <- function(
       hoverinfo = "none"
     )
   }
-
+  
   plotly::layout(
     p,
     title = "Person axis with nearest corpus texts",

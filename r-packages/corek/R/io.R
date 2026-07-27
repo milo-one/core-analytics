@@ -1,3 +1,8 @@
+#' Read Features CSV
+#' 
+#' @param path Path to feature CSV
+#' @return Data frame
+#' @export
 k_read_features <- function(path, text_id_col = "text_id") {
   if (!file.exists(path)) {
     stop("Feature file not found: ", path, call. = FALSE)

@@ -1,3 +1,10 @@
+#' Fit K-Axis
+#'
+#' Fits the personalized K-factor reference axis in the PCA space.
+#'
+#' @param scored_reference Projected reference scores data frame.
+#' @return A list representing the fitted K-axis.
+#' @export
 fit_k_axis <- function(reference_scores, pc_cols = NULL, orient = c("auto", "none")) {
   orient <- match.arg(orient)
 
@@ -53,6 +60,14 @@ fit_k_axis <- function(reference_scores, pc_cols = NULL, orient = c("auto", "non
   )
 }
 
+#' Score K-Axis
+#'
+#' Scores new texts by projection onto the fitted K-axis.
+#'
+#' @param scored_data Projected scores data frame.
+#' @param axis Fitted K-axis object.
+#' @return Data frame with added K-factor and distance metrics.
+#' @export
 score_k_axis <- function(scores, axis) {
   missing <- setdiff(axis$pc_cols, names(scores))
   if (length(missing) > 0) {
@@ -80,6 +95,15 @@ score_k_axis <- function(scores, axis) {
   out
 }
 
+#' Calculate Feature Contributions
+#'
+#' Evaluates feature weights along the K-axis.
+#'
+#' @param axis Fitted K-axis object.
+#' @param pca_space PCA space object.
+#' @param top_n Number of top features to return.
+#' @return Data frame of feature contributions.
+#' @export
 k_feature_contributions <- function(axis, pca_space, top_n = 40) {
   pc_index <- as.integer(sub("^PC", "", axis$pc_cols))
   rotation <- pca_space$pca$rotation[, pc_index, drop = FALSE]
@@ -96,11 +120,30 @@ k_feature_contributions <- function(axis, pca_space, top_n = 40) {
   out[seq_len(min(top_n, nrow(out))), , drop = FALSE]
 }
 
+#' Find Nearest Texts to Axis
+#'
+#' Selects texts closest to the K-axis based on distance and projection.
+#'
+#' @param scored Scored dataset.
+#' @param n Number of items to return.
+#' @return Data frame of nearest texts.
+#' @export
 k_nearest_to_axis <- function(scored, n = 20) {
   scored <- scored[order(scored$k_axis_distance, -abs(scored$k_projection)), , drop = FALSE]
   scored[seq_len(min(n, nrow(scored))), , drop = FALSE]
 }
 
+#' Calculate Axis Movement
+#'
+#' Computes movement vectors and feature shifts toward the K-axis.
+#'
+#' @param scored Scored dataset.
+#' @param axis Fitted K-axis object.
+#' @param pca_space Optional PCA space for feature-level shifts.
+#' @param text_id Optional specific text IDs to filter.
+#' @param top_n Number of top feature moves.
+#' @return A list with summary metrics and feature moves.
+#' @export
 k_axis_movement <- function(scored, axis, pca_space = NULL, text_id = NULL, top_n = 12) {
   if (!is.null(text_id)) {
     scored <- scored[scored$text_id %in% text_id, , drop = FALSE]
@@ -159,6 +202,15 @@ k_axis_movement <- function(scored, axis, pca_space = NULL, text_id = NULL, top_
   )
 }
 
+#' Find Nearest Corpus Texts
+#'
+#' Finds corpus texts closest to the reference axis.
+#'
+#' @param scored Scored dataset.
+#' @param n Number of nearest items to return.
+#' @param order_by Sorting metric.
+#' @return Data frame of nearest texts.
+#' @export
 k_nearest_texts <- function(
     scored,
     query_text_id = NULL,
@@ -212,6 +264,20 @@ k_nearest_texts <- function(
   out[seq_len(min(n, nrow(out))), , drop = FALSE]
 }
 
+#' Move Toward Target
+#'
+#' Computes directional movement vectors from one text to an axis, center, or another text.
+#'
+#' @param scored Scored dataset.
+#' @param from_text_id Source text ID.
+#' @param to Target type ("axis", "center", or "text").
+#' @param axis Fitted K-axis object.
+#' @param pca_space Optional PCA space.
+#' @param to_text_id Target text ID if to = "text".
+#' @param top_n Number of top feature changes.
+#' @param pc_cols PC columns to use.
+#' @return A list containing summary and feature movements.
+#' @export
 k_move_toward <- function(
     scored,
     from_text_id,
