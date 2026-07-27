@@ -41,6 +41,6 @@ setwd("C:/Users/Kathrin Preuß/OneDrive/Dokumente/core-analytics/r-packages/core
 devtools::build() 
 
 # 2. Und dann das neue 0.2.0-Archiv prüfen:
-system("R CMD check ../corek_0.2.0.tar.gz --no-manual --no-build-vignettes")
+system("R CMD check ./corek_0.2.0.tar.gz --no-manual --no-build-vignettes")
 devtools::check(args = c("--no-manual", "--no-build-vignettes"))
 

@@ -1,6 +1,6 @@
 Package: corek
 Title: Personalized K-Factor Axis for Text Feature Spaces
-Version: 0.2.0
+Version: 0.2.1
 Authors@R: person("Kathrin", "Preuss", role = c("aut", "cre"), email = "not-public@example.com")
 Author: Kathrin Preuss
 Maintainer: Kathrin Preuss <not-public@example.com>

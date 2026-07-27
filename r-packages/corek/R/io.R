@@ -1,7 +1,7 @@
 #' Read Features CSV
 #' 
 #' @param path Path to feature CSV
-#' @param text_id_col
+#' @param text_id_col Name of the column containing text identifiers.
 #' @return Data frame
 #' @param text_id_col Name of the column containing text identifiers.
 k_read_features <- function(path, text_id_col = "text_id") {
