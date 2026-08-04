@@ -4,6 +4,7 @@
 #' @param text_id_col Name of the column containing text identifiers.
 #' @return Data frame
 #' @param text_id_col Name of the column containing text identifiers.
+#' @export
 k_read_features <- function(path, text_id_col = "text_id") {
   if (!file.exists(path)) {
     stop("Feature file not found: ", path, call. = FALSE)
@@ -19,12 +20,14 @@ k_read_features <- function(path, text_id_col = "text_id") {
   df
 }
 
+#' @export
 save_k_axis_bundle <- function(bundle, path) {
   dir.create(dirname(path), recursive = TRUE, showWarnings = FALSE)
   saveRDS(bundle, path)
   invisible(path)
 }
 
+#' @export
 load_k_axis_bundle <- function(path) {
   if (!file.exists(path)) {
     stop("Bundle file not found: ", path, call. = FALSE)
